@@ -65,6 +65,8 @@ Extensions:
 - Node: `brew install node`
 - Firefox: `brew install --cask firefox`
 - Chrome: `brew install --cask google-chrome`
+- ImageOptim: `brew install --cask imageoptim`
+- SF Symbols: `brew install --cask sf-symbols`
 - Set wallpaper from `./wallpapers`
 
 # Notes
