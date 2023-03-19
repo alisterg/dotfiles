@@ -133,7 +133,7 @@
     "list.inactiveFocusBackground": "#2e2c2b80",
     "list.inactiveSelectionBackground": "#2e2c2b80",
     "list.inactiveSelectionForeground": "#a89984",
-    "list.warningForeground": "#d8a657",
+    "list.warningForeground": "#d4be98",
     "listFilterWidget.background": "#21202080",
     "listFilterWidget.noMatchesOutline": "#ea6962",
     "listFilterWidget.outline": "#7daea3",

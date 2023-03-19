@@ -53,7 +53,8 @@ Extensions:
   "editor.rulers": [120],
   "editor.lineNumbers": "off",
   "editor.folding": false,
-  "workbench.colorTheme": "Ala Gruuv"
+  "workbench.colorTheme": "Ala Gruuv",
+  "css.lint.unknownAtRules": "ignore"
 }
 ```
 
