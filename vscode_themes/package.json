@@ -1,84 +1,74 @@
 {
-	"name": "theme-ala",
-	"displayName": "Ala Theme",
-	"description": "My collection of themes",
-	"version": "1.0.0",
-	"publisher": "alisterg",
-	"engines": {
-		"vscode": "^1.25.0"
-	},
-	"categories": [
-		"Themes"
-	],
-	"license": "MIT",
-	"contributes": {
-		"themes": [
-			{
-				"label": "Ala XC",
-				"uiTheme": "vs-dark",
-				"path": "./themes/ala-xc-color-theme.json"
-			},
-			{
-				"label": "Ala Monokai",
-				"uiTheme": "vs-dark",
-				"path": "./themes/ala-kai-color-theme.json"
-			},
-			{
-				"label": "Ala Gruuv",
-				"uiTheme": "vs-dark",
-				"path": "./themes/ala-gruv-color-theme.json"
-			},
-			{
-				"label": "Ala Monokai Grey",
-				"uiTheme": "vs-dark",
-				"path": "./themes/ala-kai-grey-color-theme.json"
-			},
-			{
-				"label": "Ala Rised",
-				"uiTheme": "vs-dark",
-				"path": "./themes/ala-rised-color-theme.json"
-			},
-			{
-				"label": "Ala Rised Blue",
-				"uiTheme": "vs-dark",
-				"path": "./themes/ala-rised-blue-color-theme.json"
-			},
-			{
-				"label": "Ala Vendi",
-				"uiTheme": "vs-dark",
-				"path": "./themes/ala-vendi-color-theme.json"
-			},
-			{
-				"label": "Ala Vendi Grey",
-				"uiTheme": "vs-dark",
-				"path": "./themes/ala-vendi-grey-color-theme.json"
-			},
-			{
-				"label": "Ala Winter",
-				"uiTheme": "vs-dark",
-				"path": "./themes/ala-winter-color-theme.json"
-			},
-			{
-				"label": "Ala Vendi Light",
-				"uiTheme": "vs",
-				"path": "./themes/ala-vendi-light-color-theme.json"
-			},
-			{
-				"label": "Ala Light",
-				"uiTheme": "vs",
-				"path": "./themes/ala-baster-light-color-theme.json"
-			}
-		]
-	},
-	"__metadata": {
-		"id": "539d1230-81c6-4a1c-88e7-bd88a27e687f",
-		"publisherId": "c1080524-2160-430b-a5a1-921055ef1c73",
-		"publisherDisplayName": "alisterg",
-		"targetPlatform": "undefined",
-		"isApplicationScoped": false,
-		"updated": false,
-		"isPreReleaseVersion": false,
-		"installedTimestamp": 1673395063682,
-		"preRelease": false
-	}
+  "name": "theme-ala",
+  "displayName": "Ala Theme",
+  "description": "My collection of themes",
+  "version": "1.0.0",
+  "publisher": "alisterg",
+  "engines": {
+    "vscode": "^1.25.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "license": "MIT",
+  "contributes": {
+    "themes": [
+      {
+        "label": "Ala XC",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ala-xc-color-theme.json"
+      },
+      {
+        "label": "Ala Monokai",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ala-kai-color-theme.json"
+      },
+      {
+        "label": "Ala Gruuv",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ala-gruv-color-theme.json"
+      },
+      {
+        "label": "Ala Vendi",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ala-vendi-color-theme.json"
+      },
+      {
+        "label": "Ala Vendi Grey",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ala-vendi-grey-color-theme.json"
+      },
+      {
+        "label": "Ala Winter",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ala-winter-color-theme.json"
+      },
+      {
+        "label": "Ala Nord",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ala-nord-color-theme.json"
+      },
+      {
+        "label": "Ala Nord Light",
+        "uiTheme": "vs",
+        "path": "./themes/ala-nord-light-color-theme.json"
+      },
+      {
+        "label": "Ala Vendi Light",
+        "uiTheme": "vs",
+        "path": "./themes/ala-vendi-light-color-theme.json"
+      }
+    ]
+  },
+  "__metadata": {
+    "id": "539d1230-81c6-4a1c-88e7-bd88a27e687f",
+    "publisherId": "c1080524-2160-430b-a5a1-921055ef1c73",
+    "publisherDisplayName": "alisterg",
+    "targetPlatform": "undefined",
+    "isApplicationScoped": false,
+    "updated": false,
+    "isPreReleaseVersion": false,
+    "installedTimestamp": 1673395063682,
+    "preRelease": false
+  }
 }
