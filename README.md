@@ -62,7 +62,8 @@ Extensions:
 
 # Misc
 
-- Node: `brew install node`
+- Node: `brew install nvm`
+  - Then follow the instructions to add to PATH etc
 - Firefox: `brew install --cask firefox`
 - Chrome: `brew install --cask google-chrome`
 - ImageOptim: `brew install --cask imageoptim`
