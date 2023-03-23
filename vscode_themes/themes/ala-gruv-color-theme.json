@@ -316,6 +316,18 @@
     },
     {
       "scope": [
+        "meta.brace",
+        "punctuation",
+        "keyword.operator.assignment",
+        "keyword.operator.type.annotation.tsx"
+      ],
+      "settings": {
+        "foreground": "#928374",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
         "entity.other",
         "comment.block.documentation storage.type.class",
         "comment.block.documentation punctuation.definition.block.tag",
@@ -341,8 +353,6 @@
         "keyword.operator.other.powershell",
         "meta.link.inline punctuation.definition.string",
         "source.sql",
-        "source meta.brace",
-        "source punctuation",
         "text.html punctuation",
         "markup meta punctuation.definition",
         "meta.bracket.julia",
@@ -378,7 +388,6 @@
         "keyword.other.substitution",
         "storage.modifier",
         "meta.tag.sgml",
-        "punctuation.accessor",
         "constant.other.color",
         "entity.name.section",
         "markup.heading",
@@ -499,6 +508,15 @@
     },
     {
       "scope": [
+        "punctuation.support.type.property-name.begin.json.comments",
+        "punctuation.support.type.property-name.end.json.comments"
+      ],
+      "settings": {
+        "foreground": "#C5B18D99"
+      }
+    },
+    {
+      "scope": [
         "variable.language",
         "variable.parameter.function.language.special",
         "markup.bold",
@@ -590,6 +608,17 @@
       "settings": {
         "foreground": "#A9B665",
         "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "punctuation.definition.string.begin",
+        "punctuation.definition.string.template.begin",
+        "punctuation.definition.string.end",
+        "punctuation.definition.string.template.end"
+      ],
+      "settings": {
+        "foreground": "#A9B66599"
       }
     },
     {

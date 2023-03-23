@@ -29,14 +29,14 @@
         "path": "./themes/ala-gruv-color-theme.json"
       },
       {
+        "label": "Ala Vite",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ala-vite-color-theme.json"
+      },
+      {
         "label": "Ala Vendi",
         "uiTheme": "vs-dark",
         "path": "./themes/ala-vendi-color-theme.json"
-      },
-      {
-        "label": "Ala Vendi Grey",
-        "uiTheme": "vs-dark",
-        "path": "./themes/ala-vendi-grey-color-theme.json"
       },
       {
         "label": "Ala Winter",

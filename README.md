@@ -37,8 +37,8 @@ Extensions:
 {
   "telemetry.telemetryLevel": "off",
   "window.commandCenter": false,
-  "editor.fontFamily": "source code pro, Consolas, Menlo, monospace",
-  "editor.fontLigatures": true,
+  "editor.fontFamily": "input, source code pro, hack, cartograph cf, menlo, monospace",
+  "editor.fontLigatures": false,
   "editor.bracketPairColorization.enabled": false,
   "editor.wordWrap": "on",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -52,7 +52,11 @@ Extensions:
   "editor.rulers": [120],
   "editor.folding": false,
   "editor.tabSize": 2,
-  "css.lint.unknownAtRules": "ignore"
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "css.lint.unknownAtRules": "ignore",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSurroundingLines": 3
 }
 ```
 
