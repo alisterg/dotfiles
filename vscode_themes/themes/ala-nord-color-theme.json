@@ -311,37 +311,18 @@
       }
     },
     {
-      "scope": "constant.character",
+      "scope": "constant",
       "settings": {
-        "foreground": "#EBCB8B"
+        "foreground": "#8fbcbb"
       }
     },
     {
-      "scope": "constant.character.escape",
-      "settings": {
-        "foreground": "#EBCB8B"
-      }
-    },
-    {
-      "scope": "constant.language",
-      "settings": {
-        "foreground": "#B48EAD"
-      }
-    },
-    {
-      "scope": "constant.numeric",
-      "settings": {
-        "foreground": "#B48EAD"
-      }
-    },
-    {
-      "scope": "constant.regexp",
-      "settings": {
-        "foreground": "#EBCB8B"
-      }
-    },
-    {
-      "scope": ["entity.name.class", "entity.name.type.class"],
+      "scope": [
+        "entity.name.class",
+        "entity.name.type.class",
+        "entity.name.type.cs",
+        "keyword.type.cs"
+      ],
       "settings": {
         "foreground": "#8FBCBB"
       }
@@ -379,7 +360,11 @@
       }
     },
     {
-      "scope": ["entity.name.tag.style", "entity.name.tag.script", "entity.name.tag.template"],
+      "scope": [
+        "entity.name.tag.style",
+        "entity.name.tag.script",
+        "entity.name.tag.template"
+      ],
       "settings": {
         "foreground": "#B48EAD"
       }
@@ -411,21 +396,34 @@
         "background": "#BF616A"
       }
     },
-
+    // Regular keywords
     {
-			"scope": ["keyword.control", "storage.modifier", "storage.type.function.ts"],
-			"settings": {
-				"foreground": "#81A1C1",
-        "fontStyle": "none"
-			}
-		},
-		{
-			"scope": "storage.type",
-			"settings": {
+      "scope": ["storage.type", "keyword.other"],
+      "settings": {
         "foreground": "#d8dee9",
-				"fontStyle": "italic"
-			}
-		},
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": [
+        "storage.type.function.ts",
+        "storage.type.type.ts",
+        "storage.type.interface.ts",
+        "storage.modifier",
+        "storage.type.enum.ts"
+      ],
+      "settings": {
+        "foreground": "#81A1C1",
+        "fontStyle": "none"
+      }
+    },
+    // Control flow keywords
+    {
+      "scope": "keyword.control",
+      "settings": {
+        "foreground": "#B48EAD"
+      }
+    },
     {
       "scope": "keyword.operator",
       "settings": {
@@ -981,7 +979,7 @@
     {
       "scope": "markup.heading",
       "settings": {
-        "foreground": "#88C0D0"
+        "foreground": "#B48EAD"
       }
     },
     {
