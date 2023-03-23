@@ -22,7 +22,6 @@ It's fresh computer time!
 
 - Install: `brew install --cask visual-studio-code`
 - Install themes from `./vscode_themes` (.vsix file)
-- Install Iosevkata from `./fonts`
 - Sign in with GitHub
 
 Extensions:
@@ -38,7 +37,7 @@ Extensions:
 {
   "telemetry.telemetryLevel": "off",
   "window.commandCenter": false,
-  "editor.fontFamily": "Iosevkata, Consolas, Menlo, monospace",
+  "editor.fontFamily": "source code pro, Consolas, Menlo, monospace",
   "editor.fontLigatures": true,
   "editor.bracketPairColorization.enabled": false,
   "editor.wordWrap": "on",
@@ -51,9 +50,8 @@ Extensions:
   "editor.minimap.showSlider": "always",
   "breadcrumbs.enabled": false,
   "editor.rulers": [120],
-  "editor.lineNumbers": "off",
   "editor.folding": false,
-  "workbench.colorTheme": "Ala Gruuv",
+  "editor.tabSize": 2,
   "css.lint.unknownAtRules": "ignore"
 }
 ```
@@ -69,6 +67,8 @@ Extensions:
 - ImageOptim: `brew install --cask imageoptim`
 - SF Symbols: `brew install --cask sf-symbols`
 - Set wallpaper from `./wallpapers`
+- Source Code Pro: https://github.com/adobe-fonts/source-code-pro
+- Hack: https://sourcefoundry.org/hack/
 
 # Notes
 
