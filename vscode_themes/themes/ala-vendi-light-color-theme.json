@@ -59,7 +59,11 @@
     },
     {
       "name": "Keyword",
-      "scope": "keyword, modifier, support.type.object, constant.language",
+      "scope": [
+        "keyword, modifier, support.type.object, constant.language",
+        "keyword.control.import",
+        "keyword.control.export"
+      ],
       "settings": {
         "foreground": "#6650A0"
       }
@@ -72,7 +76,7 @@
       }
     },
     {
-      "scope": "keyword.control.import",
+      "scope": "keyword.control",
       "settings": {
         "foreground": "#009CD0"
       }
@@ -114,16 +118,9 @@
       }
     },
     {
-      "name": "Storage",
-      "scope": "storage.type, storage.modifier",
+      "scope": "storage.type",
       "settings": {
-        "foreground": "#2a2a2a"
-      }
-    },
-    {
-      "scope": "storage.type.ts",
-      "settings": {
-        "fontStyle": "bold"
+        "fontStyle": "italic"
       }
     },
     {
@@ -205,7 +202,7 @@
       "name": "Reset embedded/template expression colors",
       "scope": "meta.embedded, source.groovy.embedded, meta.template.expression",
       "settings": {
-        "foreground": "#009cd0"
+        "foreground": "#6650A0"
       }
     },
     {
@@ -391,31 +388,31 @@
   ],
   "colors": {
     "activityBar.background": "#f0f0f0",
-		"activityBar.foreground": "#007acc",
-		"editor.findMatchBackground": "#ffbc5d",
-		"editor.findMatchHighlightBackground": "#ffd86381",
-		"editor.lineHighlightBackground": "#f0f0f0",
-		"editor.selectionBackground": "#bfdbfe",
-		"editor.selectionHighlightBackground": "#cfcfcf81",
-		"editorCursor.foreground": "#007acc",
-		"editorGroupHeader.tabsBackground": "#f0f0f0",
-		"editorLineNumber.foreground": "#9da39a",
-		"editorSuggestWidget.focusHighlightForeground": "#000000",
-		"editorSuggestWidget.highlightForeground": "#000000",
-		"editorSuggestWidget.selectedBackground": "#dddddd",
-		"editorSuggestWidget.selectedForeground": "#000000",
-		"focusBorder": "#cccccc",
-		"list.focusHighlightForeground": "#007acc",
-		"panel.background": "#f0f0f0",
-		"quickInputList.focusBackground": "#dddddd",
-		"quickInputList.focusForeground": "#000000",
-		"sideBar.background": "#f0f0f0",
-		"statusBar.background": "#dddddd",
-		"statusBar.debuggingBackground": "#ffbc5d",
-		"statusBar.debuggingForeground": "#000000",
-		"statusBar.foreground": "#474747",
-		"statusBar.noFolderBackground": "#7a3e9d",
-		"statusBar.noFolderForeground": "#ffffff",
+    "activityBar.foreground": "#007acc",
+    "editor.findMatchBackground": "#ffbc5d",
+    "editor.findMatchHighlightBackground": "#ffd86381",
+    "editor.lineHighlightBackground": "#f0f0f0",
+    "editor.selectionBackground": "#bfdbfe",
+    "editor.selectionHighlightBackground": "#cfcfcf81",
+    "editorCursor.foreground": "#007acc",
+    "editorGroupHeader.tabsBackground": "#f0f0f0",
+    "editorLineNumber.foreground": "#9da39a",
+    "editorSuggestWidget.focusHighlightForeground": "#000000",
+    "editorSuggestWidget.highlightForeground": "#000000",
+    "editorSuggestWidget.selectedBackground": "#dddddd",
+    "editorSuggestWidget.selectedForeground": "#000000",
+    "focusBorder": "#cccccc",
+    "list.focusHighlightForeground": "#007acc",
+    "panel.background": "#f0f0f0",
+    "quickInputList.focusBackground": "#dddddd",
+    "quickInputList.focusForeground": "#000000",
+    "sideBar.background": "#f0f0f0",
+    "statusBar.background": "#dddddd",
+    "statusBar.debuggingBackground": "#ffbc5d",
+    "statusBar.debuggingForeground": "#000000",
+    "statusBar.foreground": "#474747",
+    "statusBar.noFolderBackground": "#7a3e9d",
+    "statusBar.noFolderForeground": "#ffffff",
 
     // File explorer
     "list.activeSelectionBackground": "#2a2a2a80",
@@ -427,7 +424,7 @@
     "list.hoverBackground": "#1717171a",
     "list.inactiveSelectionBackground": "#17171733",
     "list.errorForeground": "#9e332e",
-    "list.warningForeground": "#c3c5c5",
+    "list.warningForeground": "#2a2a2a",
     "gitDecoration.modifiedResourceForeground": "#8c8449",
     "gitDecoration.untrackedResourceForeground": "#00d9ff",
     // Activity bar
