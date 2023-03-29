@@ -28,22 +28,45 @@ Extensions:
 
 - Prettier
 - Quill Icons
+- Catppuccin Icons
 - Any language / framework related plugins
 
+# Misc
+
+- Node: `brew install nvm`
+  - Then follow the instructions to add to PATH etc
+- Firefox: `brew install --cask firefox`
+- Chrome: `brew install --cask google-chrome`
+- ImageOptim: `brew install --cask imageoptim`
+- SF Symbols: `brew install --cask sf-symbols`
+- Get wallpapers from `./wallpapers`
+- Install fonts from font repo
+- `brew tap homebrew/cask-fonts`
+- `brew install --cask font-victor-mono`
+- `brew install --cask font-source-code-pro`
+- `brew install --cask font-hack`
+- `brew install --cask font-sf-mono`
+
+# Others
+
+- Neovim: https://github.com/alisterg/dotfiles
+- Slack: `brew install --cask slack`
+
+---
+
 <details>
-<summary>NOTE: if settings don't sync:</summary>
+<summary>VSCode settings</summary>
 
 ```json
 {
   "telemetry.telemetryLevel": "off",
   "window.commandCenter": false,
-  "editor.fontFamily": "input, source code pro, hack, cartograph cf, menlo, monospace",
-  "editor.fontLigatures": false,
+  "editor.fontLigatures": true,
   "editor.bracketPairColorization.enabled": false,
   "editor.wordWrap": "on",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "workbench.tree.indent": 18,
-  "workbench.iconTheme": "quill-icons-minimal",
+  "workbench.iconTheme": "catppuccin-mocha",
   "debug.onTaskErrors": "debugAnyway",
   "git.autofetch": true,
   "workbench.activityBar.visible": false,
@@ -56,26 +79,30 @@ Extensions:
   "css.lint.unknownAtRules": "ignore",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "smooth",
-  "editor.cursorSurroundingLines": 3
+  "editor.cursorSurroundingLines": 3,
+
+  // THEMES
+
+  // -------- NEO THEME
+  // "workbench.colorTheme": "Ala Neo",
+  // "editor.fontFamily": "victor mono"
+
+  // -------- MONOKAIPRO THEME
+  "workbench.colorTheme": "Ala MonokaiPro",
+  "editor.fontFamily": "victor mono"
+
+  // -------- VITE THEME
+  // "workbench.colorTheme": "Ala Vite",
+  // "editor.fontFamily": "input, hack",
+
+  // -------- XC THEME
+  // "workbench.colorTheme": "Ala XC",
+  // "editor.fontFamily": "sf mono",
+
+  // -------- LIGHT THEME
+  // "workbench.colorTheme": "Ala Vendi Light",
+  // "editor.fontFamily": "cartograph cf",
 }
 ```
 
 </details>
-
-# Misc
-
-- Node: `brew install nvm`
-  - Then follow the instructions to add to PATH etc
-- Firefox: `brew install --cask firefox`
-- Chrome: `brew install --cask google-chrome`
-- ImageOptim: `brew install --cask imageoptim`
-- SF Symbols: `brew install --cask sf-symbols`
-- Set wallpaper from `./wallpapers`
-- Source Code Pro: https://github.com/adobe-fonts/source-code-pro
-- Hack: https://sourcefoundry.org/hack/
-
-# Notes
-
-- If you feel like using neovim: https://github.com/alisterg/dotfiles
-- If you need Slack: `brew install --cask slack`
-  - Slack Nord theme: https://www.nordtheme.com/docs/ports/slack/installation

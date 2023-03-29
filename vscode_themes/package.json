@@ -19,9 +19,19 @@
         "path": "./themes/ala-xc-color-theme.json"
       },
       {
+        "label": "Ala Neo",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ala-neo-color-theme.json"
+      },
+      {
         "label": "Ala Monokai",
         "uiTheme": "vs-dark",
         "path": "./themes/ala-kai-color-theme.json"
+      },
+      {
+        "label": "Ala MonokaiPro",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ala-kaipro-color-theme.json"
       },
       {
         "label": "Ala Gruuv",
