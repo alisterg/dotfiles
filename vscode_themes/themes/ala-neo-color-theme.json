@@ -202,7 +202,7 @@
     "inputValidation.warningBackground": "#ef9f76",
     "inputValidation.warningBorder": "#22232633",
     "inputValidation.warningForeground": "#222326",
-    "list.activeSelectionBackground": "#51576d",
+    "list.activeSelectionBackground": "#51576d99",
     "list.activeSelectionForeground": "#d9dbe1",
     "list.dropBackground": "#62688099",
     "list.focusBackground": "#414559",
@@ -318,7 +318,7 @@
     "statusBarItem.warningForeground": "#ef9f76",
     "symbolIcon.arrayForeground": "#ef9f76",
     "symbolIcon.booleanForeground": "#ca9ee6",
-    "symbolIcon.classForeground": "#e5c890",
+    "symbolIcon.classForeground": "#67FEE4",
     "symbolIcon.colorForeground": "#f4b8e4",
     "symbolIcon.constantForeground": "#ef9f76",
     "symbolIcon.constructorForeground": "#babbf1",
@@ -328,13 +328,13 @@
     "symbolIcon.fieldForeground": "#d9dbe1",
     "symbolIcon.fileForeground": "#85c1dc",
     "symbolIcon.folderForeground": "#85c1dc",
-    "symbolIcon.functionForeground": "#8caaee",
-    "symbolIcon.interfaceForeground": "#e5c890",
+    "symbolIcon.functionForeground": "#C092F4",
+    "symbolIcon.interfaceForeground": "#DDFE4A",
     "symbolIcon.keyForeground": "#81c8be",
     "symbolIcon.keywordForeground": "#ca9ee6",
-    "symbolIcon.methodForeground": "#8caaee",
+    "symbolIcon.methodForeground": "#C092F4",
     "symbolIcon.moduleForeground": "#d9dbe1",
-    "symbolIcon.namespaceForeground": "#e5c890",
+    "symbolIcon.namespaceForeground": "#67FEE4",
     "symbolIcon.nullForeground": "#ea999c",
     "symbolIcon.numberForeground": "#ef9f76",
     "symbolIcon.objectForeground": "#e5c890",
@@ -344,7 +344,7 @@
     "symbolIcon.referenceForeground": "#e5c890",
     "symbolIcon.snippetForeground": "#eebebe",
     "symbolIcon.stringForeground": "#a6d189",
-    "symbolIcon.structForeground": "#81c8be",
+    "symbolIcon.structForeground": "#EE759D",
     "symbolIcon.textForeground": "#d9dbe1",
     "symbolIcon.typeParameterForeground": "#ea999c",
     "symbolIcon.unitForeground": "#d9dbe1",
@@ -490,7 +490,7 @@
         "meta.function.php"
       ],
       "settings": {
-        "foreground": "#6a9eff" // blue 6a9eff green A6FD8E
+        "foreground": "#C092F4" // blue 6a9eff green A6FD8E
       }
     },
     {
