@@ -65,8 +65,7 @@ Extensions:
   "editor.bracketPairColorization.enabled": false,
   "editor.wordWrap": "on",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "workbench.tree.indent": 18,
-  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.tree.indent": 22,
   "debug.onTaskErrors": "debugAnyway",
   "git.autofetch": true,
   "workbench.activityBar.visible": false,
@@ -74,7 +73,6 @@ Extensions:
   "breadcrumbs.enabled": false,
   "editor.rulers": [120],
   "editor.folding": false,
-  "editor.tabSize": 2,
   "terminal.integrated.defaultProfile.osx": "zsh",
   "css.lint.unknownAtRules": "ignore",
   "editor.cursorSmoothCaretAnimation": "on",
@@ -86,22 +84,27 @@ Extensions:
   // -------- NEO THEME
   // "workbench.colorTheme": "Ala Neo",
   // "editor.fontFamily": "victor mono"
+  // "workbench.iconTheme": "catppuccin-mocha",
 
   // -------- MONOKAIPRO THEME
   "workbench.colorTheme": "Ala MonokaiPro",
-  "editor.fontFamily": "victor mono"
+  "editor.fontFamily": "victor mono",
+  "workbench.iconTheme": "catppuccin-mocha",
 
   // -------- VITE THEME
   // "workbench.colorTheme": "Ala Vite",
   // "editor.fontFamily": "input, hack",
+  // "workbench.iconTheme": "catppuccin-mocha",
 
   // -------- XC THEME
   // "workbench.colorTheme": "Ala XC",
   // "editor.fontFamily": "sf mono",
+  // "workbench.iconTheme": "catppuccin-mocha",
 
   // -------- LIGHT THEME
   // "workbench.colorTheme": "Ala Vendi Light",
   // "editor.fontFamily": "cartograph cf",
+  // "workbench.iconTheme": "catppuccin-latte",
 }
 ```
 
