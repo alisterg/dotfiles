@@ -426,7 +426,7 @@
     {
       "scope": "string",
       "settings": {
-        "foreground": "#DDFE4A"
+        "foreground": "#c0d951"
       }
     },
     {
@@ -435,7 +435,7 @@
         "punctuation.definition.string.end"
       ],
       "settings": {
-        "foreground": "#DDFE4A99"
+        "foreground": "#c0d95188"
       }
     },
     // Regular keywords
@@ -476,7 +476,7 @@
         "entity.name.scope-resolution"
       ],
       "settings": {
-        "foreground": "#67FEE4"
+        "foreground": "#63e4ce"
       }
     },
     {

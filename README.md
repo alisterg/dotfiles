@@ -26,6 +26,7 @@ It's fresh computer time!
 
 Extensions:
 
+- Vim
 - Prettier
 - Quill Icons
 - Catppuccin Icons
@@ -42,7 +43,8 @@ Extensions:
 - Get wallpapers from `./wallpapers`
 - Install fonts from font repo
 - `brew tap homebrew/cask-fonts`
-- `brew install --cask font-victor-mono`
+- `brew install --cask font-ubuntu-mono`
+- `brew install --cask font-jetbrains-mono`
 - `brew install --cask font-source-code-pro`
 - `brew install --cask font-hack`
 - `brew install --cask font-sf-mono`
@@ -78,27 +80,27 @@ Extensions:
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "smooth",
   "editor.cursorSurroundingLines": 3,
+  "editor.fontSize": 14,
+  "terminal.integrated.fontSize": 14,
+  "editor.fontFamily": "ubuntu mono",
 
   // THEMES
 
   // -------- NEO THEME
-  // "workbench.colorTheme": "Ala Neo",
-  // "editor.fontFamily": "victor mono"
-  // "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.colorTheme": "Ala Neo",
+  "workbench.iconTheme": "catppuccin-mocha",
 
   // -------- MONOKAIPRO THEME
-  "workbench.colorTheme": "Ala MonokaiPro",
-  "editor.fontFamily": "victor mono",
-  "workbench.iconTheme": "catppuccin-mocha",
+  // "workbench.colorTheme": "Ala MonokaiPro",
+  // "workbench.iconTheme": "catppuccin-mocha"
+
+  // -------- XC THEME
+  // "workbench.colorTheme": "Ala XC",
+  // "workbench.iconTheme": "catppuccin-mocha",
 
   // -------- VITE THEME
   // "workbench.colorTheme": "Ala Vite",
   // "editor.fontFamily": "input, hack",
-  // "workbench.iconTheme": "catppuccin-mocha",
-
-  // -------- XC THEME
-  // "workbench.colorTheme": "Ala XC",
-  // "editor.fontFamily": "sf mono",
   // "workbench.iconTheme": "catppuccin-mocha",
 
   // -------- LIGHT THEME
