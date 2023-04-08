@@ -1,6 +1,7 @@
 {
-  "name": "theme-ala",
-  "displayName": "Ala Theme",
+  "name": "theme-a",
+  "displayName": "A-Theme",
+  "repository": "null",
   "description": "My collection of themes",
   "version": "1.0.0",
   "publisher": "alisterg",
@@ -14,59 +15,44 @@
   "contributes": {
     "themes": [
       {
-        "label": "Ala XC",
+        "label": "A-Cool",
         "uiTheme": "vs-dark",
-        "path": "./themes/ala-xc-color-theme.json"
+        "path": "./themes/a-cool-color-theme.json"
       },
       {
-        "label": "Ala Neo",
+        "label": "A-Pop",
         "uiTheme": "vs-dark",
-        "path": "./themes/ala-neo-color-theme.json"
+        "path": "./themes/a-pop-color-theme.json"
       },
       {
-        "label": "Ala Monokai",
+        "label": "A-Pro",
         "uiTheme": "vs-dark",
-        "path": "./themes/ala-kai-color-theme.json"
+        "path": "./themes/a-pro-color-theme.json"
       },
       {
-        "label": "Ala MonokaiPro",
+        "label": "A-Calm",
         "uiTheme": "vs-dark",
-        "path": "./themes/ala-kaipro-color-theme.json"
+        "path": "./themes/a-calm-color-theme.json"
       },
       {
-        "label": "Ala Gruuv",
+        "label": "A-Dark",
         "uiTheme": "vs-dark",
-        "path": "./themes/ala-gruv-color-theme.json"
+        "path": "./themes/a-dark-color-theme.json"
       },
       {
-        "label": "Ala Vite",
+        "label": "A-Frost",
         "uiTheme": "vs-dark",
-        "path": "./themes/ala-vite-color-theme.json"
+        "path": "./themes/a-frost-color-theme.json"
       },
       {
-        "label": "Ala Vendi",
-        "uiTheme": "vs-dark",
-        "path": "./themes/ala-vendi-color-theme.json"
-      },
-      {
-        "label": "Ala Winter",
-        "uiTheme": "vs-dark",
-        "path": "./themes/ala-winter-color-theme.json"
-      },
-      {
-        "label": "Ala Nord",
-        "uiTheme": "vs-dark",
-        "path": "./themes/ala-nord-color-theme.json"
-      },
-      {
-        "label": "Ala Nord Light",
+        "label": "A-FrostLight",
         "uiTheme": "vs",
-        "path": "./themes/ala-nord-light-color-theme.json"
+        "path": "./themes/a-frost-light-color-theme.json"
       },
       {
-        "label": "Ala Vendi Light",
+        "label": "A-Light",
         "uiTheme": "vs",
-        "path": "./themes/ala-vendi-light-color-theme.json"
+        "path": "./themes/a-light-color-theme.json"
       }
     ]
   },

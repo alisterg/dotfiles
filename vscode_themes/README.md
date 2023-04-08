@@ -1,4 +1,4 @@
-Here are my themes
+Here are my themes - all inspired by other themes, I take no credit for their design
 
 # To build
 
