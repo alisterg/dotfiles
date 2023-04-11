@@ -80,8 +80,8 @@ Extensions:
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "smooth",
   "editor.cursorSurroundingLines": 3,
-  "editor.fontSize": 14,
-  "terminal.integrated.fontSize": 14,
+  "editor.fontSize": 13.5,
+  "terminal.integrated.fontSize": 13.5,
   "editor.fontFamily": "ubuntu mono",
   "workbench.colorTheme": "Ala Neo",
   "workbench.iconTheme": "catppuccin-mocha"
