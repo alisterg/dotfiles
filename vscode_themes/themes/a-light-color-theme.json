@@ -146,17 +146,28 @@
       }
     },
     {
+      "scope": [
+        "punctuation",
+        "meta.brace",
+        "punctuation.definition.string.end.json.comments",
+        "punctuation.definition.string.begin.json.comments"
+      ],
+      "settings": {
+        "foreground": "#17171777"
+      }
+    },
+    {
       "name": "Comment",
       "scope": "comment",
       "settings": {
-        "foreground": "#af875b",
+        "foreground": "#419F7C",
         "fontStyle": "italic bold"
       }
     },
     {
       "scope": "comment.block.documentation",
       "settings": {
-        "foreground": "#989898"
+        "foreground": "#419F7C"
       }
     },
     {
