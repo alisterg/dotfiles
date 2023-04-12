@@ -20,6 +20,11 @@
         "path": "./themes/a-cool-color-theme.json"
       },
       {
+        "label": "A-Ok",
+        "uiTheme": "vs-dark",
+        "path": "./themes/a-ok-color-theme.json"
+      },
+      {
         "label": "A-Pop",
         "uiTheme": "vs-dark",
         "path": "./themes/a-pop-color-theme.json"
