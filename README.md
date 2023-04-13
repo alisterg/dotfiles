@@ -80,11 +80,21 @@ Extensions:
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "smooth",
   "editor.cursorSurroundingLines": 3,
-  "editor.fontSize": 13.5,
-  "terminal.integrated.fontSize": 13.5,
-  "editor.fontFamily": "ubuntu mono",
-  "workbench.colorTheme": "Ala Neo",
-  "workbench.iconTheme": "catppuccin-mocha"
+  "editor.fontFamily": "iosevkata, ubuntu mono",
+  "workbench.iconTheme": "catppuccin-frappe",
+  "workbench.colorTheme": "A-Ok",
+  "editor.guides.indentation": false,
+  "files.exclude": {
+    "node_modules": true,
+    "package-lock.json": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true
+  },
+  "editor.tabSize": 2
 }
 ```
 
