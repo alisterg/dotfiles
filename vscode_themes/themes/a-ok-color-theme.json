@@ -59,6 +59,7 @@
     "list.errorForeground": "#bb726e",
     "list.warningForeground": "#a9a4a0",
     "gitDecoration.modifiedResourceForeground": "#a9a4a0",
+    "gitDecoration.untrackedResourceForeground": "#a9a4a0",
     "minimap.selectionHighlight": "#274642",
     // "panel.border": "#424242",
     "peekView.border": "#d7d7d799",
