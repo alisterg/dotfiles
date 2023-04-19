@@ -22,9 +22,6 @@
     "editor.wordHighlightBackground": "#757575aa",
     "editor.wordHighlightStrongBackground": "#757575aa",
     // "editorError.background": "#d3368277",
-    "editorBracketHighlight.foreground1": "#cdcdcd",
-    "editorBracketHighlight.foreground2": "#b58900",
-    "editorBracketHighlight.foreground3": "#d33682",
     "editorCursor.foreground": "#41A2C099",
     "editorGroup.dropBackground": "#d7d7d744",
     "editorGroupHeader.tabsBackground": "#1F2226",
@@ -114,6 +111,10 @@
     "editorHoverWidget.border": "#b7b7b7",
     "notifications.background": "#1F2226",
     "panel.background": "#1F2226",
+    "editorBracketHighlight.foreground1": "#E77838bb",
+    "editorBracketHighlight.foreground2": "#41A2C0bb",
+    "editorBracketHighlight.foreground3": "#91A62Abb",
+    "editorBracketHighlight.foreground4": "#D25C60bb",
     // icons
     "symbolIcon.arrayForeground": "#41A2C0",
     "symbolIcon.booleanForeground": "#41A2C0",
@@ -147,7 +148,7 @@
     "symbolIcon.textForeground": "#d9dbe1",
     "symbolIcon.typeParameterForeground": "#e77838",
     "symbolIcon.unitForeground": "#e5c890",
-    "symbolIcon.variableForeground": "#A9A4A0",
+    "symbolIcon.variableForeground": "#A9A4A0"
   },
   "tokenColors": [
     {

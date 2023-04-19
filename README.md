@@ -68,7 +68,7 @@ Extensions:
   "editor.fontLigatures": true,
   "editor.wordWrap": "on",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "workbench.tree.indent": 22,
+  "workbench.tree.indent": 20,
   "debug.onTaskErrors": "debugAnyway",
   "git.autofetch": true,
   "editor.minimap.showSlider": "always",
@@ -80,7 +80,7 @@ Extensions:
   "editor.cursorBlinking": "smooth",
   "editor.cursorSurroundingLines": 3,
   "editor.fontFamily": "consolas ligaturized v3, iosevkata, ubuntu mono",
-  "workbench.iconTheme": "catppuccin-frappe",
+  "workbench.iconTheme": "quill-icons-minimal",
   "editor.guides.indentation": false,
   "files.exclude": {
     "node_modules": true,
@@ -102,12 +102,6 @@ Extensions:
   "workbench.colorTheme": "A-Ok",
   "workbench.activityBar.visible": false,
   "editor.folding": false,
-  "workbench.colorCustomizations": {
-    "editorBracketHighlight.foreground1": "#E77838bb",
-    "editorBracketHighlight.foreground2": "#41A2C0bb",
-    "editorBracketHighlight.foreground3": "#91A62Abb",
-    "editorBracketHighlight.foreground4": "#D25C60bb"
-  },
   "editor.fontSize": 13
 }
 ```
