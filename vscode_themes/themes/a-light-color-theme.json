@@ -492,6 +492,10 @@
     "pickerGroup.border": "#1717171a",
     "debugToolBar.background": "#f7f7f7",
     "selection.background": "#bfdbfe",
-    "editorGutter.modifiedBackground": "#3272e8"
+    "editorGutter.modifiedBackground": "#3272e8",
+    "editorBracketHighlight.foreground1": "#171717cc",
+    "editorBracketHighlight.foreground2": "#171717cc",
+    "editorBracketHighlight.foreground3": "#171717cc",
+    "editorBracketHighlight.foreground4": "#171717cc"
   }
 }
