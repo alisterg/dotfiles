@@ -20,9 +20,14 @@
         "path": "./themes/a-cool-color-theme.json"
       },
       {
-        "label": "A-Ok",
+        "label": "A-OkLowContrast",
         "uiTheme": "vs-dark",
         "path": "./themes/a-ok-color-theme.json"
+      },
+      {
+        "label": "A-Ok",
+        "uiTheme": "vs-dark",
+        "path": "./themes/a-okhc-color-theme.json"
       },
       {
         "label": "A-Pop",
