@@ -22,12 +22,12 @@
       {
         "label": "A-OkLowContrast",
         "uiTheme": "vs-dark",
-        "path": "./themes/a-ok-color-theme.json"
+        "path": "./themes/a-oklc-color-theme.json"
       },
       {
         "label": "A-Ok",
         "uiTheme": "vs-dark",
-        "path": "./themes/a-okhc-color-theme.json"
+        "path": "./themes/a-ok-color-theme.json"
       },
       {
         "label": "A-Pop",
@@ -38,11 +38,6 @@
         "label": "A-Pro",
         "uiTheme": "vs-dark",
         "path": "./themes/a-pro-color-theme.json"
-      },
-      {
-        "label": "A-Calm",
-        "uiTheme": "vs-dark",
-        "path": "./themes/a-calm-color-theme.json"
       },
       {
         "label": "A-Dark",
