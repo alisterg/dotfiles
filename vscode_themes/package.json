@@ -30,6 +30,11 @@
         "path": "./themes/a-ok-color-theme.json"
       },
       {
+        "label": "A-Solar",
+        "uiTheme": "vs-dark",
+        "path": "./themes/a-solar-color-theme.json"
+      },
+      {
         "label": "A-Pop",
         "uiTheme": "vs-dark",
         "path": "./themes/a-pop-color-theme.json"
