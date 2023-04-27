@@ -65,6 +65,11 @@
         "path": "./themes/a-light-color-theme.json"
       },
       {
+        "label": "A-Solar-Light",
+        "uiTheme": "vs",
+        "path": "./themes/a-solarlight-color-theme.json"
+      },
+      {
         "label": "A-OkLight",
         "uiTheme": "vs",
         "path": "./themes/a-oklight-color-theme.json"
