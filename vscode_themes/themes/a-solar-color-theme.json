@@ -228,7 +228,8 @@
         "keyword.control",
         "storage.modifier",
         "keyword.other",
-        "storage.type"
+        "storage.type",
+        "keyword.function.go"
       ],
       "settings": {
         "foreground": "#e83b8e"
@@ -236,6 +237,8 @@
     },
     {
       "scope": [
+        "keyword.import",
+        "keyword.package",
         "keyword.control.import",
         "keyword.control.export",
         "keyword.other.using",
@@ -254,7 +257,12 @@
       }
     },
     {
-      "scope": ["constant.numeric", "constant.language", "constant.character", "constant.other"],
+      "scope": [
+        "constant.numeric",
+        "constant.language",
+        "constant.character",
+        "constant.other"
+      ],
       "settings": {
         "foreground": "#92b300"
       }
@@ -268,7 +276,7 @@
     {
       "scope": [
         // "variable.parameter",
-        "punctuation.definition.variable.php",
+        "punctuation.definition.variable.php"
       ],
       "settings": {
         "foreground": "#92b300"
@@ -300,7 +308,8 @@
         "meta.method-call",
         "entity.name.function.cs",
         "meta.function.php",
-        "meta.function-call.tsx entity.name.function.tsx"
+        "meta.function-call.tsx entity.name.function.tsx",
+        "support.function.go"
       ],
       "settings": {
         "foreground": "#348fe5"
@@ -340,7 +349,12 @@
       }
     },
     {
-      "scope": "support.function",
+      "scope": [
+        "support.function",
+        "storage.type.string.go",
+        "storage.type.boolean.go",
+        "storage.type.numeric.go"
+      ],
       "settings": {
         "foreground": "#8281ca"
       }
