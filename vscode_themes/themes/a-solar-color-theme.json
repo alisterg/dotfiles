@@ -128,10 +128,10 @@
     "notifications.background": "#1F2226",
     "panel.background": "#1F2226",
     // "editorBracketHighlight.foreground1": "#A9BCBCbb",
-    "editorBracketHighlight.foreground2": "#e83b8ebb",
-    "editorBracketHighlight.foreground3": "#348fe5bb",
+    "editorBracketHighlight.foreground3": "#e83b8ebb",
+    "editorBracketHighlight.foreground2": "#348fe5bb",
     "editorBracketHighlight.foreground1": "#21ab9dbb",
-    "editorBracketHighlight.foreground4": "#cc5623bb",
+    "editorBracketHighlight.foreground4": "#8281CAbb", //cc5623
     // icons
     "symbolIcon.arrayForeground": "#348fe5",
     "symbolIcon.booleanForeground": "#348fe5",
@@ -223,18 +223,28 @@
         "foreground": "#21ab9d99"
       }
     },
+
     {
-      "scope": [
-        "keyword.control",
-        "storage.modifier",
-        "keyword.other",
-        "storage.type",
-        "keyword.function.go"
-      ],
+      "scope": ["keyword.control", "keyword.other"],
       "settings": {
         "foreground": "#e83b8e"
       }
     },
+    {
+      "scope": ["storage.modifier", "storage.type"],
+      "settings": {
+        "foreground": "#348fe5", // "#393f3f",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": ["keyword.other.var.cs", "storage.type"],
+      "settings": {
+        "foreground": "#A9BCBC",
+        "fontStyle": "bold"
+      }
+    },
+
     {
       "scope": [
         "keyword.import",
@@ -289,27 +299,23 @@
       }
     },
     {
-      "name": "function definitions",
-      "scope": [
-        "meta.object.member.ts entity.name.function.ts",
-        "meta.method.declaration.ts entity.name.function.ts",
-        "meta.definition.function",
-        "meta.definition.variable entity.name.function"
-      ],
-      "settings": {
-        "foreground": "#A9BCBC"
-      }
-    },
-    {
-      "name": "overrides for function call",
       "scope": [
         "meta.method.declaration.ts meta.function-call.ts entity.name.function.ts",
         "meta.function-call.ts entity.name.function.ts",
         "meta.method-call",
-        "entity.name.function.cs",
+        "entity.name.function",
         "meta.function.php",
         "meta.function-call.tsx entity.name.function.tsx",
-        "support.function.go"
+        "entity.name.variable.parameter.cs",
+        "storage.type.function",
+        "variable.parameter",
+        "support.function.go",
+        "keyword.function.go",
+
+        "meta.object.member.ts entity.name.function.ts",
+        "meta.method.declaration.ts entity.name.function.ts",
+        "meta.definition.function",
+        "meta.definition.variable entity.name.function"
       ],
       "settings": {
         "foreground": "#348fe5"
@@ -349,12 +355,7 @@
       }
     },
     {
-      "scope": [
-        "support.function",
-        "storage.type.string.go",
-        "storage.type.boolean.go",
-        "storage.type.numeric.go"
-      ],
+      "scope": "support.function",
       "settings": {
         "foreground": "#8281ca"
       }
@@ -454,7 +455,7 @@
     {
       "scope": "markup.inline.raw",
       "settings": {
-        "foreground": "#21ab9d"
+        "foreground": "#E6DB74"
       }
     },
     {
