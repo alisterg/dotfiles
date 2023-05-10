@@ -1,0 +1,75 @@
+[buildPlans.io-lib]
+family = "io lib"
+spacing = "normal"
+serifs = "sans"
+no-cv-ss = true
+export-glyph-names = false
+
+  [buildPlans.io-lib.variants]
+  inherits = "ss06"
+
+    [buildPlans.io-lib.variants.design]
+    capital-b = "standard-serifless"
+    capital-d = "standard-serifless"
+    capital-g = "toothless-corner-serifless-hooked"
+    capital-i = "short-serifed"
+    capital-j = "serifless"
+    capital-q = "straight"
+    capital-r = "standing"
+    capital-u = "toothless-corner"
+    capital-v = "straight"
+    capital-w = "straight-flat-top"
+    capital-x = "straight-serifless"
+    a = "double-storey-serifless"
+    f = "flat-hook"
+    g = "single-storey-flat-hook-serifless"
+    j = "flat-hook-serifed"
+    l = "serifed"
+    m = "normal"
+    r = "hookless"
+    t = "flat-hook"
+    v = "straight"
+    w = "straight-flat-top"
+    y = "straight"
+    zero = "slashed"
+    one = "no-base"
+    two = "straight-neck"
+    three = "flat-top"
+    four = "semi-open"
+    five = "vertical-upper-left-bar"
+    six = "straight-bar"
+    seven = "straight-serifless"
+    eight = "two-circles"
+    nine = "straight-bar"
+    punctuation-dot = "square"
+    asterisk = "penta-low"
+    underscore = "high"
+    brace = "curly"
+    number-sign = "upright"
+    ampersand = "upper-open"
+    at = "threefold"
+    dollar = "through-cap"
+    percent = "rings-segmented-slash"
+    question = "corner-flat-hooked"
+
+[buildPlans.io-lib.widths.normal]
+shape = 600
+menu = 5
+css = "normal"
+
+[buildPlans.io-lib.slopes.upright]
+angle = 0
+shape = "upright"
+menu = "upright"
+css = "normal"
+
+[buildPlans.io-lib.slopes.oblique]
+angle = 9.4
+shape = "oblique"
+menu = "oblique"
+css = "oblique"
+
+[buildPlans.io-lib.metric-override]
+cap = 683
+ascender = 688
+parenSize = 868

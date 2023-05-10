@@ -43,13 +43,10 @@ Extensions:
 - ImageOptim: `brew install --cask imageoptim`
 - SF Symbols: `brew install --cask sf-symbols`
 - Get wallpapers from `./wallpapers`
-- Install fonts from font repo
+- Install font from `./font`
 - `brew tap homebrew/cask-fonts`
 - `brew install --cask font-ubuntu-mono`
-- `brew install --cask font-jetbrains-mono`
 - `brew install --cask font-source-code-pro`
-- `brew install --cask font-hack`
-- `brew install --cask font-sf-mono`
 
 # Others
 
@@ -65,21 +62,20 @@ Extensions:
 {
   "telemetry.telemetryLevel": "off",
   "window.commandCenter": false,
-  "editor.fontLigatures": true,
+  "editor.fontLigatures": false,
   "editor.wordWrap": "on",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "workbench.tree.indent": 20,
   "debug.onTaskErrors": "debugAnyway",
   "git.autofetch": true,
   "editor.minimap.showSlider": "always",
   "breadcrumbs.enabled": false,
-  "editor.rulers": [120],
+  "editor.bracketPairColorization.enabled": true,
+  "editor.rulers": [100],
   "terminal.integrated.defaultProfile.osx": "zsh",
   "css.lint.unknownAtRules": "ignore",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "smooth",
   "editor.cursorSurroundingLines": 3,
-  "editor.fontFamily": "consolas ligaturized v3, iosevkata, ubuntu mono",
+  "editor.fontFamily": "io lib, ubuntu mono, source code pro",
   "workbench.iconTheme": "quill-icons-minimal",
   "editor.guides.indentation": false,
   "files.exclude": {
@@ -92,17 +88,48 @@ Extensions:
     "**/.DS_Store": true,
     "**/Thumbs.db": true
   },
+  "prettier.printWidth": 120,
   "aws.telemetry": false,
   "aws.codeWhisperer.shareCodeWhispererContentWithAWS": false,
   "diffEditor.codeLens": true,
   "csharp.referencesCodeLens.enabled": false,
+  "workbench.activityBar.visible": false,
+  "editor.folding": false,
   "[csharp]": {
     "editor.defaultFormatter": "ms-dotnettools.csharp"
   },
-  "workbench.colorTheme": "A-Ok",
-  "workbench.activityBar.visible": false,
-  "editor.folding": false,
-  "editor.fontSize": 13
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": false
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "vue.inlayHints.optionsWrapper": false,
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorTheme": "A-Bright"
 }
 ```
 

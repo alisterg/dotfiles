@@ -15,64 +15,19 @@
   "contributes": {
     "themes": [
       {
-        "label": "A-Cool",
-        "uiTheme": "vs-dark",
-        "path": "./themes/a-cool-color-theme.json"
-      },
-      {
-        "label": "A-OkLowContrast",
-        "uiTheme": "vs-dark",
-        "path": "./themes/a-oklc-color-theme.json"
-      },
-      {
-        "label": "A-Ok",
-        "uiTheme": "vs-dark",
-        "path": "./themes/a-ok-color-theme.json"
-      },
-      {
-        "label": "A-Solar",
-        "uiTheme": "vs-dark",
-        "path": "./themes/a-solar-color-theme.json"
-      },
-      {
-        "label": "A-Pop",
-        "uiTheme": "vs-dark",
-        "path": "./themes/a-pop-color-theme.json"
-      },
-      {
-        "label": "A-Pro",
-        "uiTheme": "vs-dark",
-        "path": "./themes/a-pro-color-theme.json"
-      },
-      {
         "label": "A-Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/a-dark-color-theme.json"
       },
       {
-        "label": "A-Frost",
+        "label": "A-Dim",
         "uiTheme": "vs-dark",
-        "path": "./themes/a-frost-color-theme.json"
+        "path": "./themes/a-dim-color-theme.json"
       },
       {
-        "label": "A-FrostLight",
+        "label": "A-Bright",
         "uiTheme": "vs",
-        "path": "./themes/a-frost-light-color-theme.json"
-      },
-      {
-        "label": "A-Light",
-        "uiTheme": "vs",
-        "path": "./themes/a-light-color-theme.json"
-      },
-      {
-        "label": "A-Solar-Light",
-        "uiTheme": "vs",
-        "path": "./themes/a-solarlight-color-theme.json"
-      },
-      {
-        "label": "A-OkLight",
-        "uiTheme": "vs",
-        "path": "./themes/a-oklight-color-theme.json"
+        "path": "./themes/a-bright-color-theme.json"
       }
     ]
   },
