@@ -201,7 +201,13 @@
       }
     },
     {
-      "scope": ["storage.type", "keyword.other.var.cs", "keyword.other.new"],
+      "scope": [
+        "storage.type",
+        "keyword.other.var.cs",
+        "keyword.other.new",
+        "keyword.function.go",
+        "keyword.import.go"
+      ],
       "settings": {
         "foreground": "#e183ac"
       }
@@ -248,6 +254,7 @@
         "meta.definition.function",
         "meta.definition.variable entity.name.function",
         "entity.name.function.cs",
+        "entity.name.function.go",
         "meta.function.php",
         "meta.definition.method.js entity.name.function.js"
       ],
@@ -262,7 +269,8 @@
         "meta.function-call.ts entity.name.function.ts",
         "meta.method-call",
         "variable.other.object.property.cs",
-        "meta.function-call.js entity.name.function.js"
+        "meta.function-call.js entity.name.function.js",
+        "support.function.go"
       ],
       "settings": {
         "foreground": "#A167E6"
