@@ -15,17 +15,32 @@
   "contributes": {
     "themes": [
       {
-        "label": "A-Dark",
+        "label": "A-1 Monday",
         "uiTheme": "vs-dark",
-        "path": "./themes/a-dark-color-theme.json"
+        "path": "./themes/a-monday-color-theme.json"
       },
       {
-        "label": "A-Dim",
+        "label": "A-2 Tuesday",
         "uiTheme": "vs-dark",
-        "path": "./themes/a-dim-color-theme.json"
+        "path": "./themes/a-tuesday-color-theme.json"
       },
       {
-        "label": "A-Bright",
+        "label": "A-3 Wednesday",
+        "uiTheme": "vs-dark",
+        "path": "./themes/a-wednesday-color-theme.json"
+      },
+      {
+        "label": "A-4 Thursday",
+        "uiTheme": "vs-dark",
+        "path": "./themes/a-thursday-color-theme.json"
+      },
+      {
+        "label": "A-5 Weekend",
+        "uiTheme": "vs-dark",
+        "path": "./themes/a-weekend-color-theme.json"
+      },
+      {
+        "label": "A-Light",
         "uiTheme": "vs",
         "path": "./themes/a-bright-color-theme.json"
       }

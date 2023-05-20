@@ -28,8 +28,9 @@ Extensions:
 
 - Vim
 - Prettier
-- Quill Icons
-- Catppuccin Icons
+- Bearded icons
+- Quill icons
+- Separators
 - AWS Toolkit
 - Insert GUID
 - Any language / framework related plugins
@@ -45,7 +46,6 @@ Extensions:
 - Get wallpapers from `./wallpapers`
 - Install font from `./font`
 - `brew tap homebrew/cask-fonts`
-- `brew install --cask font-ubuntu-mono`
 - `brew install --cask font-source-code-pro`
 
 # Others
@@ -62,12 +62,11 @@ Extensions:
 {
   "telemetry.telemetryLevel": "off",
   "window.commandCenter": false,
-  "editor.fontLigatures": false,
+  "editor.fontLigatures": true,
   "editor.wordWrap": "on",
   "debug.onTaskErrors": "debugAnyway",
   "git.autofetch": true,
   "editor.minimap.showSlider": "always",
-  "breadcrumbs.enabled": false,
   "editor.bracketPairColorization.enabled": true,
   "editor.rulers": [100],
   "terminal.integrated.defaultProfile.osx": "zsh",
@@ -75,8 +74,7 @@ Extensions:
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "smooth",
   "editor.cursorSurroundingLines": 3,
-  "editor.fontFamily": "io lib, ubuntu mono, source code pro",
-  "workbench.iconTheme": "quill-icons-minimal",
+  "workbench.iconTheme": "bearded-icons",
   "editor.guides.indentation": false,
   "files.exclude": {
     "node_modules": true,
@@ -93,8 +91,8 @@ Extensions:
   "aws.codeWhisperer.shareCodeWhispererContentWithAWS": false,
   "diffEditor.codeLens": true,
   "csharp.referencesCodeLens.enabled": false,
-  "workbench.activityBar.visible": false,
   "editor.folding": false,
+  "separators.functions.ignoreCallbackInline": true,
   "[csharp]": {
     "editor.defaultFormatter": "ms-dotnettools.csharp"
   },
@@ -129,7 +127,34 @@ Extensions:
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.colorTheme": "A-Bright"
+  "git.confirmSync": false,
+  "workbench.activityBar.visible": false,
+
+  // MONDAY
+  // "editor.lineHeight": 22,
+  // "workbench.colorTheme": "A-1 Monday",
+  // "editor.fontFamily": "jetbrains mono",
+
+  // TUESDAY
+  // "editor.lineHeight": 0,
+  // "editor.fontSize": 13.5,
+  // "workbench.colorTheme": "A-2 Tuesday",
+  // "editor.fontFamily": "ubuntu mono ligaturized",
+
+  // WEDNESDAY
+  // "editor.lineHeight": 22,
+  // "workbench.colorTheme": "A-3 Wednesday",
+  // "editor.fontFamily": "jetbrains mono",
+
+  // THURSDAY
+  // "editor.lineHeight": 0,
+  // "workbench.colorTheme": "A-4 Thursday",
+  // "editor.fontFamily": "input",
+
+  // WEEKEND
+  "editor.lineHeight": 0,
+  "workbench.colorTheme": "A-5 Weekend",
+  "editor.fontFamily": "io lib"
 }
 ```
 
