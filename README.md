@@ -24,19 +24,18 @@ It's fresh computer time!
 - Install themes from `./vscode_themes` (.vsix file)
 - Sign in with GitHub
 
-Extensions:
+Extensions (it should install automatically when you sign in):
 
 - Vim
 - Prettier
-- Bearded icons
 - Quill icons
 - Separators
 - AWS Toolkit
-- Insert GUID
-- Any language / framework related plugins
 
 # Misc
 
+- Jetbrains toolbox: `brew install --cask jetbrains-toolbox`
+- Iosevka comfy font: `https://github.com/protesilaos/iosevka-comfy`
 - Node: `brew install nvm`
   - Then follow the instructions to add to PATH etc
 - Firefox: `brew install --cask firefox`
@@ -68,7 +67,7 @@ Extensions:
   "git.autofetch": true,
   "editor.minimap.showSlider": "always",
   "editor.bracketPairColorization.enabled": true,
-  "editor.rulers": [100],
+  "editor.rulers": [120],
   "terminal.integrated.defaultProfile.osx": "zsh",
   "css.lint.unknownAtRules": "ignore",
   "editor.cursorSmoothCaretAnimation": "on",
@@ -129,31 +128,8 @@ Extensions:
   },
   "git.confirmSync": false,
   "workbench.activityBar.visible": false,
-
-  // MONDAY
-  // "editor.lineHeight": 22,
-  // "workbench.colorTheme": "A-1 Monday",
-  // "editor.fontFamily": "jetbrains mono",
-
-  // TUESDAY
-  // "editor.lineHeight": 0,
-  // "editor.fontSize": 13.5,
-  // "workbench.colorTheme": "A-2 Tuesday",
-  // "editor.fontFamily": "ubuntu mono ligaturized",
-
-  // WEDNESDAY
-  // "editor.lineHeight": 22,
-  // "workbench.colorTheme": "A-3 Wednesday",
-  // "editor.fontFamily": "jetbrains mono",
-
-  // THURSDAY
-  // "editor.lineHeight": 0,
-  // "workbench.colorTheme": "A-4 Thursday",
-  // "editor.fontFamily": "input",
-
-  // WEEKEND
   "editor.lineHeight": 0,
-  "workbench.colorTheme": "A-5 Weekend",
+  "workbench.colorTheme": "A-1 Monday",
   "editor.fontFamily": "io lib"
 }
 ```
