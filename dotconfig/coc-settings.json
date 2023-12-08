@@ -1,0 +1,24 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [],
+  "suggest.completionItemKindLabels": {
+    "variable": "",
+    "constant": "",
+    "field": "",
+    "function": "",
+    "method": "",
+    "text": "",
+    "keyword": "",
+    "class": "",
+    "interface": "",
+    "property": "",
+    "default": ""
+  },
+  "languageserver": {
+  "godot": {
+      "host": "127.0.0.1",
+      "filetypes": ["gd", "gdscript3"],
+      "port": 6008
+    }
+  }
+}
+
