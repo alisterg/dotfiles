@@ -17,6 +17,7 @@ It's fresh computer time!
   - `brew tap homebrew/cask-fonts`
   - `brew install --cask font-ubuntu-mono`
 - z: `brew install z`
+- fzf: `brew install fzf`
 - Oh My Zsh: https://ohmyz.sh/
 - PowerLevel10k: https://github.com/romkatv/powerlevel10k#oh-my-zsh
 - tmux:

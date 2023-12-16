@@ -1,6 +1,5 @@
 if !exists('g:loaded_telescope') | finish | endif
 
-
 nmap gf <cmd>Telescope find_files<cr>
 nmap ga <cmd>Telescope live_grep<cr>
 "nnoremap <silent> \\ <cmd>Telescope buffers<cr>
@@ -13,7 +12,12 @@ local actions = require('telescope.actions')
 require('telescope').setup{
   defaults = {
     file_ignore_patterns = {"node_modules"},
+    -- layout_strategy = "vertical",
     layout_config = {
+      vertical = {
+        prompt_position = "top",
+        mirror = true,
+      },
       preview_width = 80
     },
     mappings = {
@@ -24,4 +28,3 @@ require('telescope').setup{
   }
 }
 EOF
-
