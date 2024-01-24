@@ -1,0 +1,77 @@
+-- Bubbles config for lualine
+-- Author: lokesh-krishna
+-- MIT license, see LICENSE for more details.
+
+-- stylua: ignore
+local colors = {
+  blue   = '#57a2e8',
+  black  = '#1a1a1b',
+  white  = '#bacece',
+  orange = '#d08770',
+  red    = '#bf616a',
+  green  = '#92b300',
+  violet = '#e183ac',
+  grey   = '#454549',
+}
+
+local bubbles_theme = {
+  normal = {
+    a = { fg = colors.white, bg = colors.black },
+    b = { fg = colors.white, bg = colors.black },
+    c = { fg = colors.black, bg = colors.grey },
+  },
+  command = {
+    a = { fg = colors.black, bg = colors.green },
+    b = { fg = colors.green, bg = colors.black },
+    c = { fg = colors.black, bg = colors.grey },
+  },
+  insert = {
+    a = { fg = colors.black, bg = colors.blue },
+    b = { fg = colors.blue, bg = colors.black },
+    c = { fg = colors.black, bg = colors.grey },
+  },
+  visual = {
+    a = { fg = colors.black, bg = colors.violet },
+    b = { fg = colors.violet, bg = colors.black },
+    c = { fg = colors.black, bg = colors.grey },
+  },
+  replace = { a = { fg = colors.white, bg = colors.orange } },
+
+  inactive = {
+    a = { fg = colors.white, bg = colors.black },
+    b = { fg = colors.white, bg = colors.black },
+    c = { fg = colors.black, bg = colors.black },
+  },
+}
+
+require('lualine').setup {
+  options = {
+    theme = bubbles_theme,
+    component_separators = '|',
+    section_separators = {'', ''},
+  },
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'branch', 'diff'},
+    lualine_c = {{
+      'filename',
+      file_status = true, -- displays file status (readonly status, modified status)
+      path = 0 -- 0 = just filename, 1 = relative path, 2 = absolute path
+    }},
+    lualine_x = {
+      --{ 'diagnostics', sources = {"nvim_lsp"}, symbols = {error = ' ', warn = ' ', info = ' ', hint = ' '} },
+      --'filetype'
+    },
+    --lualine_z = {'location'}
+  },
+  inactive_sections = {
+    lualine_a = { 'filename' },
+    lualine_b = {},
+    lualine_c = {},
+    lualine_x = {},
+    lualine_y = {},
+    lualine_z = { 'location' },
+  },
+  tabline = {},
+  extensions = {},
+}
