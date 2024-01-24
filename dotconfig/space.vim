@@ -22,13 +22,13 @@ let s:lighter_gray    = { "gui": "#c0c4cd", "cterm": "251" } " fg
 let s:medium_gray     = { "gui": "#616E88", "cterm": "243" } " comments
 let s:dark_red        = { "gui": "#bf616a", "cterm": "1"   } " red
 let s:orange          = { "gui": "#d08770", "cterm": "167" } " orange
-let s:blue            = { "gui": "#8fa1b3", "cterm": "12"  } " blue
-let s:light_blue      = { "gui": "#5699af", "cterm": "153" } " dark cyan
+let s:yellow          = { "gui": "#ecbe7b", "cterm": "11"  } " yellow
 let s:dark_green      = { "gui": "#a3be8c", "cterm": "2"   } " green
 let s:light_green     = { "gui": "#88c0d0", "cterm": "10"  } " light cyan
-let s:light_purple    = { "gui": "#e298c2", "cterm": "134" } " magenta
+let s:light_blue      = { "gui": "#5699af", "cterm": "153" } " dark cyan
+let s:blue            = { "gui": "#8fa1b3", "cterm": "12"  } " blue
 let s:dark_purple     = { "gui": "#b48ead", "cterm": "134" } " magenta
-let s:yellow          = { "gui": "#ecbe7b", "cterm": "11"  } " yellow
+let s:light_purple    = { "gui": "#e298c2", "cterm": "134" } " magenta
 let s:white           = { "gui": "#D5D9E2", "cterm": "15"  }
 let s:light_black     = { "gui": "#323845", "cterm": "235" }
 let s:light_gray      = { "gui": "#A8A8A8", "cterm": "248" }
@@ -105,13 +105,12 @@ hi! link csRepeat        typeScriptRepeat
 call s:h("Identifier",    {"fg": s:orange})
 hi! link Function         Identifier
 hi! link typeScriptIdentifier Identifier
-hi! link markdownH1 Identifier
 
 call s:h("Keyword",    {"fg": s:dark_purple})
 hi! link typeScriptPredefinedType Keyword
 hi! link typeScriptNull Keyword
 
-call s:h("typeScriptAliasDeclaration",    {"fg": s:yellow})
+call s:h("typeScriptAliasDeclaration",    {"fg": s:light_purple})
 hi! link typeScriptClassName typeScriptAliasDeclaration
 hi! link typeScriptEnum typeScriptAliasDeclaration
 hi! link csClassType typeScriptAliasDeclaration
@@ -122,11 +121,19 @@ hi! link Repeat           Statement
 hi! link Label            Statement
 hi! link Exception        Statement
 hi! link jsonQuote    Statement
-hi! link markdownH2 Statement
-hi! link markdownH3 Statement
-hi! link markdownH4 Statement
-hi! link markdownH5 Statement
-hi! link markdownH6 Statement
+
+call s:h("markdownH1", {"fg": s:dark_green})
+call s:h("markdownH1Delimiter", {"fg": s:blue})
+call s:h("markdownH2", {"fg": s:light_green})
+call s:h("markdownH2Delimiter", {"fg": s:light_blue})
+call s:h("markdownH3", {"fg": s:light_red})
+call s:h("markdownH3Delimiter", {"fg": s:dark_red})
+call s:h("markdownH4", {"fg": s:light_red})
+call s:h("markdownH4Delimiter", {"fg": s:dark_red})
+call s:h("markdownH5", {"fg": s:light_purple})
+call s:h("markdownH5Delimiter", {"fg": s:dark_purple})
+call s:h("markdownH6", {"fg": s:dark_green})
+call s:h("markdownH6Delimiter", {"fg": s:dark_green})
 
 call s:h("htmlTagName",     {"fg": s:light_purple})
 call s:h("htmlTagN",     {"fg": s:orange})
@@ -173,7 +180,7 @@ call s:h("Visual",        {"fg": s:norm, "bg": s:dark_purple})
 call s:h("VisualNOS",     {"bg": s:bg_subtle})
 call s:h("WarningMsg",    {"fg": s:yellow})
 call s:h("WildMenu",      {"fg": s:bg, "bg": s:norm})
-call s:h("Folded",        {"fg": s:light_purple, "bg": s:light_black})
+call s:h("Folded",        {"fg": s:yellow, "bg": s:light_black})
 call s:h("FoldColumn",    {"fg": s:bg_subtle})
 call s:h("DiffAdd",       {"fg": s:light_green})
 call s:h("DiffDelete",    {"fg": s:red})

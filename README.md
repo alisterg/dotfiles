@@ -13,16 +13,14 @@ It's fresh computer time!
 
 - iterm2: `brew install --cask iterm2`
 - Install the profiles from `./iterm_profiles`
-- Ubuntu mono:
-  - `brew tap homebrew/cask-fonts`
-  - `brew install --cask font-ubuntu-mono`
+- Install SF mono from ./font
 - z: `brew install z`
-- fzf: `brew install fzf`
 - Oh My Zsh: https://ohmyz.sh/
 - PowerLevel10k: https://github.com/romkatv/powerlevel10k#oh-my-zsh
 - tmux:
   - `brew install tmux`
   - Copy .tmux.conf to home directory
+- tmuxinator: `brew install tmuxinator`
 - neovim:
   - `brew install neovim`
   - Copy dotfiles from `dotconfig` to `~/.config/nvim`
@@ -36,6 +34,3 @@ It's fresh computer time!
   - Then follow the instructions to add to PATH etc
 - Firefox: `brew install --cask firefox`
 - Chrome: `brew install --cask google-chrome`
-- ImageOptim: `brew install --cask imageoptim`
-- Get wallpapers from `./wallpapers`
-- Slack: `brew install --cask slack`

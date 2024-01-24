@@ -12,13 +12,13 @@ local actions = require('telescope.actions')
 require('telescope').setup{
   defaults = {
     file_ignore_patterns = {"node_modules"},
-    -- layout_strategy = "vertical",
+    layout_strategy = "vertical",
     layout_config = {
       vertical = {
         prompt_position = "top",
         mirror = true,
       },
-      preview_width = 80
+      preview_width = 60
     },
     mappings = {
       n = {

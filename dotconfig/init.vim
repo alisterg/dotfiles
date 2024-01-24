@@ -25,12 +25,14 @@ if exists("&termguicolors") && exists("&winblend")
   "runtime ./light_space.vim
 
   set background=dark
-  runtime ./space.vim
+  "runtime ./space.vim
+  runtime ./tmoz.vim
   highlight Visual cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey40
   
   set cursorline
 endif
 
+let g:markdown_folding = 1
 set showcmd
 set cmdheight=1
 set laststatus=2
@@ -53,13 +55,12 @@ set wrap "Soft Wrap lines
 set foldmethod=indent
 set foldnestmax=2
 set foldlevel=2
-let g:markdown_folding = 1
 
 " Add asterisks in block comments
 set formatoptions+=r
 
 " Automatically start colorizer (highlights hash colours)
-autocmd VimEnter * :ColorizerAttachToBuffer
+autocmd VimEnter * :ColorizerToggle
 
 "-----------------------------
 " Netrw - file explorer
@@ -103,6 +104,8 @@ nmap <C-a> gg<S-v>G
 "This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR>
 
+nnoremap gb :Telescope buffers<CR>
+
 " MOVING LINES
 " Normal mode
 nnoremap <C-j> :m .+1<CR>==
@@ -126,7 +129,7 @@ let g:gitgutter_sign_modified_removed = '|'
 
 set updatetime=200
 
-" Change tab
+let g:OmniSharp_server_use_mono = 1
 nmap <leader><tab> gt
 
 nnoremap <leader>ii :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
