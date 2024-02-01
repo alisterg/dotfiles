@@ -11,7 +11,7 @@ if !1 | finish | endif
 
 runtime ./plug.vim
 
-" Highlights "{{{
+" THEME "{{{
 " ---------------------------------------------------------------------
 " true color
 if exists("&termguicolors") && exists("&winblend")
@@ -25,9 +25,11 @@ if exists("&termguicolors") && exists("&winblend")
   "runtime ./light_space.vim
 
   set background=dark
-  "runtime ./space.vim
   runtime ./tmoz.vim
-  highlight Visual cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey40
+  "runtime ./space.vim
+  highlight Visual cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey40 " for transparent bg
+  highlight Search cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey50 " for transparent bg
+  highlight IncSearch cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey70 " for transparent bg
   
   set cursorline
 endif
@@ -136,3 +138,6 @@ nnoremap <leader>ii :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") 
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
+" Haskell ormolu formatter throws error without this
+"let g:ormolu_command="fourmolu"
+"let g:ormolu_options=["--no-cabal"]

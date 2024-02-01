@@ -16,7 +16,7 @@ let g:colors_name='tmoz'
 let g:limelight_conceal_ctermfg=100
 let g:limelight_conceal_guifg = '#a1a1a1'
 
-let s:black           = { "gui": "#111111", "cterm": "232" } " bg
+let s:black           = { "gui": "#1e1d1e", "cterm": "232" } " bg
 let s:bg_contrast     = { "gui": "#232830", "cterm": "232" } " bg contrast
 let s:lighter_gray    = { "gui": "#c5c8c6", "cterm": "251" } " fg 
 let s:medium_gray     = { "gui": "#969896", "cterm": "243" } " comments
@@ -55,7 +55,7 @@ endif
 function! s:h(group, style)
   execute "highlight" a:group
     \ "guifg="   (has_key(a:style, "fg")    ? a:style.fg.gui   : "NONE")
-    \ "guibg="   (has_key(a:style, "bg")    ? a:style.bg.gui   : "NONE")
+    \ "guibg="   (has_key(a:style, "bg")    ? "NONE"   : "NONE")
     \ "guisp="   (has_key(a:style, "sp")    ? a:style.sp.gui   : "NONE")
     \ "gui="     (has_key(a:style, "gui")   ? a:style.gui      : "NONE")
     \ "ctermfg=" (has_key(a:style, "fg")    ? a:style.fg.cterm : "NONE")
@@ -71,14 +71,11 @@ if &background != s:background
 endif
 
 call s:h("Cursor",        {"bg": s:light_purple, "fg": s:norm })
-call s:h("Comment",       {"fg": s:bg_subtle, "gui": "italic"})
+call s:h("Comment",       {"fg": s:bg_subtle, "cterm": "italic", "gui": "italic"})
 hi! link SpecialComment   Comment
 
 call s:h("Constant",      {"fg": s:light_blue})
 hi! link Character        Constant
-hi! link Number           Constant
-hi! link Boolean          Constant
-hi! link Float            Constant
 hi! link String           Constant
 
 hi! link typeScriptBraces       Normal
@@ -88,6 +85,7 @@ hi! link typeScriptParamImpl       Normal
 hi! link typeScriptObjectLabel       Normal
 hi! link typeScriptFuncType       Normal
 hi! link typeScriptBOMNavigatorProp       Normal
+hi! link typeScriptGlobalMethod       Normal
 hi! link typeScriptBOMWindowProp       Normal
 hi! link typeScriptGlobal       Normal
 hi! link htmlTag       Normal
@@ -96,6 +94,10 @@ hi! link javaScript       Normal
 hi! link jsonKeyword       Normal
 
 call s:h("typeScriptMember",    {"fg": s:blue})
+hi! link javaScriptFunction    typeScriptMember
+hi! link pythonFunction typeScriptMember
+hi! link hsModule typeScriptMember
+hi! link hsStructure typeScriptMember
 
 call s:h("typeScriptRepeat",    {"fg": s:bright_purple})
 hi! link typeScriptStatementKeyword        typeScriptRepeat
@@ -103,9 +105,11 @@ hi! link typeScriptConditional        typeScriptRepeat
 hi! link javaScriptConditional        typeScriptRepeat
 hi! link csConditional        typeScriptRepeat
 hi! link csRepeat        typeScriptRepeat
+hi! link pythonConditional        typeScriptRepeat
+hi! link hsConditional        typeScriptRepeat
 
-call s:h("Statement",    {"fg": s:norm, "gui": "italic" })
-call s:h("Identifier",    {"fg": s:norm, "gui": "italic" })
+call s:h("Statement",    {"fg": s:norm, "cterm": "italic", "gui": "italic" })
+call s:h("Identifier",    {"fg": s:norm, "cterm": "italic", "gui": "italic" })
 hi! link Function         Identifier
 hi! link typeScriptIdentifier Identifier
 hi! link Conditonal       Identifier
@@ -116,6 +120,8 @@ hi! link jsonQuote        Identifier
 
 call s:h("Keyword",    {"fg": s:light_purple})
 hi! link typeScriptClassStatic Keyword
+hi! link pythonStatement Keyword
+hi! link hsStatement Keyword
 
 call s:h("typeScriptAliasDeclaration",    {"fg": s:dark_purple})
 hi! link typeScriptClassName typeScriptAliasDeclaration
@@ -123,9 +129,13 @@ hi! link typeScriptTypeReference typeScriptAliasDeclaration
 hi! link typeScriptPredefinedType typeScriptAliasDeclaration
 hi! link typeScriptEnum typeScriptAliasDeclaration
 hi! link csClassType typeScriptAliasDeclaration
+hi! link pythonBuiltin typeScriptAliasDeclaration
+hi! link ConId typeScriptAliasDeclaration
 
 call s:h("typeScriptNull",    {"fg": s:light_green})
-hi! link typeScriptNumber typeScriptNull
+hi! link Number typeScriptNull
+hi! link Float            typeScriptNull
+hi! link Boolean          typeScriptNull
 
 call s:h("markdownH1", {"fg": s:yellow})
 call s:h("markdownH1Delimiter", {"fg": s:orange})
@@ -162,6 +172,8 @@ hi! link SpecialChar      Special
 hi! link Tag              Special
 hi! link Delimiter        Special
 hi! link Debug            Special
+hi! link hsNewtypedef     Special
+hi! link hsTypedef        Special
 
 call s:h("Underlined",    {"fg": s:norm, "gui": "underline", "cterm": "underline"})
 call s:h("Ignore",        {"fg": s:bg})
@@ -171,8 +183,8 @@ call s:h("SpecialKey",    {"fg": s:light_green})
 call s:h("NonText",       {"fg": s:medium_gray})
 call s:h("Directory",     {"fg": s:blue})
 call s:h("ErrorMsg",      {"fg": s:red})
-call s:h("IncSearch",     {"bg": s:yellow, "fg": s:black})
-call s:h("Search",        {"bg": s:orange, "fg": s:black})
+call s:h("IncSearch",     {"bg": s:bg_subtle, "fg": s:yellow})
+call s:h("Search",        {"bg": s:bg_subtle, "fg": s:orange})
 call s:h("MoreMsg",       {"fg": s:medium_gray, "cterm": "bold", "gui": "bold"})
 hi! link ModeMsg MoreMsg
 call s:h("LineNr",        {"fg": s:bg_subtle})
@@ -182,11 +194,11 @@ call s:h("StatusLine",    {"bg": s:bg_very_subtle})
 call s:h("StatusLineNC",  {"bg": s:bg_very_subtle, "fg": s:medium_gray})
 call s:h("VertSplit",     {"bg": s:bg_very_subtle, "fg": s:bg_very_subtle})
 call s:h("Title",         {"fg": s:blue})
-call s:h("Visual",        {"fg": s:norm, "bg": s:dark_purple})
+call s:h("Visual",        {"fg": s:bg, "bg": s:dark_purple})
 call s:h("VisualNOS",     {"bg": s:bg_subtle})
 call s:h("WarningMsg",    {"fg": s:yellow})
 call s:h("WildMenu",      {"fg": s:bg, "bg": s:norm})
-call s:h("Folded",        {"fg": s:yellow, "bg": s:light_black})
+call s:h("Folded",        {"fg": s:light_gray, "bg": s:light_black})
 call s:h("FoldColumn",    {"fg": s:bg_subtle})
 call s:h("DiffAdd",       {"fg": s:light_green})
 call s:h("DiffDelete",    {"fg": s:red})

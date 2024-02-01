@@ -16,7 +16,8 @@ let g:colors_name='space'
 let g:limelight_conceal_ctermfg=100
 let g:limelight_conceal_guifg = '#a1a1a1'
 
-let s:bg           = { "gui": "#ced1d9", "cterm": "232" } " bg
+let s:bg           = { "gui": "#d5d7df", "cterm": "232" } " bg
+"let s:bg           = { "gui": "#ced1d9", "cterm": "232" } " bg
 let s:fg           = { "gui": "#18191E", "cterm": "232" } " bg
 let s:primary      = { "gui": "#5E30AE", "cterm": "232" } " bg
 let s:secondary    = { "gui": "#1B5274", "cterm": "232" } " bg
@@ -32,7 +33,7 @@ let s:blue            = { "gui": "#8fa1b3", "cterm": "12"  } " blue
 let s:light_blue      = { "gui": "#5699af", "cterm": "153" } " dark cyan
 let s:dark_green      = { "gui": "#a3be8c", "cterm": "2"   } " green
 let s:light_green     = { "gui": "#88c0d0", "cterm": "10"  } " light cyan
-let s:light_purple    = { "gui": "#e298c2", "cterm": "134" } " magenta
+let s:light_purple    = { "gui": "#D10073", "cterm": "134" } " magenta
 let s:dark_purple     = { "gui": "#b48ead", "cterm": "134" } " magenta
 let s:yellow          = { "gui": "#ecbe7b", "cterm": "11"  } " yellow
 let s:white           = { "gui": "#D5D9E2", "cterm": "15"  }
@@ -107,8 +108,15 @@ hi! link javaScriptConditional        typeScriptRepeat
 hi! link csConditional        typeScriptRepeat
 hi! link csRepeat        typeScriptRepeat
 
+call s:h("Special",       {"fg": s:light_purple})
+hi! link Keyword          Special
+hi! link SpecialChar      Special
+hi! link Tag              Special
+hi! link Delimiter        Special
+hi! link Debug            Special
+
+
 call s:h("Identifier",    {"fg": s:fg, "gui": "bold"})
-hi! link Keyword          Identifier
 hi! link Function         Identifier
 hi! link typeScriptIdentifier Identifier
 hi! link csAccessModifier Identifier
@@ -134,6 +142,9 @@ hi! link markdownH4 Statement
 hi! link markdownH5 Statement
 hi! link markdownH6 Statement
 
+call s:h("htmlTagName", {"fg": s:secondary, "cterm": "bold", "gui": "bold"})
+call s:h("htmlTagN",    {"fg": s:dark_red, "gui": "bold"})
+
 call s:h("Operator",      {"fg": s:norm, "cterm": "bold", "gui": "bold"})
 
 call s:h("PreProc",     {"fg": s:light_blue})
@@ -146,12 +157,6 @@ call s:h("Type",          {"fg": s:fg})
 hi! link StorageClass     Type
 hi! link Structure        Type
 hi! link Typedef          Type
-
-call s:h("Special",       {"fg": s:fg, "gui": "bold"})
-hi! link SpecialChar      Special
-hi! link Tag              Special
-hi! link Delimiter        Special
-hi! link Debug            Special
 
 call s:h("Underlined",    {"fg": s:norm, "gui": "underline", "cterm": "underline"})
 call s:h("Ignore",        {"fg": s:bg})

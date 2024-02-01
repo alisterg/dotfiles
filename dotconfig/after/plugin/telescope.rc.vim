@@ -11,7 +11,7 @@ local actions = require('telescope.actions')
 ------------------------------
 require('telescope').setup{
   defaults = {
-    file_ignore_patterns = {"node_modules"},
+    file_ignore_patterns = {"node_modules", "fastlane", ".xcodeproj", ".pbxproj"},
     layout_strategy = "vertical",
     layout_config = {
       vertical = {
@@ -28,3 +28,4 @@ require('telescope').setup{
   }
 }
 EOF
+
