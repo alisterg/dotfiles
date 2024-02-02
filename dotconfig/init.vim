@@ -21,16 +21,26 @@ if exists("&termguicolors") && exists("&winblend")
   set pumblend=5
   set termguicolors
 
-  "set background=light
-  "runtime ./light_space.vim
+  let dark_theme=1
+  let transparent=0
 
-  set background=dark
-  runtime ./tmoz.vim
-  "runtime ./space.vim
-  highlight Visual cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey40 " for transparent bg
-  highlight Search cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey50 " for transparent bg
-  highlight IncSearch cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey70 " for transparent bg
-  
+  if dark_theme == 1
+    set background=dark
+    "runtime ./molo.vim
+    runtime ./space.vim
+    "runtime ./tmoz.vim
+
+    if transparent == 1
+      highlight Visual cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey40 " for transparent bg
+      highlight Search cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey50 " for transparent bg
+      highlight IncSearch cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey70 " for transparent bg
+    endif
+
+  else
+    set background=light
+    runtime ./light_space.vim
+  endif
+
   set cursorline
 endif
 
@@ -138,6 +148,3 @@ nnoremap <leader>ii :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") 
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
-" Haskell ormolu formatter throws error without this
-"let g:ormolu_command="fourmolu"
-"let g:ormolu_options=["--no-cabal"]

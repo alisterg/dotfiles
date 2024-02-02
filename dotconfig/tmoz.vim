@@ -18,8 +18,8 @@ let g:limelight_conceal_guifg = '#a1a1a1'
 
 let s:black           = { "gui": "#1e1d1e", "cterm": "232" } " bg
 let s:bg_contrast     = { "gui": "#232830", "cterm": "232" } " bg contrast
-let s:lighter_gray    = { "gui": "#c5c8c6", "cterm": "251" } " fg 
-let s:medium_gray     = { "gui": "#969896", "cterm": "243" } " comments
+let s:lighter_gray    = { "gui": "#abb2bf", "cterm": "251" } " fg
+let s:medium_gray     = { "gui": "#5c6370", "cterm": "243" } " comments
 let s:orange          = { "gui": "#e78c45", "cterm": "167" } " orange
 let s:yellow          = { "gui": "#e7c547", "cterm": "11"  } " yellow
 let s:dark_green      = { "gui": "#b9ca4a", "cterm": "2"   } " green
