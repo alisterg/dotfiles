@@ -89,6 +89,7 @@ hi! link typeScriptTypeReference       Normal
 hi! link typeScriptParamImpl       Normal
 hi! link typeScriptObjectLabel       Normal
 hi! link typeScriptFuncType       Normal
+hi! link typeScriptDestructureVariable       Normal
 hi! link htmlTag       Normal
 hi! link htmlEndTag       Normal
 hi! link javaScript       Normal
@@ -100,6 +101,7 @@ hi! link vimLet       typeScriptMember
 hi! link vimCommand       typeScriptMember
 hi! link vimHighlight       typeScriptMember
 hi! link javaScriptFunction       typeScriptMember
+hi! link typeScriptFuncName       typeScriptMember
 hi! link pythonFunction typeScriptMember
 hi! link hsModule typeScriptMember
 hi! link hsStructure typeScriptMember
@@ -152,6 +154,7 @@ call s:h("markdownH6Delimiter", {"fg": s:dark_green})
 
 call s:h("htmlTagName",     {"fg": s:light_purple})
 call s:h("htmlTagN",     {"fg": s:orange})
+call s:h("tsxTagName",     {"fg": s:orange})
 
 call s:h("Operator",      {"fg": s:norm, "cterm": "bold", "gui": "bold"})
 
