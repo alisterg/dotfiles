@@ -26,6 +26,7 @@ It's fresh computer time!
   - Copy dotfiles from `dotconfig` to `~/.config/nvim`
   - Vim-plug: https://github.com/junegunn/vim-plug#neovim
   - CoC plugins, eg. `:CocInstall coc-tsserver coc-json coc-html coc-css coc-prettier`
+- tree: `brew install tree`
 
 # Misc
 
