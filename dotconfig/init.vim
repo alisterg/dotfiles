@@ -21,25 +21,20 @@ if exists("&termguicolors") && exists("&winblend")
   set pumblend=5
   set termguicolors
 
-  let dark_theme=1
-  let transparent=0
+  " Dark theme ---------------------------
+  set background=dark
+  runtime ./space.vim
+  "runtime ./molo.vim
+  "runtime ./tmoz.vim
 
-  if dark_theme == 1
-    set background=dark
-    "runtime ./molo.vim
-    runtime ./space.vim
-    "runtime ./tmoz.vim
-
-    if transparent == 1
-      highlight Visual cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey40 " for transparent bg
-      highlight Search cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey50 " for transparent bg
-      highlight IncSearch cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey70 " for transparent bg
-    endif
-
-  else
-    set background=light
-    runtime ./light_space.vim
-  endif
+  " Light theme --------------------------
+  "set background=light
+  "runtime ./light_space.vim
+ 
+  " For theme with transparent background
+  "highlight Visual cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey40 " for transparent bg
+  "highlight Search cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey50 " for transparent bg
+  "highlight IncSearch cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey70 " for transparent bg
 
   set cursorline
 endif
@@ -129,6 +124,9 @@ inoremap <C-k> <ESC>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
+" Insert current datetime
+nmap <leader>d a[<esc>"=strftime("%F %H:%M")<CR>pa] 
+
 "--------------------------
 "Git Gutter
 set signcolumn=yes
@@ -139,11 +137,10 @@ let g:gitgutter_sign_removed_first_line = '|'
 let g:gitgutter_sign_removed_above_and_below = '|'
 let g:gitgutter_sign_modified_removed = '|'
 
+" Updates gitgutter every 200ms
 set updatetime=200
 
-let g:OmniSharp_server_use_mono = 1
-nmap <leader><tab> gt
-
+" Display the syntax highlight group of the symbol under cursor
 nnoremap <leader>ii :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>

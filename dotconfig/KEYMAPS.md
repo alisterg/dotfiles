@@ -7,6 +7,7 @@ These are the extra keybindings I have configured:
 - Select all: control+a
 - Move lines up/down: control+j/k
 - Display current highlight token: leader ii
+- Insert current datetime: leader d
 
 - Go to file: gf
 - Go to anything: ga

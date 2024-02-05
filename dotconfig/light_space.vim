@@ -69,7 +69,7 @@ function! s:h(group, style)
     \ "cterm="   (has_key(a:style, "cterm") ? a:style.cterm    : "NONE")
 endfunction
 
-call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
+call s:h("Normal",        {"bg": s:bg,"fg": s:norm})
 
 " restore &background's value in case changing Normal changed &background (:help :hi-normal-cterm)
 if &background != s:background
@@ -212,7 +212,8 @@ call s:h("TabLine",       {"fg": s:norm, "bg": s:bg_very_subtle})
 call s:h("TabLineSel",    {"fg": s:blue, "bg": s:bg_subtle, "gui": "bold", "cterm": "bold"})
 call s:h("TabLineFill",   {"fg": s:norm, "bg": s:bg_very_subtle})
 call s:h("CursorColumn",  {"bg": s:light_green})
-call s:h("CursorLine",    {"bg": s:bg_very_subtle})
+call s:h("CursorLine",    {"gui": "underline"})
+"call s:h("CursorLine",    {"bg": s:bg_very_subtle})
 call s:h("ColorColumn",   {"bg": s:bg_subtle})
 
 call s:h("MatchParen",    {"bg": s:bg_subtle, "fg": s:norm})
