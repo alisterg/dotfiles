@@ -14,9 +14,10 @@ endif
 
 let g:colors_name='space'
 let g:limelight_conceal_ctermfg=100
-let g:limelight_conceal_guifg = '#a1a1a1'
+let g:limelight_conceal_guifg = '#898d94'
 
-let s:black           = { "gui": "#282a36", "cterm": "232" } " bg
+let s:black           = { "gui": "#16171d", "cterm": "232" } " bg
+let s:alt_black       = { "gui": "#1c1f28", "cterm": "232" } " bg
 let s:bg_contrast     = { "gui": "#383a4b", "cterm": "232" } " bg contrast
 let s:lighter_gray    = { "gui": "#c0c4cd", "cterm": "251" } " fg 
 let s:medium_gray     = { "gui": "#616E88", "cterm": "243" } " comments
@@ -154,21 +155,34 @@ call s:h("markdownH6Delimiter", {"fg": s:dark_green})
 
 call s:h("htmlTagName",     {"fg": s:light_purple})
 call s:h("htmlTagN",     {"fg": s:orange})
-call s:h("tsxTagName",     {"fg": s:orange})
+hi! link tsxTagName          htmlTagN
 
 call s:h("Operator",      {"fg": s:norm, "cterm": "bold", "gui": "bold"})
 
-call s:h("PreProc",     {"fg": s:dark_green})
+call s:h("PreProc",     {"fg": s:blue_grey})
 hi! link Include          PreProc
 hi! link Define           PreProc
 hi! link Macro            PreProc
 hi! link PreCondit        PreProc
 hi! link javaScriptReserved        PreProc
+hi! link cssMediaProp          PreProc
+hi! link cssFlexibleBoxProp          PreProc
+hi! link cssFontProp          PreProc
+hi! link cssTextProp          PreProc
+hi! link cssBoxProp          PreProc
+hi! link cssUIProp          PreProc
+hi! link cssTransformProp          PreProc
+hi! link cssColorProp          PreProc
+hi! link cssTransitionProp          PreProc
+hi! link cssPositioningProp          PreProc
+hi! link cssVendor      PreProc
 
 call s:h("Type",          {"fg": s:dark_purple})
 hi! link StorageClass     Type
 hi! link Structure        Type
 hi! link Typedef          Type
+hi! link cssClassName          Type
+hi! link cssTagName          Type
 
 call s:h("Special",       {"fg": s:blue_grey})
 hi! link SpecialChar      Special
@@ -199,7 +213,7 @@ call s:h("Visual",        {"fg": s:norm, "bg": s:dark_purple})
 call s:h("VisualNOS",     {"bg": s:bg_subtle})
 call s:h("WarningMsg",    {"fg": s:yellow})
 call s:h("WildMenu",      {"fg": s:bg, "bg": s:norm})
-call s:h("Folded",        {"fg": s:yellow, "bg": s:light_black})
+call s:h("Folded",        {"fg": s:light_gray, "bg": s:alt_black})
 call s:h("FoldColumn",    {"fg": s:bg_subtle})
 call s:h("DiffAdd",       {"fg": s:light_green})
 call s:h("DiffDelete",    {"fg": s:red})
@@ -263,4 +277,3 @@ hi link GitGutterAdd                LineNr
 hi link GitGutterDelete             LineNr
 hi link GitGutterChange             LineNr
 hi link GitGutterChangeDelete       LineNr
-

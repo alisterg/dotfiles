@@ -16,17 +16,17 @@ let g:colors_name='space'
 let g:limelight_conceal_ctermfg=100
 let g:limelight_conceal_guifg = '#a1a1a1'
 
-let s:bg           = { "gui": "#d5d7df", "cterm": "232" } " bg
-"let s:bg           = { "gui": "#ced1d9", "cterm": "232" } " bg
-let s:fg           = { "gui": "#18191E", "cterm": "232" } " bg
-let s:primary      = { "gui": "#5E30AE", "cterm": "232" } " bg
-let s:secondary    = { "gui": "#1B5274", "cterm": "232" } " bg
-let s:tertiary     = { "gui": "#b06750", "cterm": "232" } " bg
+let s:bg           = { "gui": "#eff1f5", "cterm": "232" } " bg
+"let s:bg           = { "gui": "#d5d7df", "cterm": "232" } " bg
+let s:fg           = { "gui": "#2B303B", "cterm": "232" } " bg
+let s:primary      = { "gui": "#b48ead", "cterm": "232" } " bg
+let s:secondary    = { "gui": "#8fa1b3", "cterm": "232" } " bg
+let s:tertiary     = { "gui": "#d08770", "cterm": "232" } " bg
 
 let s:black           = { "gui": "#2B303B", "cterm": "232" } " bg
 let s:bg_contrast     = { "gui": "#232830", "cterm": "232" } " bg contrast
-let s:lighter_gray    = { "gui": "#c0c4cd", "cterm": "251" } " fg 
-let s:medium_gray     = { "gui": "#616E88", "cterm": "243" } " comments
+let s:lighter_gray    = { "gui": "#dfe1e8", "cterm": "251" } " fg 
+let s:medium_gray     = { "gui": "#a7adba", "cterm": "243" } " comments
 let s:dark_red        = { "gui": "#bf616a", "cterm": "1"   } " red
 let s:orange          = { "gui": "#d08770", "cterm": "167" } " orange
 let s:blue            = { "gui": "#8fa1b3", "cterm": "12"  } " blue
@@ -77,10 +77,10 @@ if &background != s:background
 endif
 
 call s:h("Cursor",        {"bg": s:light_purple, "fg": s:norm })
-call s:h("Comment",       {"fg": s:bg_subtle, "gui": "italic"})
+call s:h("Comment",       {"fg": s:secondary, "gui": "italic"})
 hi! link SpecialComment   Comment
 
-call s:h("Constant",      {"fg": s:primary})
+call s:h("Constant",      {"fg": s:light_purple})
 hi! link Character        Constant
 hi! link Number           Constant
 hi! link Boolean          Constant
@@ -94,12 +94,13 @@ hi! link typeScriptTypeReference       Normal
 hi! link typeScriptParamImpl       Normal
 hi! link typeScriptObjectLabel       Normal
 hi! link typeScriptFuncType       Normal
+hi! link typeScriptPredefinedType       Normal
 hi! link htmlTag       Normal
 hi! link htmlEndTag       Normal
 hi! link javaScript       Normal
 hi! link jsonKeyword       Normal
 
-call s:h("typeScriptMember",    {"fg": s:secondary})
+call s:h("typeScriptMember",    {"fg": s:primary, "gui": "bold"})
 
 call s:h("typeScriptRepeat",    {"fg": s:dark_red, "gui": "bold"})
 hi! link typeScriptStatementKeyword        typeScriptRepeat
@@ -108,21 +109,22 @@ hi! link javaScriptConditional        typeScriptRepeat
 hi! link csConditional        typeScriptRepeat
 hi! link csRepeat        typeScriptRepeat
 
-call s:h("Special",       {"fg": s:light_purple})
+call s:h("Special",       {"fg": s:norm, "gui": "bold"})
 hi! link Keyword          Special
 hi! link SpecialChar      Special
 hi! link Tag              Special
 hi! link Delimiter        Special
 hi! link Debug            Special
 
+call s:h("typeScriptVariable",    {"fg": s:fg, "gui": "italic"})
 
-call s:h("Identifier",    {"fg": s:fg, "gui": "bold"})
+call s:h("Identifier",    {"fg": s:fg, "gui": "italic"})
 hi! link Function         Identifier
 hi! link typeScriptIdentifier Identifier
 hi! link csAccessModifier Identifier
 hi! link csType Identifier
-hi! link typeScriptPredefinedType Keyword
-hi! link typeScriptNull Keyword
+hi! link typeScriptPredefinedType Identifier
+hi! link typeScriptNull Identifier
 
 call s:h("typeScriptAliasDeclaration",    {"fg": s:tertiary, "gui": "bold"})
 hi! link typeScriptClassName typeScriptAliasDeclaration
@@ -209,7 +211,7 @@ call s:h("PmenuThumb",    {"fg": s:norm, "bg": s:bg_subtle})
 call s:h("TabLine",       {"fg": s:norm, "bg": s:bg_very_subtle})
 call s:h("TabLineSel",    {"fg": s:blue, "bg": s:bg_subtle, "gui": "bold", "cterm": "bold"})
 call s:h("TabLineFill",   {"fg": s:norm, "bg": s:bg_very_subtle})
-call s:h("CursorColumn",  {"bg": s:blue})
+call s:h("CursorColumn",  {"bg": s:light_green})
 call s:h("CursorLine",    {"bg": s:bg_very_subtle})
 call s:h("ColorColumn",   {"bg": s:bg_subtle})
 
