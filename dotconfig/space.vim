@@ -1,4 +1,4 @@
-" Name:       ume.vim
+" Name:       space.vim
 " Version:    0.1.0
 " Maintainer: github.com/alisterg
 " License:    The MIT License (MIT)
@@ -196,9 +196,11 @@ call s:h("Error",         {"fg": s:white, "bg": s:red, "cterm": "bold"})
 call s:h("Todo",          {"fg": s:dark_red, "gui": "underline", "cterm": "underline"})
 call s:h("SpecialKey",    {"fg": s:light_green})
 call s:h("NonText",       {"fg": s:medium_gray})
+call s:h("EndOfBuffer",       {"fg": s:black}) " The ~ symbols below editor
 call s:h("Directory",     {"fg": s:blue})
 call s:h("ErrorMsg",      {"fg": s:red})
 call s:h("IncSearch",     {"bg": s:yellow, "fg": s:black})
+call s:h("TelescopeMatching",     {"fg": s:yellow})
 call s:h("Search",        {"bg": s:orange, "fg": s:black})
 call s:h("MoreMsg",       {"fg": s:medium_gray, "cterm": "bold", "gui": "bold"})
 hi! link ModeMsg MoreMsg
@@ -209,7 +211,7 @@ call s:h("StatusLine",    {"bg": s:bg_very_subtle})
 call s:h("StatusLineNC",  {"bg": s:bg_very_subtle, "fg": s:medium_gray})
 call s:h("VertSplit",     {"bg": s:bg_very_subtle, "fg": s:bg_very_subtle})
 call s:h("Title",         {"fg": s:blue})
-call s:h("Visual",        {"fg": s:norm, "bg": s:dark_purple})
+call s:h("Visual",        {"fg": s:alt_black, "bg": s:dark_purple})
 call s:h("VisualNOS",     {"bg": s:bg_subtle})
 call s:h("WarningMsg",    {"fg": s:yellow})
 call s:h("WildMenu",      {"fg": s:bg, "bg": s:norm})
