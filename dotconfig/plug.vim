@@ -7,6 +7,10 @@ call plug#begin()
       Plug 'neoclide/coc.nvim', {'branch': 'release'}
       Plug 'junegunn/limelight.vim'
       Plug 'norcalli/nvim-colorizer.lua' " Colours hex codes
+
+      Plug 'nordtheme/vim'
+      Plug 'EdenEast/nightfox.nvim'
+      Plug 'ayu-theme/ayu-vim'
     endif
 call plug#end()
 

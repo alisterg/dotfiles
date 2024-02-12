@@ -79,20 +79,21 @@ call s:h("Constant",      {"fg": s:yellow})
 hi! link Character        Constant
 hi! link String           Constant
 
-hi! link typeScriptBraces       Normal
-hi! link javaScriptBraces       Normal
-hi! link typeScriptCall       Normal
-hi! link typeScriptParamImpl       Normal
-hi! link typeScriptObjectLabel       Normal
-hi! link typeScriptFuncType       Normal
-hi! link typeScriptBOMNavigatorProp       Normal
-hi! link typeScriptGlobalMethod       Normal
-hi! link typeScriptBOMWindowProp       Normal
-hi! link typeScriptGlobal       Normal
-hi! link htmlTag       Normal
-hi! link htmlEndTag       Normal
-hi! link javaScript       Normal
-hi! link jsonKeyword       Normal
+call s:h("javaScript",      {"fg": s:norm})
+hi! link typeScriptBraces       javaScript
+hi! link javaScriptBraces       javaScript
+hi! link typeScriptCall       javaScript
+hi! link typeScriptParamImpl       javaScript
+hi! link typeScriptObjectLabel       javaScript
+hi! link typeScriptFuncType       javaScript
+hi! link typeScriptBOMNavigatorProp       javaScript
+hi! link typeScriptGlobalMethod       javaScript
+hi! link typeScriptBOMWindowProp       javaScript
+hi! link typeScriptGlobal       javaScript
+hi! link htmlTag       javaScript
+hi! link htmlEndTag       javaScript
+hi! link javaScript       javaScript
+hi! link jsonKeyword       javaScript
 
 call s:h("typeScriptMember",    {"fg": s:blue})
 hi! link javaScriptFunction    typeScriptMember

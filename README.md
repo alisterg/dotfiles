@@ -13,7 +13,7 @@ It's fresh computer time!
 
 - iterm2: `brew install --cask iterm2`
 - Install the profiles from `./iterm_profiles`
-- Install SF mono from ./font
+- fonts: `brew install font-ubuntu-mono-nerd-font`
 - z: `brew install z`
 - Oh My Zsh: https://ohmyz.sh/
 - PowerLevel10k: https://github.com/romkatv/powerlevel10k#oh-my-zsh

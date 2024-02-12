@@ -83,19 +83,23 @@ hi! link Boolean          Constant
 hi! link Float            Constant
 hi! link String           Constant
 
-hi! link typeScriptBraces       Normal
-hi! link javaScriptBraces       Normal
-hi! link typeScriptCall       Normal
-hi! link typeScriptTypeReference       Normal
-hi! link typeScriptParamImpl       Normal
-hi! link typeScriptObjectLabel       Normal
-hi! link typeScriptFuncType       Normal
-hi! link typeScriptDestructureVariable       Normal
-hi! link htmlTag       Normal
-hi! link htmlEndTag       Normal
-hi! link javaScript       Normal
-hi! link jsonKeyword       Normal
-hi! link vimVar       Normal
+call s:h("javaScript",      {"fg": s:norm})
+hi! link typeScriptBraces       javaScript
+hi! link javaScriptBraces       javaScript
+hi! link typeScriptCall       javaScript
+hi! link typeScriptTypeReference       javaScript
+hi! link typeScriptParamImpl       javaScript
+hi! link typeScriptObjectLabel       javaScript
+hi! link typeScriptFuncType       javaScript
+hi! link typeScriptDestructureVariable       javaScript
+hi! link typeScriptBOMNavigatorProp       javaScript
+hi! link typeScriptConsoleMethod       javaScript
+hi! link typeScriptFileReaderProp       javaScript
+hi! link htmlTag       javaScript
+hi! link htmlEndTag       javaScript
+hi! link javaScript       javaScript
+hi! link jsonKeyword       javaScript
+hi! link vimVar       javaScript
 
 call s:h("typeScriptMember",    {"fg": s:blue_grey})
 hi! link vimLet       typeScriptMember
@@ -157,7 +161,7 @@ call s:h("htmlTagName",     {"fg": s:light_purple})
 call s:h("htmlTagN",     {"fg": s:orange})
 hi! link tsxTagName          htmlTagN
 
-call s:h("Operator",      {"fg": s:norm, "cterm": "bold", "gui": "bold"})
+call s:h("Operator",      {"fg": s:norm})
 
 call s:h("PreProc",     {"fg": s:blue_grey})
 hi! link Include          PreProc
@@ -244,7 +248,8 @@ call s:h("TabLine",       {"fg": s:norm, "bg": s:bg_very_subtle})
 call s:h("TabLineSel",    {"fg": s:blue, "bg": s:bg_subtle, "gui": "bold", "cterm": "bold"})
 call s:h("TabLineFill",   {"fg": s:norm, "bg": s:bg_very_subtle})
 call s:h("CursorColumn",  {"bg": s:bg_very_subtle})
-call s:h("CursorLine",    {"gui": "underline"})
+call s:h("CursorLine",    {"bg": s:bg_very_subtle})
+"call s:h("CursorLine",    {"gui": "underline"})
 call s:h("ColorColumn",   {"bg": s:bg_subtle})
 
 call s:h("MatchParen",    {"bg": s:bg_subtle, "fg": s:norm})

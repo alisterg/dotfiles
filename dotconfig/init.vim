@@ -25,7 +25,9 @@ if exists("&termguicolors") && exists("&winblend")
   set background=dark
   runtime ./space.vim
   "runtime ./molo.vim
+  "runtime ./gruv.vim
   "runtime ./tmoz.vim
+  "runtime ./ume.vim
 
   " Light theme --------------------------
   "set background=light
@@ -108,9 +110,6 @@ inoremap <silent> <C-e> :call ToggleNetrw()<CR>
 " Select all
 nmap <C-a> gg<S-v>G
 
-"This unsets the "last search pattern" register by hitting return
-nnoremap <CR> :noh<CR>
-
 nnoremap gb :Telescope buffers<CR>
 
 " MOVING LINES
@@ -126,6 +125,7 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 
 " Insert current datetime
 nmap <leader>d a[<esc>"=strftime("%F %H:%M")<CR>pa] 
+inoremap <C-d> [<esc>"=strftime("%F %H:%M")<CR>pa] 
 
 "--------------------------
 "Git Gutter
@@ -144,4 +144,3 @@ set updatetime=200
 nnoremap <leader>ii :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
-

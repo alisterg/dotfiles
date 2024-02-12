@@ -18,7 +18,7 @@ let g:limelight_conceal_guifg = '#a1a1a1'
 
 let s:black           = { "gui": "#1e1d1e", "cterm": "232" } " bg
 let s:bg_contrast     = { "gui": "#232830", "cterm": "232" } " bg contrast
-let s:lighter_gray    = { "gui": "#abb2bf", "cterm": "251" } " fg
+let s:lighter_gray    = { "gui": "#abb2bf", "cterm": "251" } " fg 
 let s:medium_gray     = { "gui": "#5c6370", "cterm": "243" } " comments
 let s:orange          = { "gui": "#e78c45", "cterm": "167" } " orange
 let s:yellow          = { "gui": "#e7c547", "cterm": "11"  } " yellow
@@ -95,9 +95,6 @@ hi! link jsonKeyword       Normal
 
 call s:h("typeScriptMember",    {"fg": s:blue})
 hi! link javaScriptFunction    typeScriptMember
-hi! link pythonFunction typeScriptMember
-hi! link hsModule typeScriptMember
-hi! link hsStructure typeScriptMember
 
 call s:h("typeScriptRepeat",    {"fg": s:bright_purple})
 hi! link typeScriptStatementKeyword        typeScriptRepeat
@@ -105,8 +102,6 @@ hi! link typeScriptConditional        typeScriptRepeat
 hi! link javaScriptConditional        typeScriptRepeat
 hi! link csConditional        typeScriptRepeat
 hi! link csRepeat        typeScriptRepeat
-hi! link pythonConditional        typeScriptRepeat
-hi! link hsConditional        typeScriptRepeat
 
 call s:h("Statement",    {"fg": s:norm, "cterm": "italic", "gui": "italic" })
 call s:h("Identifier",    {"fg": s:norm, "cterm": "italic", "gui": "italic" })
@@ -120,8 +115,6 @@ hi! link jsonQuote        Identifier
 
 call s:h("Keyword",    {"fg": s:light_purple})
 hi! link typeScriptClassStatic Keyword
-hi! link pythonStatement Keyword
-hi! link hsStatement Keyword
 
 call s:h("typeScriptAliasDeclaration",    {"fg": s:dark_purple})
 hi! link typeScriptClassName typeScriptAliasDeclaration
@@ -129,8 +122,6 @@ hi! link typeScriptTypeReference typeScriptAliasDeclaration
 hi! link typeScriptPredefinedType typeScriptAliasDeclaration
 hi! link typeScriptEnum typeScriptAliasDeclaration
 hi! link csClassType typeScriptAliasDeclaration
-hi! link pythonBuiltin typeScriptAliasDeclaration
-hi! link ConId typeScriptAliasDeclaration
 
 call s:h("typeScriptNull",    {"fg": s:light_green})
 hi! link Number typeScriptNull
@@ -161,6 +152,7 @@ hi! link Include          PreProc
 hi! link Define           PreProc
 hi! link Macro            PreProc
 hi! link PreCondit        PreProc
+hi! link javaScriptReserved        PreProc
 
 call s:h("Type",          {"fg": s:dark_purple})
 hi! link StorageClass     Type
@@ -172,8 +164,6 @@ hi! link SpecialChar      Special
 hi! link Tag              Special
 hi! link Delimiter        Special
 hi! link Debug            Special
-hi! link hsNewtypedef     Special
-hi! link hsTypedef        Special
 
 call s:h("Underlined",    {"fg": s:norm, "gui": "underline", "cterm": "underline"})
 call s:h("Ignore",        {"fg": s:bg})

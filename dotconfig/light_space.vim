@@ -16,12 +16,13 @@ let g:colors_name='space'
 let g:limelight_conceal_ctermfg=100
 let g:limelight_conceal_guifg = '#a1a1a1'
 
-let s:bg           = { "gui": "#eff1f5", "cterm": "232" } " bg
-"let s:bg           = { "gui": "#d5d7df", "cterm": "232" } " bg
-let s:fg           = { "gui": "#2B303B", "cterm": "232" } " bg
-let s:primary      = { "gui": "#b48ead", "cterm": "232" } " bg
-let s:secondary    = { "gui": "#8fa1b3", "cterm": "232" } " bg
-let s:tertiary     = { "gui": "#d08770", "cterm": "232" } " bg
+let s:bg           = { "gui": "#F9F9F9", "cterm": "1" } " bg
+let s:fg           = { "gui": "#424242", "cterm": "232" } " bg
+let s:primary      = { "gui": "#FC550C", "cterm": "232" } " bg
+let s:secondary    = { "gui": "#2E88DD", "cterm": "232" } " bg
+let s:tertiary     = { "gui": "#5719AE", "cterm": "232" } " bg
+let s:light_tert   = { "gui": "#9c7fd3", "cterm": "232" } " bg
+let s:light_prim   = { "gui": "#FB2486", "cterm": "232" } " bg
 
 let s:black           = { "gui": "#2B303B", "cterm": "232" } " bg
 let s:bg_contrast     = { "gui": "#232830", "cterm": "232" } " bg contrast
@@ -31,7 +32,7 @@ let s:dark_red        = { "gui": "#bf616a", "cterm": "1"   } " red
 let s:orange          = { "gui": "#d08770", "cterm": "167" } " orange
 let s:blue            = { "gui": "#8fa1b3", "cterm": "12"  } " blue
 let s:light_blue      = { "gui": "#5699af", "cterm": "153" } " dark cyan
-let s:dark_green      = { "gui": "#a3be8c", "cterm": "2"   } " green
+let s:dark_green      = { "gui": "#3D911F", "cterm": "2"   } " green
 let s:light_green     = { "gui": "#88c0d0", "cterm": "10"  } " light cyan
 let s:light_purple    = { "gui": "#1D7CB4", "cterm": "134" } " magenta
 let s:dark_purple     = { "gui": "#b48ead", "cterm": "134" } " magenta
@@ -77,32 +78,40 @@ if &background != s:background
 endif
 
 call s:h("Cursor",        {"bg": s:light_purple, "fg": s:norm })
-call s:h("Comment",       {"fg": s:secondary, "gui": "italic"})
+call s:h("Comment",       {"fg": s:medium_gray, "gui": "italic"})
 hi! link SpecialComment   Comment
 
-call s:h("Constant",      {"fg": s:light_purple})
+call s:h("String",      {"fg": s:light_purple})
+call s:h("Constant",      {"fg": s:primary})
 hi! link Character        Constant
 hi! link Number           Constant
 hi! link Boolean          Constant
 hi! link Float            Constant
-hi! link String           Constant
 
-hi! link typeScriptBraces       Normal
-hi! link javaScriptBraces       Normal
-hi! link typeScriptCall       Normal
-hi! link typeScriptTypeReference       Normal
-hi! link typeScriptParamImpl       Normal
-hi! link typeScriptObjectLabel       Normal
-hi! link typeScriptFuncType       Normal
-hi! link typeScriptPredefinedType       Normal
-hi! link htmlTag       Normal
-hi! link htmlEndTag       Normal
-hi! link javaScript       Normal
-hi! link jsonKeyword       Normal
+call s:h("javaScript",  {"fg": s:norm})
+hi! link typeScriptBraces       javaScript
+hi! link javaScriptBraces       javaScript
+hi! link typeScriptCall       javaScript
+hi! link typeScriptTypeReference       javaScript
+hi! link typeScriptParamImpl       javaScript
+hi! link typeScriptObjectLabel       javaScript
+hi! link typeScriptFuncType       javaScript
+hi! link typeScriptPredefinedType       javaScript
+hi! link htmlTag       javaScript
+hi! link htmlEndTag       javaScript
+hi! link javaScript       javaScript
+hi! link jsonKeyword       javaScript
 
-call s:h("typeScriptMember",    {"fg": s:primary, "gui": "bold"})
+call s:h("typeScriptMember",    {"fg": s:tertiary, "gui": "bold"})
 
-call s:h("typeScriptRepeat",    {"fg": s:dark_red, "gui": "bold"})
+hi! link markdownH1 typeScriptMember
+hi! link markdownH2 typeScriptMember
+hi! link markdownH3 typeScriptMember
+hi! link markdownH4 typeScriptMember
+hi! link markdownH5 typeScriptMember
+hi! link markdownH6 typeScriptMember
+
+call s:h("typeScriptRepeat",    {"fg": s:light_prim})
 hi! link typeScriptStatementKeyword        typeScriptRepeat
 hi! link typeScriptConditional        typeScriptRepeat
 hi! link javaScriptConditional        typeScriptRepeat
@@ -126,7 +135,7 @@ hi! link csType Identifier
 hi! link typeScriptPredefinedType Identifier
 hi! link typeScriptNull Identifier
 
-call s:h("typeScriptAliasDeclaration",    {"fg": s:tertiary, "gui": "bold"})
+call s:h("typeScriptAliasDeclaration",    {"fg": s:secondary, "gui": "bold"})
 hi! link typeScriptClassName typeScriptAliasDeclaration
 hi! link typeScriptEnum typeScriptAliasDeclaration
 hi! link csClassType typeScriptAliasDeclaration
@@ -137,12 +146,6 @@ hi! link Repeat           Statement
 hi! link Label            Statement
 hi! link Exception        Statement
 hi! link jsonQuote    Statement
-hi! link markdownH1 Statement
-hi! link markdownH2 Statement
-hi! link markdownH3 Statement
-hi! link markdownH4 Statement
-hi! link markdownH5 Statement
-hi! link markdownH6 Statement
 
 call s:h("htmlTagName", {"fg": s:secondary, "cterm": "bold", "gui": "bold"})
 call s:h("htmlTagN",    {"fg": s:dark_red, "gui": "bold"})
@@ -212,8 +215,8 @@ call s:h("TabLine",       {"fg": s:norm, "bg": s:bg_very_subtle})
 call s:h("TabLineSel",    {"fg": s:blue, "bg": s:bg_subtle, "gui": "bold", "cterm": "bold"})
 call s:h("TabLineFill",   {"fg": s:norm, "bg": s:bg_very_subtle})
 call s:h("CursorColumn",  {"bg": s:light_green})
-call s:h("CursorLine",    {"gui": "underline"})
-"call s:h("CursorLine",    {"bg": s:bg_very_subtle})
+"call s:h("CursorLine",    {"gui": "underline"})
+call s:h("CursorLine",    {"bg": s:bg_very_subtle})
 call s:h("ColorColumn",   {"bg": s:bg_subtle})
 
 call s:h("MatchParen",    {"bg": s:bg_subtle, "fg": s:norm})
@@ -248,4 +251,3 @@ hi link GitGutterAdd                LineNr
 hi link GitGutterDelete             LineNr
 hi link GitGutterChange             LineNr
 hi link GitGutterChangeDelete       LineNr
-
