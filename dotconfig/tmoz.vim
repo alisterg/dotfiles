@@ -78,23 +78,28 @@ call s:h("Constant",      {"fg": s:light_blue})
 hi! link Character        Constant
 hi! link String           Constant
 
-hi! link typeScriptBraces       Normal
-hi! link javaScriptBraces       Normal
-hi! link typeScriptCall       Normal
-hi! link typeScriptParamImpl       Normal
-hi! link typeScriptObjectLabel       Normal
-hi! link typeScriptFuncType       Normal
-hi! link typeScriptBOMNavigatorProp       Normal
-hi! link typeScriptGlobalMethod       Normal
-hi! link typeScriptBOMWindowProp       Normal
-hi! link typeScriptGlobal       Normal
-hi! link htmlTag       Normal
-hi! link htmlEndTag       Normal
-hi! link javaScript       Normal
-hi! link jsonKeyword       Normal
+call s:h("htmlTag",      {"fg": s:norm})
+hi! link typeScriptBraces       htmlTag
+hi! link javaScriptBraces       htmlTag
+hi! link typeScriptCall       htmlTag
+hi! link typeScriptParamImpl       htmlTag
+hi! link typeScriptObjectLabel       htmlTag
+hi! link typeScriptFuncType       htmlTag
+hi! link typeScriptDestructureVariable       htmlTag
+hi! link typeScriptBOMNavigatorProp       htmlTag
+hi! link typeScriptGlobalMethod       htmlTag
+hi! link typeScriptBOMWindowProp       htmlTag
+hi! link typeScriptGlobal       htmlTag
+hi! link htmlEndTag       htmlTag
+hi! link javaScript       htmlTag
+hi! link jsonKeyword       htmlTag
 
 call s:h("typeScriptMember",    {"fg": s:blue})
+hi! link typeScriptFuncName    typeScriptMember
+hi! link tsxString    typeScriptMember
 hi! link javaScriptFunction    typeScriptMember
+hi! link hsModule typeScriptMember
+hi! link hsStructure typeScriptMember
 
 call s:h("typeScriptRepeat",    {"fg": s:bright_purple})
 hi! link typeScriptStatementKeyword        typeScriptRepeat
@@ -102,6 +107,7 @@ hi! link typeScriptConditional        typeScriptRepeat
 hi! link javaScriptConditional        typeScriptRepeat
 hi! link csConditional        typeScriptRepeat
 hi! link csRepeat        typeScriptRepeat
+hi! link hsConditional        typeScriptRepeat
 
 call s:h("Statement",    {"fg": s:norm, "cterm": "italic", "gui": "italic" })
 call s:h("Identifier",    {"fg": s:norm, "cterm": "italic", "gui": "italic" })
@@ -115,6 +121,7 @@ hi! link jsonQuote        Identifier
 
 call s:h("Keyword",    {"fg": s:light_purple})
 hi! link typeScriptClassStatic Keyword
+hi! link hsStatement Keyword
 
 call s:h("typeScriptAliasDeclaration",    {"fg": s:dark_purple})
 hi! link typeScriptClassName typeScriptAliasDeclaration
@@ -122,6 +129,7 @@ hi! link typeScriptTypeReference typeScriptAliasDeclaration
 hi! link typeScriptPredefinedType typeScriptAliasDeclaration
 hi! link typeScriptEnum typeScriptAliasDeclaration
 hi! link csClassType typeScriptAliasDeclaration
+hi! link ConId typeScriptAliasDeclaration
 
 call s:h("typeScriptNull",    {"fg": s:light_green})
 hi! link Number typeScriptNull
