@@ -16,8 +16,10 @@ let g:colors_name='space'
 let g:limelight_conceal_ctermfg=100
 let g:limelight_conceal_guifg = '#a1a1a1'
 
-let s:bg           = { "gui": "#F9F9F9", "cterm": "1" } " bg
-let s:fg           = { "gui": "#424242", "cterm": "232" } " bg
+let s:bg           = { "gui": "#f6f2ee", "cterm": "1" } " bg
+"let s:bg           = { "gui": "#F9F9F9", "cterm": "1" } " bg
+let s:fg           = { "gui": "#000000", "cterm": "232" } " bg
+"let s:fg           = { "gui": "#343434", "cterm": "232" } " bg
 let s:primary      = { "gui": "#FC550C", "cterm": "232" } " bg
 let s:secondary    = { "gui": "#2E88DD", "cterm": "232" } " bg
 let s:tertiary     = { "gui": "#5719AE", "cterm": "232" } " bg

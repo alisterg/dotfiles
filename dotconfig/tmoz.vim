@@ -19,7 +19,7 @@ let g:limelight_conceal_guifg = '#a1a1a1'
 let s:black           = { "gui": "#1e1d1e", "cterm": "232" } " bg
 let s:bg_contrast     = { "gui": "#232830", "cterm": "232" } " bg contrast
 let s:lighter_gray    = { "gui": "#abb2bf", "cterm": "251" } " fg 
-let s:medium_gray     = { "gui": "#5c6370", "cterm": "243" } " comments
+let s:medium_gray     = { "gui": "#586e75", "cterm": "243" } " comments
 let s:orange          = { "gui": "#e78c45", "cterm": "167" } " orange
 let s:yellow          = { "gui": "#e7c547", "cterm": "11"  } " yellow
 let s:dark_green      = { "gui": "#b9ca4a", "cterm": "2"   } " green
@@ -32,9 +32,8 @@ let s:bright_purple   = { "gui": "#c468ae", "cterm": "134" }
 let s:white           = { "gui": "#D5D9E2", "cterm": "15"  }
 let s:light_black     = { "gui": "#323845", "cterm": "235" }
 let s:light_gray      = { "gui": "#A8A8A8", "cterm": "248" }
-let s:lightest_gray   = { "gui": "#E0E4EC", "cterm": "255" }
+let s:lightest_gray   = { "gui": "#839496", "cterm": "255" }
 let s:dark_red        = { "gui": "#cc6666", "cterm": "1"   }
-let s:norm_subtle     = s:medium_gray
 let s:red             = s:dark_red
 
 let s:background = &background
@@ -78,28 +77,22 @@ call s:h("Constant",      {"fg": s:light_blue})
 hi! link Character        Constant
 hi! link String           Constant
 
-call s:h("htmlTag",      {"fg": s:norm})
-hi! link typeScriptBraces       htmlTag
-hi! link javaScriptBraces       htmlTag
-hi! link typeScriptCall       htmlTag
-hi! link typeScriptParamImpl       htmlTag
-hi! link typeScriptObjectLabel       htmlTag
-hi! link typeScriptFuncType       htmlTag
-hi! link typeScriptDestructureVariable       htmlTag
-hi! link typeScriptBOMNavigatorProp       htmlTag
-hi! link typeScriptGlobalMethod       htmlTag
-hi! link typeScriptBOMWindowProp       htmlTag
-hi! link typeScriptGlobal       htmlTag
-hi! link htmlEndTag       htmlTag
-hi! link javaScript       htmlTag
-hi! link jsonKeyword       htmlTag
-
-call s:h("typeScriptMember",    {"fg": s:blue})
-hi! link typeScriptFuncName    typeScriptMember
-hi! link tsxString    typeScriptMember
-hi! link javaScriptFunction    typeScriptMember
-hi! link hsModule typeScriptMember
-hi! link hsStructure typeScriptMember
+hi! link typeScriptBraces       Normal
+hi! link javaScriptBraces       Normal
+hi! link typeScriptCall       Normal
+hi! link typeScriptParamImpl       Normal
+hi! link typeScriptObjectLabel       Normal
+hi! link typeScriptFuncType       Normal
+hi! link typeScriptBOMNavigatorProp       Normal
+hi! link typeScriptGlobalMethod       Normal
+hi! link typeScriptBOMWindowProp       Normal
+hi! link typeScriptGlobal       Normal
+hi! link htmlTag       Normal
+hi! link htmlEndTag       Normal
+hi! link javaScript       Normal
+hi! link jsonKeyword       Normal
+hi! link typeScriptPredefinedType Normal
+hi! link goTypeConstructor Normal
 
 call s:h("typeScriptRepeat",    {"fg": s:bright_purple})
 hi! link typeScriptStatementKeyword        typeScriptRepeat
@@ -107,34 +100,39 @@ hi! link typeScriptConditional        typeScriptRepeat
 hi! link javaScriptConditional        typeScriptRepeat
 hi! link csConditional        typeScriptRepeat
 hi! link csRepeat        typeScriptRepeat
-hi! link hsConditional        typeScriptRepeat
+hi! link goConditional        typeScriptRepeat
+hi! link goStatement        typeScriptRepeat
 
-call s:h("Statement",    {"fg": s:norm, "cterm": "italic", "gui": "italic" })
-call s:h("Identifier",    {"fg": s:norm, "cterm": "italic", "gui": "italic" })
+call s:h("Identifier",    {"fg": s:dark_purple})
 hi! link Function         Identifier
 hi! link typeScriptIdentifier Identifier
+hi! link javaScriptReserved        Identifier
 hi! link Conditonal       Identifier
 hi! link Repeat           Identifier
 hi! link Label            Identifier
 hi! link Exception        Identifier
 hi! link jsonQuote        Identifier
+hi! link goDeclaration        Identifier
+hi! link goType Identifier
 
 call s:h("Keyword",    {"fg": s:light_purple})
 hi! link typeScriptClassStatic Keyword
-hi! link hsStatement Keyword
+hi! link ConId Keyword
 
-call s:h("typeScriptAliasDeclaration",    {"fg": s:dark_purple})
-hi! link typeScriptClassName typeScriptAliasDeclaration
-hi! link typeScriptTypeReference typeScriptAliasDeclaration
-hi! link typeScriptPredefinedType typeScriptAliasDeclaration
-hi! link typeScriptEnum typeScriptAliasDeclaration
-hi! link csClassType typeScriptAliasDeclaration
-hi! link ConId typeScriptAliasDeclaration
+call s:h("typeScriptTypeReference",    {"fg": s:norm})
+
+call s:h("typeScriptClassName",    {"fg": s:blue})
+hi! link typeScriptAliasDeclaration typeScriptClassName
+hi! link csClassType typeScriptClassName
+hi! link typeScriptEnum typeScriptClassName
+hi! link goTypeName typeScriptClassName
+hi! link goReceiverType typeScriptClassName
 
 call s:h("typeScriptNull",    {"fg": s:light_green})
 hi! link Number typeScriptNull
 hi! link Float            typeScriptNull
 hi! link Boolean          typeScriptNull
+hi! link goPredefinedIdentifiers           typeScriptNull
 
 call s:h("markdownH1", {"fg": s:yellow})
 call s:h("markdownH1Delimiter", {"fg": s:orange})
@@ -151,23 +149,30 @@ call s:h("markdownH6Delimiter", {"fg": s:dark_red})
 
 call s:h("htmlTagName",     {"fg": s:light_purple})
 "call s:h("htmlString",     {"fg": s:dark_green})
-call s:h("htmlTagN",     {"fg": s:orange})
+call s:h("htmlTagN",     {"fg": s:bright_purple})
 
 call s:h("Operator",      {"fg": s:norm, "cterm": "bold", "gui": "bold"})
+"call s:h("typeScriptMember",    {"fg": s:lightest_gray})
+hi! link typeScriptMember    Operator
+hi! link goFunction    Operator
+hi! link javaScriptFunction    Operator
+hi! link cssClassName    Operator
+hi! link htmlArg    Operator
 
+call s:h("Statement",    {"fg": s:lightest_gray, "gui": "italic" })
 call s:h("PreProc",     {"fg": s:dark_green})
 hi! link Include          PreProc
 hi! link Define           PreProc
 hi! link Macro            PreProc
-hi! link PreCondit        PreProc
-hi! link javaScriptReserved        PreProc
+hi! link goPackage        PreProc
+hi! link goImport        PreProc
 
 call s:h("Type",          {"fg": s:dark_purple})
 hi! link StorageClass     Type
 hi! link Structure        Type
 hi! link Typedef          Type
 
-call s:h("Special",       {"fg": s:dark_green})
+call s:h("Special",       {"fg": s:dark_purple})
 hi! link SpecialChar      Special
 hi! link Tag              Special
 hi! link Delimiter        Special
