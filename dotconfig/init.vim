@@ -17,7 +17,8 @@ if exists("&termguicolors") && exists("&winblend")
 
   " Dark theme ---------------------------
   set background=dark
-  runtime ./tmoz.vim
+  "runtime ./tmoz.vim
+  runtime ./solar.vim
   "runtime ./space.vim
   "runtime ./molo.vim
 
@@ -26,9 +27,9 @@ if exists("&termguicolors") && exists("&winblend")
   "runtime ./light_space.vim
  
   " For theme with transparent background
-  highlight Visual cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey40
-  highlight Search cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey50
-  highlight IncSearch cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey70
+  "highlight Visual cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey40
+  "highlight Search cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey50
+  "highlight IncSearch cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey70
 
   set cursorline
 endif
@@ -66,6 +67,8 @@ nnoremap gb :Telescope buffers<CR>
 nmap <leader>d a[<esc>"=strftime("%F %H:%M")<CR>pa] 
 inoremap <C-d> [<esc>"=strftime("%F %H:%M")<CR>pa] 
 
+nmap <esc> :noh<CR>
+
 "--------------------------
 "Git Gutter
 set signcolumn=yes
@@ -78,6 +81,10 @@ let g:gitgutter_sign_modified_removed = '|'
 
 " Updates gitgutter every 200ms
 set updatetime=200
+
+" Golang highlighting for use with vim-go
+let g:go_highlight_functions = 1
+let g:go_highlight_types = 1
 
 " Display the syntax highlight group of the symbol under cursor
 nnoremap <leader>ii :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
