@@ -16,28 +16,28 @@ let g:colors_name='space'
 let g:limelight_conceal_ctermfg=100
 let g:limelight_conceal_guifg = '#898d94'
 
-let s:black           = { "gui": "#16171d", "cterm": "232" } " bg
-let s:alt_black       = { "gui": "#1c1f28", "cterm": "232" } " bg
-let s:bg_contrast     = { "gui": "#383a4b", "cterm": "232" } " bg contrast
-let s:lighter_gray    = { "gui": "#c0c4cd", "cterm": "251" } " fg 
-let s:medium_gray     = { "gui": "#616E88", "cterm": "243" } " comments
-let s:dark_red        = { "gui": "#bf616a", "cterm": "1"   } " red
-let s:orange          = { "gui": "#d08770", "cterm": "167" } " orange
-let s:yellow          = { "gui": "#ebca8a", "cterm": "11"  } " yellow
-let s:dark_green      = { "gui": "#a3be8c", "cterm": "2"   } " green
-let s:light_green     = { "gui": "#88c0d0", "cterm": "10"  } " light cyan
-let s:light_blue      = { "gui": "#5699af", "cterm": "153" } " dark cyan
-let s:blue            = { "gui": "#8fa1b3", "cterm": "12"  } " blue
-let s:blue_grey            = { "gui": "#8fa0b2", "cterm": "12"  } " blue
-let s:dark_purple     = { "gui": "#b48ead", "cterm": "134" } " magenta
-let s:light_purple    = { "gui": "#e298c2", "cterm": "134" } " magenta
-let s:white           = { "gui": "#D5D9E2", "cterm": "15"  }
-let s:light_black     = { "gui": "#323845", "cterm": "235" }
-let s:light_gray      = { "gui": "#898d94", "cterm": "248" }
-let s:lightest_gray   = { "gui": "#E0E4EC", "cterm": "255" }
-let s:light_red       = { "gui": "#D98282", "cterm": "1"   }
-let s:norm_subtle     = s:medium_gray
-let s:red             = s:light_red
+let s:black         = { "gui": "#16171d", "cterm": "232" } " bg
+let s:alt_black     = { "gui": "#1c1f28", "cterm": "232" } " bg
+let s:bg_contrast   = { "gui": "#383a4b", "cterm": "232" } " bg contrast
+let s:lighter_gray  = { "gui": "#c0c4cd", "cterm": "251" } " fg
+let s:medium_gray   = { "gui": "#616E88", "cterm": "243" } " comments
+let s:dark_red      = { "gui": "#bf616a", "cterm": "1"   } " red
+let s:orange        = { "gui": "#d08770", "cterm": "167" } " orange
+let s:yellow        = { "gui": "#ebca8a", "cterm": "11"  } " yellow
+let s:dark_green    = { "gui": "#a3be8c", "cterm": "2"   } " green
+let s:light_green   = { "gui": "#88c0d0", "cterm": "10"  } " light cyan
+let s:light_blue    = { "gui": "#5699af", "cterm": "153" } " dark cyan
+let s:blue          = { "gui": "#8fa1b3", "cterm": "12"  } " blue
+let s:blue_grey     = { "gui": "#8fa0b2", "cterm": "12"  } " blue
+let s:dark_purple   = { "gui": "#b48ead", "cterm": "134" } " magenta
+let s:light_purple  = { "gui": "#e298c2", "cterm": "134" } " magenta
+let s:white         = { "gui": "#D5D9E2", "cterm": "15"  }
+let s:light_black   = { "gui": "#323845", "cterm": "235" }
+let s:light_gray    = { "gui": "#898d94", "cterm": "248" }
+let s:lightest_gray = { "gui": "#E0E4EC", "cterm": "255" }
+let s:light_red     = { "gui": "#D98282", "cterm": "1"   }
+let s:norm_subtle   = s:medium_gray
+let s:red           = s:light_red
 
 let s:background = &background
 
@@ -72,77 +72,77 @@ if &background != s:background
    execute "set background=" . s:background
 endif
 
-call s:h("Cursor",        {"bg": s:light_purple, "fg": s:norm })
-call s:h("Comment",       {"fg": s:dark_green, "gui": "italic"})
-hi! link SpecialComment   Comment
+call s:h("Cursor",  { "bg": s:light_purple, "fg": s:norm })
+call s:h("Comment", { "fg": s:dark_green, "gui": "italic"})
+hi! link SpecialComment Comment
 
-call s:h("Constant",      {"fg": s:light_blue})
-hi! link Character        Constant
-hi! link Number           Constant
-hi! link Boolean          Constant
-hi! link Float            Constant
-hi! link String           Constant
+call s:h("Constant", { "fg": s:light_blue})
+hi! link Character Constant
+hi! link Number    Constant
+hi! link Boolean   Constant
+hi! link Float     Constant
+hi! link String    Constant
 
-call s:h("javaScript",      {"fg": s:norm})
-hi! link typeScriptBraces       javaScript
-hi! link javaScriptBraces       javaScript
-hi! link typeScriptCall       javaScript
-hi! link typeScriptTypeReference       javaScript
-hi! link typeScriptParamImpl       javaScript
-hi! link typeScriptObjectLabel       javaScript
-hi! link typeScriptFuncType       javaScript
-hi! link typeScriptDestructureVariable       javaScript
-hi! link typeScriptBOMNavigatorProp       javaScript
-hi! link typeScriptConsoleMethod       javaScript
-hi! link typeScriptFileReaderProp       javaScript
-hi! link htmlTag       javaScript
-hi! link htmlEndTag       javaScript
-hi! link javaScript       javaScript
-hi! link jsonKeyword       javaScript
-hi! link vimVar       javaScript
+call s:h("Nothing", {"fg": s:norm})
+hi! link javaScript                    Nothing
+hi! link typeScriptBraces              Nothing
+hi! link javaScriptBraces              Nothing
+hi! link typeScriptCall                Nothing
+hi! link typeScriptTypeReference       Nothing
+hi! link typeScriptParamImpl           Nothing
+hi! link typeScriptObjectLabel         Nothing
+hi! link typeScriptFuncType            Nothing
+hi! link typeScriptDestructureVariable Nothing
+hi! link typeScriptBOMNavigatorProp    Nothing
+hi! link typeScriptConsoleMethod       Nothing
+hi! link typeScriptFileReaderProp      Nothing
+hi! link htmlTag                       Nothing
+hi! link htmlEndTag                    Nothing
+hi! link jsonKeyword                   Nothing
+hi! link vimVar                        Nothing
+hi! link goTypeConstructor             Nothing
 
-call s:h("typeScriptMember",    {"fg": s:blue_grey})
-hi! link vimLet       typeScriptMember
-hi! link vimCommand       typeScriptMember
+call s:h("typeScriptMember", {"fg": s:light_purple})
+hi! link vimLet             typeScriptMember
+hi! link vimCommand         typeScriptMember
 hi! link vimHighlight       typeScriptMember
-hi! link javaScriptFunction       typeScriptMember
-hi! link typeScriptFuncName       typeScriptMember
-hi! link pythonFunction typeScriptMember
-hi! link hsModule typeScriptMember
-hi! link hsStructure typeScriptMember
+hi! link javaScriptFunction typeScriptMember
+hi! link typeScriptFuncName typeScriptMember
+hi! link pythonFunction     typeScriptMember
+hi! link hsModule           typeScriptMember
+hi! link hsStructure        typeScriptMember
+hi! link goFunction         typeScriptMember
 
-call s:h("typeScriptRepeat",    {"fg": s:yellow})
-hi! link typeScriptStatementKeyword        typeScriptRepeat
-hi! link typeScriptConditional        typeScriptRepeat
-hi! link javaScriptConditional        typeScriptRepeat
-hi! link csConditional        typeScriptRepeat
-hi! link cConditional        typeScriptRepeat
-hi! link csRepeat        typeScriptRepeat
-hi! link pythonConditional        typeScriptRepeat
-hi! link hsConditional        typeScriptRepeat
+call s:h("typeScriptRepeat", {"fg": s:orange})
+hi! link typeScriptStatementKeyword typeScriptRepeat
+hi! link typeScriptConditional      typeScriptRepeat
+hi! link javaScriptConditional      typeScriptRepeat
+hi! link csConditional              typeScriptRepeat
+hi! link cConditional               typeScriptRepeat
+hi! link csRepeat                   typeScriptRepeat
+hi! link pythonConditional          typeScriptRepeat
+hi! link hsConditional              typeScriptRepeat
+hi! link goConditional              typeScriptRepeat
+hi! link goStatement                typeScriptRepeat
 
-call s:h("Statement",     {"fg": s:norm_subtle})
-hi! link Conditonal       Statement
-hi! link Repeat           Statement
-hi! link Label            Statement
-hi! link Exception        Statement
-hi! link jsonQuote    Statement
-call s:h("Identifier",    {"fg": s:norm_subtle})
-hi! link Function         Identifier
-hi! link typeScriptIdentifier Identifier
+call s:h("Statement", {"fg": s:blue_grey})
+hi! link Conditonal           Statement
+hi! link Repeat               Statement
+hi! link Label                Statement
+hi! link Exception            Statement
+hi! link jsonQuote            Statement
+hi! link Identifier           Statement
+hi! link Function             Statement
+hi! link typeScriptIdentifier Statement
 
-call s:h("Keyword",    {"fg": s:dark_purple})
-hi! link typeScriptPredefinedType Keyword
-hi! link typeScriptNull Keyword
-hi! link pythonStatement Keyword
-hi! link hsStatement Keyword
-
-call s:h("typeScriptAliasDeclaration",    {"fg": s:light_purple})
+call s:h("typeScriptAliasDeclaration", {"fg": s:yellow})
 hi! link typeScriptClassName typeScriptAliasDeclaration
-hi! link typeScriptEnum typeScriptAliasDeclaration
-hi! link csClassType typeScriptAliasDeclaration
-hi! link pythonBuiltin typeScriptAliasDeclaration
-hi! link ConId typeScriptAliasDeclaration
+hi! link typeScriptEnum      typeScriptAliasDeclaration
+hi! link csClassType         typeScriptAliasDeclaration
+hi! link pythonBuiltin       typeScriptAliasDeclaration
+hi! link ConId               typeScriptAliasDeclaration
+hi! link goTypeName          typeScriptAliasDeclaration
+hi! link goReceiverType      typeScriptAliasDeclaration
 
 call s:h("markdownH1", {"fg": s:dark_green})
 call s:h("markdownH1Delimiter", {"fg": s:blue})
@@ -157,36 +157,52 @@ call s:h("markdownH5Delimiter", {"fg": s:dark_purple})
 call s:h("markdownH6", {"fg": s:dark_green})
 call s:h("markdownH6Delimiter", {"fg": s:dark_green})
 
-call s:h("htmlTagName",     {"fg": s:light_purple})
-call s:h("htmlTagN",     {"fg": s:orange})
-hi! link tsxTagName          htmlTagN
+call s:h("htmlTagName", { "fg": s:light_purple})
+call s:h("htmlTagN",    { "fg": s:orange})
+hi! link tsxTagName     htmlTagN
 
-call s:h("Operator",      {"fg": s:norm})
+call s:h("Operator", {"fg": s:norm})
 
-call s:h("PreProc",     {"fg": s:blue_grey})
-hi! link Include          PreProc
-hi! link Define           PreProc
-hi! link Macro            PreProc
-hi! link PreCondit        PreProc
-hi! link javaScriptReserved        PreProc
-hi! link cssMediaProp          PreProc
-hi! link cssFlexibleBoxProp          PreProc
-hi! link cssFontProp          PreProc
-hi! link cssTextProp          PreProc
-hi! link cssBoxProp          PreProc
+call s:h("PreProc", {"fg": s:blue_grey})
+hi! link Include            PreProc
+hi! link Define             PreProc
+hi! link Macro              PreProc
+hi! link PreCondit          PreProc
+hi! link javaScriptReserved PreProc
+hi! link cssMediaProp       PreProc
+hi! link cssFlexibleBoxProp PreProc
+hi! link cssFontProp        PreProc
+hi! link cssTextProp        PreProc
+hi! link cssBoxProp         PreProc
 hi! link cssUIProp          PreProc
-hi! link cssTransformProp          PreProc
-hi! link cssColorProp          PreProc
-hi! link cssTransitionProp          PreProc
-hi! link cssPositioningProp          PreProc
-hi! link cssVendor      PreProc
+hi! link cssTransformProp   PreProc
+hi! link cssColorProp       PreProc
+hi! link cssTransitionProp  PreProc
+hi! link cssPositioningProp PreProc
+hi! link cssVendor          PreProc
+hi! link goPackage          PreProc
+hi! link goImport           PreProc
 
-call s:h("Type",          {"fg": s:dark_purple})
-hi! link StorageClass     Type
-hi! link Structure        Type
-hi! link Typedef          Type
-hi! link cssClassName          Type
-hi! link cssTagName          Type
+call s:h("Keyword", {"fg": s:dark_purple})
+hi! link typeScriptPredefinedType Keyword
+hi! link typeScriptNull           Keyword
+hi! link pythonStatement          Keyword
+hi! link hsStatement              Keyword
+hi! link goLabel                  Keyword
+hi! link goVar                    Keyword
+hi! link goRepeat                 Keyword
+hi! link goBuiltins               Keyword
+hi! link goPredefinedIdentifiers  Keyword
+hi! link goType                   Keyword
+hi! link goUnsignedInts           Keyword
+
+call s:h("Type", {"fg": s:dark_purple})
+hi! link StorageClass  Type
+hi! link Structure     Type
+hi! link Typedef       Type
+hi! link cssClassName  Type
+hi! link cssTagName    Type
+hi! link goDeclaration Type
 
 call s:h("Special",       {"fg": s:blue_grey})
 hi! link SpecialChar      Special
