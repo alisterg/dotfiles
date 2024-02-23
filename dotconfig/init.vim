@@ -17,8 +17,8 @@ if exists("&termguicolors") && exists("&winblend")
 
   " Dark theme ---------------------------
   set background=dark
-  "runtime ./tmoz.vim
   runtime ./solar.vim
+  "runtime ./tmoz.vim
   "runtime ./space.vim
   "runtime ./molo.vim
 
@@ -68,6 +68,8 @@ nmap <leader>d a[<esc>"=strftime("%F %H:%M")<CR>pa]
 inoremap <C-d> [<esc>"=strftime("%F %H:%M")<CR>pa] 
 
 nmap <esc> :noh<CR>
+
+xmap <leader>a <Plug>(EasyAlign)
 
 "--------------------------
 "Git Gutter

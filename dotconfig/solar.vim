@@ -1,4 +1,4 @@
-" Name:       ume.vim
+" Name:       solar.vim
 " Version:    0.1.0
 " Maintainer: github.com/alisterg
 " License:    The MIT License (MIT)
@@ -14,25 +14,26 @@ endif
 
 let g:colors_name='solar'
 let g:limelight_conceal_ctermfg=100
-let g:limelight_conceal_guifg = '#a1a1a1'
+let g:limelight_conceal_guifg = '#586e75'
 
-let s:black           = { "gui": "#071e24", "cterm": "232" } " bg
-let s:bg_contrast     = { "gui": "#002b36", "cterm": "232" } " bg contrast
-let s:lighter_gray    = { "gui": "#93a1a1", "cterm": "251" } " fg 
-let s:medium_gray     = { "gui": "#586e75", "cterm": "243" } " comments
-let s:orange          = { "gui": "#cb4b16", "cterm": "167" } " orange
-let s:yellow          = { "gui": "#b58900", "cterm": "11"  } " yellow
-let s:dark_green      = { "gui": "#b9ca4a", "cterm": "2"   } " green
-let s:light_green     = { "gui": "#859900", "cterm": "10"  } " light cyan
-let s:light_blue      = { "gui": "#2aa198", "cterm": "153" } " dark cyan
-let s:blue            = { "gui": "#268bd2", "cterm": "12"  } " blue
-let s:dark_purple     = { "gui": "#6c71c4", "cterm": "134" } " magenta
-let s:light_purple    = { "gui": "#d33682", "cterm": "134" }
-let s:white           = { "gui": "#D5D9E2", "cterm": "15"  }
-let s:light_black     = { "gui": "#323845", "cterm": "235" }
-let s:light_gray      = { "gui": "#A8A8A8", "cterm": "248" }
-let s:dark_red        = { "gui": "#dc322f", "cterm": "1"   }
-let s:red             = s:dark_red
+let s:black        = { "gui": "#071e24", "cterm": "232" } " bg
+let s:bg_contrast  = { "gui": "#002b36", "cterm": "232" } " bg contrast
+let s:lighter_gray = { "gui": "#93a1a1", "cterm": "251" } " fg
+let s:medium_gray  = { "gui": "#586e75", "cterm": "243" } " comments
+let s:orange       = { "gui": "#cb4b16", "cterm": "167" } " orange
+let s:yellow       = { "gui": "#b58900", "cterm": "11"  } " yellow
+let s:dark_green   = { "gui": "#b9ca4a", "cterm": "2"   } " green
+let s:light_green  = { "gui": "#859900", "cterm": "10"  } " light cyan
+let s:light_blue   = { "gui": "#2aa198", "cterm": "153" } " dark cyan
+let s:blue         = { "gui": "#268bd2", "cterm": "12"  } " blue
+let s:dark_purple  = { "gui": "#6c71c4", "cterm": "134" } " magenta
+let s:light_purple = { "gui": "#A04B73", "cterm": "134" }
+let s:white        = { "gui": "#D5D9E2", "cterm": "15"  }
+let s:light_black  = { "gui": "#323845", "cterm": "235" }
+let s:darker_black = { "gui": "#00161c", "cterm": "235" }
+let s:light_gray   = { "gui": "#A8A8A8", "cterm": "248" }
+let s:dark_red     = { "gui": "#dc322f", "cterm": "1"   }
+let s:red          = s:dark_red
 
 let s:background = &background
 
@@ -74,149 +75,149 @@ call s:h("Constant",      {"fg": s:light_blue})
 hi! link Character        Constant
 hi! link String           Constant
 
-hi! link typeScriptBraces       Normal
-hi! link javaScriptBraces       Normal
-hi! link typeScriptCall       Normal
-hi! link typeScriptParamImpl       Normal
-hi! link typeScriptObjectLabel       Normal
-hi! link typeScriptFuncType       Normal
-hi! link typeScriptBOMNavigatorProp       Normal
-hi! link typeScriptGlobalMethod       Normal
-hi! link typeScriptBOMWindowProp       Normal
-hi! link typeScriptGlobal       Normal
-hi! link typeScriptDestructureVariable       Normal
-hi! link htmlTag       Normal
-hi! link htmlEndTag       Normal
-hi! link javaScript       Normal
-hi! link jsonKeyword       Normal
-hi! link goTypeConstructor Normal
-hi! link hsVarSym Normal
+call s:h("Statement", { "fg": s:medium_gray, "gui": "italic" })
 
-call s:h("typeScriptRepeat",    {"fg": s:light_green})
-hi! link typeScriptStatementKeyword        typeScriptRepeat
-hi! link typeScriptConditional        typeScriptRepeat
-hi! link javaScriptConditional        typeScriptRepeat
-hi! link csConditional        typeScriptRepeat
-hi! link csRepeat        typeScriptRepeat
-hi! link goConditional        typeScriptRepeat
-hi! link goStatement        typeScriptRepeat
-hi! link hsStatement        typeScriptRepeat
+call s:h("Nothing", {"fg": s:norm})
+hi! link typeScriptBraces              Nothing
+hi! link javaScriptBraces              Nothing
+hi! link typeScriptCall                Nothing
+hi! link typeScriptParamImpl           Nothing
+hi! link typeScriptObjectLabel         Nothing
+hi! link typeScriptFuncType            Nothing
+hi! link typeScriptParens              Nothing
+hi! link typeScriptBOMNavigatorProp    Nothing
+hi! link typeScriptGlobalMethod        Nothing
+hi! link typeScriptBOMWindowProp       Nothing
+hi! link typeScriptGlobal              Nothing
+hi! link typeScriptDestructureVariable Nothing
+hi! link htmlTag                       Nothing
+hi! link htmlEndTag                    Nothing
+hi! link javaScript                    Nothing
+hi! link jsonKeyword                   Nothing
+hi! link goTypeConstructor             Nothing
+hi! link hsVarSym                      Nothing
 
-call s:h("Identifier",    {"fg": s:blue})
-hi! link Function         Identifier
-hi! link Conditonal       Identifier
-hi! link Repeat           Identifier
-hi! link Label            Identifier
-hi! link Exception        Identifier
-hi! link jsonQuote        Identifier
-hi! link goFunction    Identifier
-hi! link hsStructure    Identifier
-hi! link hsTypedef    Identifier
+call s:h("typeScriptRepeat", {"fg": s:light_green})
+hi! link typeScriptStatementKeyword typeScriptRepeat
+hi! link typeScriptConditional      typeScriptRepeat
+hi! link javaScriptConditional      typeScriptRepeat
+hi! link csConditional              typeScriptRepeat
+hi! link csRepeat                   typeScriptRepeat
+hi! link goConditional              typeScriptRepeat
+hi! link goStatement                typeScriptRepeat
+hi! link hsStatement                typeScriptRepeat
 
-call s:h("Keyword",    {"fg": s:norm, "gui": "bold"})
-hi! link typeScriptClassStatic Keyword
-"hi! link ConId Keyword
-hi! link typeScriptVariable Keyword
-hi! link goLabel Keyword
-hi! link goVar Keyword
-hi! link goRepeat Keyword
-hi! link goBuiltins Keyword
+call s:h("Identifier", {"fg": s:blue})
+hi! link Function    Identifier
+hi! link Conditonal  Identifier
+hi! link Repeat      Identifier
+hi! link Label       Identifier
+hi! link Exception   Identifier
+hi! link jsonQuote   Identifier
+hi! link goFunction  Identifier
+hi! link hsStructure Identifier
+hi! link hsTypedef   Identifier
 
-call s:h("typeScriptTypeReference",    {"fg": s:norm})
+call s:h("Keyword", {"fg": s:norm, "gui": "bold"})
+hi! link typeScriptClassStatic   Keyword
+hi! link typeScriptVariable      Keyword
+hi! link typeScriptTypeReference Keyword
+hi! link goLabel                 Keyword
+hi! link goVar                   Keyword
+hi! link goRepeat                Keyword
+hi! link goBuiltins              Keyword
 
-call s:h("typeScriptClassName",    {"fg": s:blue})
+call s:h("typeScriptClassName", {"fg": s:blue})
 hi! link typeScriptAliasDeclaration typeScriptClassName
-hi! link typeScriptMember typeScriptClassName
-hi! link javaScriptFunction    typeScriptClassName
-hi! link csClassType typeScriptClassName
-hi! link typeScriptEnum typeScriptClassName
-hi! link goTypeName typeScriptClassName
-hi! link goReceiverType typeScriptClassName
+hi! link typeScriptMember           typeScriptClassName
+hi! link javaScriptFunction         typeScriptClassName
+hi! link csClassType                typeScriptClassName
+hi! link typeScriptEnum             typeScriptClassName
+hi! link goTypeName                 typeScriptClassName
+hi! link goReceiverType             typeScriptClassName
 
-call s:h("typeScriptNull",    {"fg": s:yellow})
-hi! link Number typeScriptNull
-hi! link Float            typeScriptNull
-hi! link Boolean          typeScriptNull
-hi! link javaScriptType typeScriptNull
-hi! link typeScriptPredefinedType           typeScriptNull
-hi! link goPredefinedIdentifiers           typeScriptNull
-hi! link goType           typeScriptNull
+call s:h("typeScriptNull", {"fg": s:yellow})
+hi! link Number                   typeScriptNull
+hi! link Float                    typeScriptNull
+hi! link Boolean                  typeScriptNull
+hi! link javaScriptType           typeScriptNull
+hi! link typeScriptPredefinedType typeScriptNull
+hi! link goPredefinedIdentifiers  typeScriptNull
+hi! link goType                   typeScriptNull
 hi! link goUnsignedInts           typeScriptNull
-hi! link hsConSym typeScriptNull
+hi! link hsConSym                 typeScriptNull
 
-call s:h("markdownH1", {"fg": s:yellow})
-call s:h("markdownH1Delimiter", {"fg": s:orange})
-call s:h("markdownH2", {"fg": s:light_green})
-call s:h("markdownH2Delimiter", {"fg": s:dark_green})
-call s:h("markdownH3", {"fg": s:light_blue})
-call s:h("markdownH3Delimiter", {"fg": s:blue})
-call s:h("markdownH4", {"fg": s:light_purple})
-call s:h("markdownH4Delimiter", {"fg": s:dark_purple})
-call s:h("markdownH5", {"fg": s:lighter_gray})
-call s:h("markdownH5Delimiter", {"fg": s:light_purple})
-call s:h("markdownH6", {"fg": s:lighter_gray})
-call s:h("markdownH6Delimiter", {"fg": s:dark_red})
+call s:h("markdownH1",          { "fg": s:yellow})
+call s:h("markdownH1Delimiter", { "fg": s:orange})
+call s:h("markdownH2",          { "fg": s:light_green})
+call s:h("markdownH2Delimiter", { "fg": s:dark_green})
+call s:h("markdownH3",          { "fg": s:light_blue})
+call s:h("markdownH3Delimiter", { "fg": s:blue})
+call s:h("markdownH4",          { "fg": s:light_purple})
+call s:h("markdownH4Delimiter", { "fg": s:dark_purple})
+call s:h("markdownH5",          { "fg": s:lighter_gray})
+call s:h("markdownH5Delimiter", { "fg": s:light_purple})
+call s:h("markdownH6",          { "fg": s:lighter_gray})
+call s:h("markdownH6Delimiter", { "fg": s:dark_red})
 
-call s:h("htmlTagName",     {"fg": s:light_purple})
-call s:h("htmlTagN",     {"fg": s:light_purple})
+call s:h("htmlTagName", { "fg": s:light_purple})
+call s:h("htmlTagN",    { "fg": s:yellow})
 
-call s:h("Operator",      {"fg": s:norm, "cterm": "bold", "gui": "bold"})
-hi! link cssClassName    Operator
-hi! link htmlArg    Operator
-hi! link typeScriptIdentifier    Operator
+call s:h("Operator", {"fg": s:norm, "cterm": "bold", "gui": "bold"})
+hi! link cssClassName         Operator
+hi! link htmlArg              Operator
+hi! link typeScriptIdentifier Operator
 
-call s:h("Statement",    {"fg": s:medium_gray, "gui": "italic" })
-call s:h("PreProc",     {"fg": s:light_green})
-hi! link Include          PreProc
-hi! link Define           PreProc
-hi! link Macro            PreProc
-hi! link goPackage        PreProc
-hi! link goImport        PreProc
+call s:h("PreProc",   { "fg": s:light_green})
+hi! link Include   PreProc
+hi! link Define    PreProc
+hi! link Macro     PreProc
+hi! link goPackage PreProc
+hi! link goImport  PreProc
 
-call s:h("Type",          {"fg": s:dark_purple})
-hi! link StorageClass     Type
-hi! link Structure        Type
-hi! link Typedef          Type
-hi! link goDeclaration        Type
+call s:h("Type", {"fg": s:dark_purple})
+hi! link StorageClass       Type
+hi! link Structure          Type
+hi! link Typedef            Type
+hi! link goDeclaration      Type
 hi! link javaScriptReserved Type
 
-call s:h("Special",       {"fg": s:dark_purple})
-hi! link SpecialChar      Special
-hi! link Tag              Special
-hi! link Delimiter        Special
-hi! link Debug            Special
+call s:h("Special", { "fg": s:dark_purple})
+hi! link SpecialChar Special
+hi! link Tag         Special
+hi! link Delimiter   Special
+hi! link Debug       Special
 
-call s:h("Underlined",    {"fg": s:norm, "gui": "underline", "cterm": "underline"})
-call s:h("Ignore",        {"fg": s:bg})
-call s:h("Error",         {"fg": s:white, "bg": s:red, "cterm": "bold"})
-call s:h("Todo",          {"fg": s:light_purple, "gui": "underline", "cterm": "underline"})
-call s:h("SpecialKey",    {"fg": s:light_green})
-call s:h("NonText",       {"fg": s:medium_gray})
-call s:h("Directory",     {"fg": s:blue})
-call s:h("ErrorMsg",      {"fg": s:red})
-call s:h("IncSearch",     {"bg": s:bg_subtle, "fg": s:yellow})
-call s:h("Search",        {"bg": s:bg_subtle, "fg": s:orange})
-call s:h("MoreMsg",       {"fg": s:medium_gray, "cterm": "bold", "gui": "bold"})
+call s:h("Underlined",   { "fg": s:norm, "gui": "underline", "cterm": "underline"})
+call s:h("Ignore",       { "fg": s:bg})
+call s:h("Error",        { "fg": s:white, "bg": s:red, "cterm": "bold"})
+call s:h("Todo",         { "fg": s:orange, "gui": "underline", "cterm": "underline"})
+call s:h("SpecialKey",   { "fg": s:light_green})
+call s:h("NonText",      { "fg": s:medium_gray})
+call s:h("Directory",    { "fg": s:blue})
+call s:h("ErrorMsg",     { "fg": s:red})
+call s:h("IncSearch",    { "bg": s:bg_subtle, "fg": s:yellow})
+call s:h("Search",       { "bg": s:bg_subtle, "fg": s:orange})
+call s:h("MoreMsg",      { "fg": s:medium_gray, "cterm": "bold", "gui": "bold"})
 hi! link ModeMsg MoreMsg
-call s:h("LineNr",        {"fg": s:bg_subtle})
-call s:h("CursorLineNr",  {"fg": s:lighter_gray, "bg": s:bg_very_subtle})
-call s:h("Question",      {"fg": s:red})
-call s:h("StatusLine",    {"bg": s:bg_very_subtle})
-call s:h("StatusLineNC",  {"bg": s:bg_very_subtle, "fg": s:medium_gray})
-call s:h("VertSplit",     {"bg": s:bg_very_subtle, "fg": s:bg_very_subtle})
-call s:h("Title",         {"fg": s:blue})
-call s:h("Visual",        {"fg": s:bg, "bg": s:light_green})
-call s:h("VisualNOS",     {"bg": s:bg_subtle})
-call s:h("WarningMsg",    {"fg": s:yellow})
-call s:h("WildMenu",      {"fg": s:bg, "bg": s:norm})
-call s:h("Folded",        {"fg": s:light_gray, "bg": s:light_black})
-call s:h("FoldColumn",    {"fg": s:bg_subtle})
-call s:h("DiffAdd",       {"fg": s:light_green})
-call s:h("DiffDelete",    {"fg": s:red})
-call s:h("DiffChange",    {"fg": s:yellow})
-call s:h("DiffText",      {"fg": s:blue})
-call s:h("SignColumn",    {"fg": s:light_green})
-
+call s:h("LineNr",       { "fg": s:bg_subtle})
+call s:h("CursorLineNr", { "fg": s:lighter_gray, "bg": s:bg_very_subtle})
+call s:h("Question",     { "fg": s:red})
+call s:h("StatusLine",   { "bg": s:bg_very_subtle})
+call s:h("StatusLineNC", { "bg": s:bg_very_subtle, "fg": s:medium_gray})
+call s:h("VertSplit",    { "bg": s:bg_very_subtle, "fg": s:bg_very_subtle})
+call s:h("Title",        { "fg": s:blue})
+call s:h("Visual",       { "fg": s:bg, "bg": s:light_green})
+call s:h("VisualNOS",    { "bg": s:bg_subtle})
+call s:h("WarningMsg",   { "fg": s:yellow})
+call s:h("WildMenu",     { "fg": s:bg, "bg": s:norm})
+call s:h("Folded",       { "fg": s:norm, "bg": s:darker_black})
+call s:h("FoldColumn",   { "fg": s:bg_subtle})
+call s:h("DiffAdd",      { "fg": s:light_green})
+call s:h("DiffDelete",   { "fg": s:red})
+call s:h("DiffChange",   { "fg": s:yellow})
+call s:h("DiffText",     { "fg": s:blue})
+call s:h("SignColumn",   { "fg": s:light_green})
 
 if has("gui_running")
   call s:h("SpellBad",    {"gui": "underline", "sp": s:red})
@@ -273,4 +274,3 @@ hi link GitGutterAdd                LineNr
 hi link GitGutterDelete             LineNr
 hi link GitGutterChange             LineNr
 hi link GitGutterChangeDelete       LineNr
-
