@@ -25,6 +25,7 @@ if exists("&termguicolors") && exists("&winblend")
   " Light theme --------------------------
   "set background=light
   "runtime ./light_space.vim
+  "runtime ./default_light.vim
  
   " For theme with transparent background
   "highlight Visual cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey40
@@ -55,8 +56,31 @@ set formatoptions+=r " Add asterisks in block comments
 " Automatically start colorizer (highlights hash colours)
 autocmd VimEnter * :ColorizerToggle
 
+" Netrw - file explorer
+let g:netrw_banner = 0 " Hide banner by default
+let g:netrw_browse_split = 4 " Open files in previous window (main window usually)
+let g:netrw_winsize = 28 " Width of the window
 let g:netrw_banner = 0 " Hide Netrw banner by default
 let g:netrw_liststyle = 3 " Tree view
+
+let g:NetrwIsOpen=0
+function! ToggleNetrw()
+    if g:NetrwIsOpen
+        let i = bufnr("$")
+        while (i >= 1)
+            if (getbufvar(i, "&filetype") == "netrw")
+                silent exe "bwipeout " . i 
+            endif
+            let i-=1
+        endwhile
+        let g:NetrwIsOpen=0
+    else
+        let g:NetrwIsOpen=1
+        silent :Vexplore!
+    endif
+endfunction
+noremap <silent> <C-e> :call ToggleNetrw()<CR>
+inoremap <silent> <C-e> :call ToggleNetrw()<CR>
 
 "-----------------------------
 " KEYMAPS
