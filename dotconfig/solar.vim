@@ -19,7 +19,8 @@ let g:limelight_conceal_guifg = '#586e75'
 let s:black        = { "gui": "#071e24", "cterm": "232" } " bg
 let s:bg_contrast  = { "gui": "#002b36", "cterm": "232" } " bg contrast
 let s:lighter_gray = { "gui": "#93a1a1", "cterm": "251" } " fg
-let s:medium_gray  = { "gui": "#586e75", "cterm": "243" } " comments
+let s:emphasis     = { "gui": "#917382", "cterm": "251" } " fg
+let s:medium_gray  = { "gui": "#586e75", "cterm": "243" }
 let s:orange       = { "gui": "#cb4b16", "cterm": "167" } " orange
 let s:yellow       = { "gui": "#b58900", "cterm": "11"  } " yellow
 let s:dark_green   = { "gui": "#b9ca4a", "cterm": "2"   } " green
@@ -68,14 +69,12 @@ if &background != s:background
 endif
 
 call s:h("Cursor",        {"bg": s:light_purple, "fg": s:norm })
-call s:h("Comment",       {"fg": s:medium_gray})
+call s:h("Comment",       {"fg": s:medium_gray, "gui": "italic"})
 hi! link SpecialComment   Comment
 
 call s:h("Constant",      {"fg": s:light_blue})
 hi! link Character        Constant
 hi! link String           Constant
-
-call s:h("Statement", { "fg": s:medium_gray, "gui": "italic" })
 
 call s:h("Nothing", {"fg": s:norm})
 hi! link typeScriptBraces              Nothing
@@ -136,23 +135,12 @@ hi! link typeScriptEnum             typeScriptClassName
 hi! link goTypeName                 typeScriptClassName
 hi! link goReceiverType             typeScriptClassName
 
-call s:h("typeScriptNull", {"fg": s:yellow})
-hi! link Number                   typeScriptNull
-hi! link Float                    typeScriptNull
-hi! link Boolean                  typeScriptNull
-hi! link javaScriptType           typeScriptNull
-hi! link typeScriptPredefinedType typeScriptNull
-hi! link goPredefinedIdentifiers  typeScriptNull
-hi! link goType                   typeScriptNull
-hi! link goUnsignedInts           typeScriptNull
-hi! link hsConSym                 typeScriptNull
-
-call s:h("markdownH1",          { "fg": s:yellow})
-call s:h("markdownH1Delimiter", { "fg": s:orange})
+call s:h("markdownH1",          { "fg": s:blue})
+call s:h("markdownH1Delimiter", { "fg": s:light_blue})
 call s:h("markdownH2",          { "fg": s:light_green})
 call s:h("markdownH2Delimiter", { "fg": s:dark_green})
-call s:h("markdownH3",          { "fg": s:light_blue})
-call s:h("markdownH3Delimiter", { "fg": s:blue})
+call s:h("markdownH3",          { "fg": s:yellow})
+call s:h("markdownH3Delimiter", { "fg": s:orange})
 call s:h("markdownH4",          { "fg": s:light_purple})
 call s:h("markdownH4Delimiter", { "fg": s:dark_purple})
 call s:h("markdownH5",          { "fg": s:lighter_gray})
@@ -167,6 +155,18 @@ call s:h("Operator", {"fg": s:norm, "cterm": "bold", "gui": "bold"})
 hi! link cssClassName         Operator
 hi! link htmlArg              Operator
 hi! link typeScriptIdentifier Operator
+
+call s:h("typeScriptNull", {"fg": s:emphasis})
+hi! link Statement                typeScriptNull
+hi! link Number                   typeScriptNull
+hi! link Float                    typeScriptNull
+hi! link Boolean                  typeScriptNull
+hi! link javaScriptType           typeScriptNull
+hi! link typeScriptPredefinedType typeScriptNull
+hi! link goPredefinedIdentifiers  typeScriptNull
+hi! link goType                   typeScriptNull
+hi! link goUnsignedInts           typeScriptNull
+hi! link hsConSym                 typeScriptNull
 
 call s:h("PreProc",   { "fg": s:light_green})
 hi! link Include   PreProc
@@ -188,6 +188,9 @@ hi! link Tag         Special
 hi! link Delimiter   Special
 hi! link Debug       Special
 
+call s:h("GitGutterAdd",   { "fg": s:light_green})
+call s:h("GitGutterChange",   { "fg": s:yellow})
+call s:h("GitGutterDelete",   { "fg": s:orange})
 call s:h("Underlined",   { "fg": s:norm, "gui": "underline", "cterm": "underline"})
 call s:h("Ignore",       { "fg": s:bg})
 call s:h("Error",        { "fg": s:white, "bg": s:red, "cterm": "bold"})
@@ -242,7 +245,7 @@ call s:h("CursorColumn",  {"bg": s:light_black})
 call s:h("CursorLine",    {"bg": s:bg_very_subtle})
 call s:h("ColorColumn",   {"bg": s:bg_subtle})
 
-call s:h("MatchParen",    {"bg": s:bg_subtle, "fg": s:norm})
+call s:h("MatchParen",    {"bg": s:light_black, "fg": s:norm})
 call s:h("qfLineNr",      {"fg": s:medium_gray})
 
 call s:h("htmlH1",        {"bg": s:bg, "fg": s:norm})
