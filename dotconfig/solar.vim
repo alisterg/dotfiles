@@ -106,25 +106,17 @@ hi! link goConditional              typeScriptRepeat
 hi! link goStatement                typeScriptRepeat
 hi! link hsStatement                typeScriptRepeat
 
-call s:h("Identifier", {"fg": s:blue})
-hi! link Function    Identifier
+call s:h("Identifier", {"fg": s:dark_purple})
 hi! link Conditonal  Identifier
 hi! link Repeat      Identifier
 hi! link Label       Identifier
 hi! link Exception   Identifier
 hi! link jsonQuote   Identifier
-hi! link goFunction  Identifier
-hi! link hsStructure Identifier
-hi! link hsTypedef   Identifier
 
-call s:h("Keyword", {"fg": s:norm, "gui": "bold"})
-hi! link typeScriptClassStatic   Keyword
-hi! link typeScriptVariable      Keyword
-hi! link typeScriptTypeReference Keyword
-hi! link goLabel                 Keyword
-hi! link goVar                   Keyword
-hi! link goRepeat                Keyword
-hi! link goBuiltins              Keyword
+call s:h("Function", {"fg": s:blue})
+hi! link goFunction  Function
+hi! link hsStructure Function
+hi! link hsTypedef   Function
 
 call s:h("typeScriptClassName", {"fg": s:blue})
 hi! link typeScriptAliasDeclaration typeScriptClassName
@@ -134,6 +126,15 @@ hi! link csClassType                typeScriptClassName
 hi! link typeScriptEnum             typeScriptClassName
 hi! link goTypeName                 typeScriptClassName
 hi! link goReceiverType             typeScriptClassName
+
+call s:h("Keyword", {"fg": s:norm, "gui": "bold"})
+hi! link typeScriptClassStatic   Keyword
+hi! link typeScriptVariable      Keyword
+hi! link typeScriptTypeReference Keyword
+hi! link goLabel                 Keyword
+hi! link goVar                   Keyword
+hi! link goRepeat                Keyword
+hi! link goBuiltins              Keyword
 
 call s:h("markdownH1",          { "fg": s:blue})
 call s:h("markdownH1Delimiter", { "fg": s:light_blue})
@@ -149,15 +150,24 @@ call s:h("markdownH6",          { "fg": s:lighter_gray})
 call s:h("markdownH6Delimiter", { "fg": s:dark_red})
 
 call s:h("htmlTagName", { "fg": s:light_purple})
+hi! link csXmlTag         htmlTagName
+
 call s:h("htmlTagN",    { "fg": s:yellow})
+hi! link xmlTag         htmlTagN
 
 call s:h("Operator", {"fg": s:norm, "cterm": "bold", "gui": "bold"})
 hi! link cssClassName         Operator
 hi! link htmlArg              Operator
 hi! link typeScriptIdentifier Operator
 
+call s:h("Type", {"fg": s:norm, "cterm": "bold", "gui": "bold"})
+hi! link StorageClass       Type
+hi! link Structure          Type
+hi! link Typedef            Type
+hi! link goDeclaration      Type
+hi! link javaScriptReserved Type
+
 call s:h("typeScriptNull", {"fg": s:emphasis})
-hi! link Statement                typeScriptNull
 hi! link Number                   typeScriptNull
 hi! link Float                    typeScriptNull
 hi! link Boolean                  typeScriptNull
@@ -168,19 +178,13 @@ hi! link goType                   typeScriptNull
 hi! link goUnsignedInts           typeScriptNull
 hi! link hsConSym                 typeScriptNull
 
-call s:h("PreProc",   { "fg": s:light_green})
+call s:h("PreProc",   { "fg": s:dark_purple})
+hi! link Statement PreProc
 hi! link Include   PreProc
 hi! link Define    PreProc
 hi! link Macro     PreProc
 hi! link goPackage PreProc
 hi! link goImport  PreProc
-
-call s:h("Type", {"fg": s:dark_purple})
-hi! link StorageClass       Type
-hi! link Structure          Type
-hi! link Typedef            Type
-hi! link goDeclaration      Type
-hi! link javaScriptReserved Type
 
 call s:h("Special", { "fg": s:dark_purple})
 hi! link SpecialChar Special
