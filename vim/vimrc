@@ -1,0 +1,130 @@
+" Set leader to Spacebar
+nnoremap <Space> <Nop>
+let mapleader=" "
+let maplocalleader=" "
+
+autocmd! 
+scriptencoding utf-8 " set script encoding
+
+" PLUGINS -------------------------------------------------------------------
+call plug#begin()
+  Plug 'airblade/vim-gitgutter'
+  Plug 'junegunn/vim-easy-align' " align text
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
+call plug#end()
+
+" THEME ---------------------------------------------------------------------
+"syntax on
+"set termguicolors
+
+"set background=dark
+"runtime ./solar.vim
+"runtime ./space.vim
+
+" For theme with transparent background
+"highlight Visual cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey40
+"highlight Search cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey50
+"highlight IncSearch cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey70
+
+" Makes it less bright
+highlight SignColumn cterm=NONE ctermbg=0 ctermfg=NONE guibg=Black
+highlight Folded cterm=NONE ctermbg=236 ctermfg=NONE guibg=Black
+
+" Gitgutter colors
+highlight GitGutterAdd ctermfg=2
+highlight GitGutterChange ctermfg=5
+highlight GitGutterDelete ctermfg=1
+highlight GitGutterChangeDelete ctermfg=1
+
+" SETTINGS-----------------------------------------------------------------
+
+filetype plugin indent on
+let g:markdown_folding = 1
+set scrolloff=10
+set expandtab
+set ignorecase
+set number
+set mouse=a
+set shiftwidth=4
+set tabstop=4
+set ai "Auto indent
+set si "Smart indent
+set wrap "Soft Wrap lines
+set foldmethod=indent
+set foldnestmax=3
+set foldlevel=3
+set incsearch
+set hlsearch
+set ruler
+set title
+set formatoptions+=r " Add asterisks in block comments
+set re=0 " Fixes tsx highlighting issue
+
+" Netrw - file explorer
+let g:netrw_banner = 0 " Hide banner by default
+let g:netrw_browse_split = 4 " Open files in previous window (main window usually)
+let g:netrw_winsize = 24 " Width of the window
+let g:netrw_liststyle = 3 " Tree view
+
+let g:NetrwIsOpen=0
+function! ToggleNetrw()
+    if g:NetrwIsOpen
+        let i = bufnr("$")
+        while (i >= 1)
+            if (getbufvar(i, "&filetype") == "netrw")
+                silent exe "bwipeout " . i 
+            endif
+            let i-=1
+        endwhile
+        let g:NetrwIsOpen=0
+    else
+        let g:NetrwIsOpen=1
+        silent :Vexplore
+    endif
+endfunction
+noremap <silent> <C-e> :call ToggleNetrw()<CR>
+inoremap <silent> <C-e> :call ToggleNetrw()<CR>
+
+"-----------------------------
+" KEYMAPS
+
+" Insert current datetime
+inoremap <C-d> [<esc>"=strftime("%F %H:%M")<CR>pa]
+
+" Insert text at the current cursor position.
+function! InsertText(text)
+    execute "normal! i\<C-r>=a:text\<CR>\<Esc>"
+endfunction
+let g:reflection = "
+            \- Was your work purposeful today? Did you move the project, company, or endeavor forward?\n
+            \- Did you make some improvement or long-term investment? What did you learn, from a technical, domain, or business perspective?\n
+            \- Is there something that should be documented? What would have helped you to know upfront?\n
+            \- Is there something that could be automated?\n"
+nmap <leader>r :call InsertText(reflection)<CR>
+
+nmap <esc> :noh<CR>
+
+xmap <leader>a <Plug>(EasyAlign)
+
+" FZF
+nmap <leader>f :Files<CR>
+nmap <leader>a :Rg<CR>
+
+"--------------------------
+"Git Gutter
+set signcolumn=yes
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = '~'
+let g:gitgutter_sign_modified_removed = '-'
+let g:gitgutter_sign_removed = '-'
+let g:gitgutter_sign_removed_first_line = '-'
+let g:gitgutter_sign_removed_above_and_below = '-'
+
+" Updates gitgutter every 200ms
+set updatetime=200
+
+" Display the syntax highlight group of the symbol under cursor
+nnoremap <leader>ii :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
