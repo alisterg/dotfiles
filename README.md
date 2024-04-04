@@ -1,12 +1,11 @@
-It's fresh computer time! It doesn't make sense to automate this with a script,
-because:
+It's fresh computer time!
 
+Why not automate this with a script?
 1. I may want to skip certain steps
 2. The commands to install may change by the time I get a new computer
 3. I should only run this once every few years at most - not worth the time
 
 # First things
-
 - Sign in
 - Check for system updates
 - Install and run XCode from App Store
@@ -14,21 +13,21 @@ because:
 - XCode CLI tools: `xcode-select --install`
 - Homebrew: https://brew.sh
 
-# Iterm2 and Neovim
-
+# Iterm2
 - iterm2: `brew install --cask iterm2`
-- Install the profiles from `./iterm_profiles`
+- Install the profiles from `iterm_profiles.json`
 - Oh My Zsh: https://ohmyz.sh/
 - PowerLevel10k: https://github.com/romkatv/powerlevel10k#oh-my-zsh
-- vim:
-  - Copy dotfiles from `vim/` to `~/.vim/`
-  - Ripgrep: `brew install ripgrep`
-  - Bat: `brew install bat`
-  - Vim-plug: https://github.com/junegunn/vim-plug
-  - Run `:PlugInstall`
+- Add `zshrc` contents to `~/.zshrc`
+
+# Vim
+- Copy dotfiles from `vim/` to `~/.vim/`
+- Ripgrep: `brew install ripgrep`
+- Bat: `brew install bat`
+- Vim-plug: https://github.com/junegunn/vim-plug
+- Run `:PlugInstall`
 
 # Misc
-
 - Node:
   - `brew install nvm`
   - Then follow the instructions to add to PATH etc
