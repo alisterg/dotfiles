@@ -24,7 +24,42 @@
     "list.activeSelectionBackground": "#1D9CCD",
     "editorGutter.addedBackground": "#487a1d88",
     "editorGutter.deletedBackground": "#A50303",
-    "editorGutter.modifiedBackground": "#76622288"
+    "editorGutter.modifiedBackground": "#76622288",
+
+    // Intellisense icons
+    "symbolIcon.classForeground": "#81433e",
+    "symbolIcon.colorForeground": "#81433e",
+    "symbolIcon.constructorForeground": "#81433e",
+    "symbolIcon.enumeratorForeground": "#81433e",
+    "symbolIcon.interfaceForeground": "#81433e",
+    "symbolIcon.moduleForeground": "#81433e",
+    "symbolIcon.namespaceForeground": "#81433e",
+    "symbolIcon.typeParameterForeground": "#81433e",
+    "symbolIcon.packageForeground": "#81433e",
+    "symbolIcon.objectForeground": "#81433e",
+    "symbolIcon.eventForeground": "#1D9CCD",
+    "symbolIcon.fileForeground": "#1D9CCD",
+    "symbolIcon.folderForeground": "#1D9CCD",
+    "symbolIcon.keywordForeground": "#1D9CCD",
+    "symbolIcon.operatorForeground": "#1D9CCD",
+    "symbolIcon.snippetForeground": "#1D9CCD",
+    "symbolIcon.structForeground": "#1D9CCD",
+    "symbolIcon.arrayForeground": "#5f4031",
+    "symbolIcon.booleanForeground": "#5f4031",
+    "symbolIcon.methodForeground": "#5f4031",
+    "symbolIcon.propertyForeground": "#5f4031",
+    "symbolIcon.fieldForeground": "#5f4031",
+    "symbolIcon.functionForeground": "#5f4031",
+    "symbolIcon.textForeground": "#65676c",
+    "symbolIcon.variableForeground": "#65676c",
+    "symbolIcon.stringForeground": "#5f3852",
+    "symbolIcon.referenceForeground": "#5f3852",
+    "symbolIcon.unitForeground": "#5f3852",
+    "symbolIcon.constantForeground": "#5f3852",
+    "symbolIcon.enumeratorMemberForeground": "#5f3852",
+    "symbolIcon.keyForeground": "#5f3852",
+    "symbolIcon.nullForeground": "#5f3852",
+    "symbolIcon.numberForeground": "#5f3852",
   },
   "tokenColors": [
     {
@@ -54,7 +89,8 @@
     {
       "scope": "entity.name.function",
       "settings": {
-        "foreground": "#E9522C"
+        "foreground": "#a85b54", // E9522C
+        "fontStyle": "bold"
       }
     },
     {
@@ -99,7 +135,7 @@
         "storage.type.class.jsdoc"
       ],
       "settings": {
-        "foreground": "#a85b54",
+        "foreground": "#945c81",
         "fontStyle": "bold"
       }
     },
