@@ -25,6 +25,16 @@
         "path": "./themes/solar.json"
       },
       {
+        "label": "realist",
+        "uiTheme": "vs-dark",
+        "path": "./themes/realist-color-theme.json"
+      },
+      {
+        "label": "A-Lightness",
+        "uiTheme": "vs",
+        "path": "./themes/a-light-color-theme.json"
+      },
+      {
         "label": "A-Light",
         "uiTheme": "vs",
         "path": "./themes/a-bright-color-theme.json"
