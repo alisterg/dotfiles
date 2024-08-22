@@ -22,6 +22,9 @@
     "textLink.activeForeground": "#1D9CCD",
     "editorLink.activeForeground": "#1D9CCD",
     "list.activeSelectionBackground": "#1D9CCD",
+    "editorGutter.addedBackground": "#487a1d88",
+    "editorGutter.deletedBackground": "#A50303",
+    "editorGutter.modifiedBackground": "#76622288"
   },
   "tokenColors": [
     {
@@ -51,7 +54,7 @@
     {
       "scope": "entity.name.function",
       "settings": {
-        "foreground": "#E9522C",
+        "foreground": "#E9522C"
       }
     },
     {
@@ -89,7 +92,12 @@
       }
     },
     {
-      "scope": ["entity.name.tag", "markup.heading.markdown", "support.type.property-name.json"],
+      "scope": [
+        "entity.name.tag",
+        "markup.heading.markdown",
+        "support.type.property-name.json",
+        "storage.type.class.jsdoc"
+      ],
       "settings": {
         "foreground": "#a85b54",
         "fontStyle": "bold"
