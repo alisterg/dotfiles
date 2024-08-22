@@ -18,7 +18,10 @@
 
     "sideBar.background": "#D8D1CA",
     "titleBar.activeBackground": "#D8D1CA",
-    "tab.inactiveBackground": "#D8D1CA"
+    "tab.inactiveBackground": "#D8D1CA",
+    "textLink.activeForeground": "#1D9CCD",
+    "editorLink.activeForeground": "#1D9CCD",
+    "list.activeSelectionBackground": "#1D9CCD",
   },
   "tokenColors": [
     {
@@ -48,9 +51,7 @@
     {
       "scope": "entity.name.function",
       "settings": {
-        // Orange #E9522C
-        // Blue #1D9CCD
-        "foreground": "#E9522C"
+        "foreground": "#E9522C",
       }
     },
     {
