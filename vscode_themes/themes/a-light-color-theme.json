@@ -37,13 +37,13 @@
     "symbolIcon.typeParameterForeground": "#81433e",
     "symbolIcon.packageForeground": "#81433e",
     "symbolIcon.objectForeground": "#81433e",
-    "symbolIcon.eventForeground": "#1D9CCD",
-    "symbolIcon.fileForeground": "#1D9CCD",
-    "symbolIcon.folderForeground": "#1D9CCD",
-    "symbolIcon.keywordForeground": "#1D9CCD",
-    "symbolIcon.operatorForeground": "#1D9CCD",
-    "symbolIcon.snippetForeground": "#1D9CCD",
-    "symbolIcon.structForeground": "#1D9CCD",
+    "symbolIcon.eventForeground": "#b14163",
+    "symbolIcon.fileForeground": "#b14163",
+    "symbolIcon.folderForeground": "#b14163",
+    "symbolIcon.keywordForeground": "#b14163",
+    "symbolIcon.operatorForeground": "#b14163",
+    "symbolIcon.snippetForeground": "#b14163",
+    "symbolIcon.structForeground": "#b14163",
     "symbolIcon.arrayForeground": "#5f4031",
     "symbolIcon.booleanForeground": "#5f4031",
     "symbolIcon.methodForeground": "#5f4031",
@@ -89,7 +89,7 @@
     {
       "scope": "entity.name.function",
       "settings": {
-        "foreground": "#a85b54", // E9522C
+        "foreground": "#c13d1c", // a85b54
         "fontStyle": "bold"
       }
     },
@@ -125,6 +125,13 @@
       "settings": {
         "foreground": "#504944",
         "fontStyle": "bold underline"
+      }
+    },
+    {
+      "scope": "entity.name.tag",
+      "settings": {
+        "foreground": "#b14163",
+        "fontStyle": "bold"
       }
     },
     {
