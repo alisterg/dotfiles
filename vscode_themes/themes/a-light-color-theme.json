@@ -90,7 +90,6 @@
       "scope": "entity.name.function",
       "settings": {
         "foreground": "#c13d1c", // a85b54
-        "fontStyle": "bold"
       }
     },
     {
@@ -99,7 +98,8 @@
         "meta.function-call",
         "variable.function",
         "entity.name.function.support.go",
-        "entity.name.type.cs"
+        "entity.name.type.cs",
+        "meta.type.annotation entity.name.type"
       ],
       "settings": {
         "foreground": "#504944",
@@ -123,8 +123,8 @@
     {
       "scope": "entity.name.type",
       "settings": {
-        "foreground": "#504944",
-        "fontStyle": "bold underline"
+        "foreground": "#b14163",
+        "fontStyle": "bold"
       }
     },
     {
@@ -136,7 +136,6 @@
     },
     {
       "scope": [
-        "entity.name.tag",
         "markup.heading.markdown",
         "support.type.property-name.json",
         "storage.type.class.jsdoc"
