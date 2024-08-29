@@ -225,10 +225,12 @@
         "storage.type",
         "keyword.other.var.cs",
         "keyword.other.new",
-        "keyword.function.go"
+        "keyword.function.go",
+        "keyword.other.declaration-specifier.swift"
       ],
       "settings": {
-        "foreground": "#859801"
+        "foreground": "#859801",
+        "fontStyle": "none"
       }
     },
     {
@@ -278,6 +280,7 @@
     {
       "name": "functions",
       "scope": [
+        "entity.name.function.ruby",
         "entity.name.function.cs",
         "meta.function.php",
         "entity.name.function.js",
@@ -287,7 +290,8 @@
         "meta.method.declaration.ts entity.name.function.ts",
         "meta.definition.function",
         "meta.definition.variable entity.name.function",
-        "meta.field.declaration.ts meta.definition.property.ts entity.name.function.ts"
+        "meta.field.declaration.ts meta.definition.property.ts entity.name.function.ts",
+        "support.function.any-method.swift"
       ],
       "settings": {
         "foreground": "#268ad1"
@@ -298,9 +302,13 @@
       "scope": [
         "meta.method.declaration.ts meta.function-call.ts entity.name.function.ts",
         "meta.function-call.ts entity.name.function.ts",
+        "meta.function-call.ruby entity.name.function.ruby",
         "meta.function-call.tsx entity.name.function.tsx",
         "meta.method-call",
-        "storage.type.function.arrow.ts"
+        "storage.type.function.arrow.ts",
+        "meta.function-result.swift",
+        "meta.definition.function.body.swift",
+        "meta.parameter-clause.swift"
       ],
       "settings": {
         "foreground": "#a3b3b3"
@@ -342,7 +350,7 @@
       }
     },
     {
-      "scope": ["support.type.primitive", "keyword.type"],
+      "scope": ["support.type.primitive", "keyword.type", "support.type.swift"],
       "settings": {
         "foreground": "#966fb0"
       }
