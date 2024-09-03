@@ -205,9 +205,9 @@
       }
     },
     {
-      "scope": ["variable", "support.variable.property.ts"],
+      "scope": ["variable", "support.variable.property.ts", "meta.definition.function.body.swift"],
       "settings": {
-        "foreground": "#D0A8FF"
+        "foreground": "#D0A8FF",
       }
     },
     {
@@ -216,7 +216,8 @@
         "keyword.other.var.cs",
         "keyword.other.new",
         "keyword.function.go",
-        "keyword.import.go"
+        "keyword.import.go",
+        "keyword.other.declaration-specifier.swift"
       ],
       "settings": {
         "foreground": "#e183ac"
@@ -250,7 +251,8 @@
         "entity.name.type.namespace",
         "entity.name.scope-resolution",
         "entity.name.type.enum",
-        "entity.other.inherited-class.ts"
+        "entity.other.inherited-class.ts",
+        "support.type.swift"
       ],
       "settings": {
         "foreground": "#58CAEF"
@@ -266,7 +268,7 @@
         "entity.name.function.cs",
         "entity.name.function.go",
         "meta.function.php",
-        "meta.definition.method.js entity.name.function.js"
+        "meta.definition.method.js entity.name.function.js",
       ],
       "settings": {
         "foreground": "#41A2C0"
@@ -280,10 +282,30 @@
         "meta.method-call",
         "variable.other.object.property.cs",
         "meta.function-call.js entity.name.function.js",
-        "support.function.go"
+        "support.function.go",
+        "meta.function-result.swift",
+        "meta.parameter-clause.swift",
+        "support.function.any-method.swift",
+        "support.function.swift"
       ],
       "settings": {
         "foreground": "#A167E6"
+      }
+    },
+    {
+      "name": "more overrides",
+      "scope": [
+        "keyword.operator.custom.infix.dot.swift",
+        "keyword.operator.custom.infix.swift",
+        "keyword.operator.function-result.swift",
+        "punctuation.separator.argument-label.swift",
+        "punctuation.section.scope.begin.swift",
+        "punctuation.section.scope.end.swift",
+        "punctuation.definition.parameters.begin.swift",
+        "punctuation.definition.parameters.end.swift"
+      ],
+      "settings": {
+        "foreground": "#D7D7D9",
       }
     },
     {
