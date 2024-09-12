@@ -30,11 +30,6 @@
         "path": "./themes/elemental-color-theme.json"
       },
       {
-        "label": "A-elemental-flat",
-        "uiTheme": "vs-dark",
-        "path": "./themes/elemental-flat-color-theme.json"
-      },
-      {
         "label": "A-earthshine",
         "uiTheme": "vs",
         "path": "./themes/earthshine-color-theme.json"

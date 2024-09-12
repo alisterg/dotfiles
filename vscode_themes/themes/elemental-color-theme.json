@@ -168,19 +168,25 @@
     {
       "scope": "comment",
       "settings": {
-        "foreground": "#85C46C"
+        "foreground": "#595d66"
       }
     },
     {
       "scope": "comment.block.documentation",
       "settings": {
-        "foreground": "#85C46C"
+        "foreground": "#595d66"
       }
     },
     {
       "scope": "string",
       "settings": {
         "foreground": "#C9A26D"
+      }
+    },
+    {
+      "scope": ["punctuation.definition.string.begin", "punctuation.definition.string.end"],
+      "settings": {
+        "foreground": "#C9A26D88"
       }
     },
     {
@@ -423,9 +429,14 @@
       }
     },
     {
-      "scope": ["entity.name.tag.cs", "variable.other.jsdoc"],
+      "scope": [
+        "entity.name.tag.cs",
+        "variable.other.jsdoc",
+        "support.type.property-name.json",
+        "entity.name.tag.yaml"
+      ],
       "settings": {
-        "foreground": "#487D34"
+        "foreground": "#888888"
       }
     },
     {
