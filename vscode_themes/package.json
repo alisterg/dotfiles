@@ -15,33 +15,34 @@
   "contributes": {
     "themes": [
       {
-        "label": "A-4 Thursday",
+        "label": "A-lunar",
         "uiTheme": "vs-dark",
         "path": "./themes/a-thursday-color-theme.json"
       },
       {
-        "label": "A-5 Solar",
+        "label": "A-solar",
         "uiTheme": "vs-dark",
-        "path": "./themes/solar.json"
-      },
-       {
-        "label": "A-darkmode",
-        "uiTheme": "vs-dark",
-        "path": "./themes/darkmode-color-theme.json"
-      },     {
-        "label": "A-realist",
-        "uiTheme": "vs-dark",
-        "path": "./themes/realist-color-theme.json"
+        "path": "./themes/solar-color-theme.json"
       },
       {
-        "label": "A-lightmode",
-        "uiTheme": "vs",
-        "path": "./themes/a-light-color-theme.json"
+        "label": "A-elemental",
+        "uiTheme": "vs-dark",
+        "path": "./themes/elemental-color-theme.json"
       },
       {
-        "label": "A-Bright",
+        "label": "A-elemental-flat",
+        "uiTheme": "vs-dark",
+        "path": "./themes/elemental-flat-color-theme.json"
+      },
+      {
+        "label": "A-earthshine",
         "uiTheme": "vs",
-        "path": "./themes/a-bright-color-theme.json"
+        "path": "./themes/earthshine-color-theme.json"
+      },
+      {
+        "label": "A-liquid",
+        "uiTheme": "vs",
+        "path": "./themes/liquid-color-theme.json"
       }
     ]
   },
