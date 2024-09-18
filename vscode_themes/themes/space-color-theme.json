@@ -11,7 +11,7 @@
     "editorIndentGuide.background1": "#dfd5d5",
     "editorLineNumber.activeForeground": "#898d94",
     "editorLineNumber.foreground": "#898d94",
-    "editorRuler.foreground": "#898d94",
+    // "editorRuler.foreground": "#898d94",
     "editorWhitespace.foreground": "#ece7e7",
     "statusBar.background": "#16161c",
     "statusBar.foreground": "#898d94",
@@ -31,16 +31,16 @@
     "editorGutter.modifiedBackground": "#76622288",
 
     // Intellisense icons
-    "symbolIcon.classForeground": "#81433e",
-    "symbolIcon.colorForeground": "#81433e",
-    "symbolIcon.constructorForeground": "#81433e",
-    "symbolIcon.enumeratorForeground": "#81433e",
-    "symbolIcon.interfaceForeground": "#81433e",
-    "symbolIcon.moduleForeground": "#81433e",
-    "symbolIcon.namespaceForeground": "#81433e",
-    "symbolIcon.typeParameterForeground": "#81433e",
-    "symbolIcon.packageForeground": "#81433e",
-    "symbolIcon.objectForeground": "#81433e",
+    "symbolIcon.classForeground": "#9fbc90",
+    "symbolIcon.colorForeground": "#9fbc90",
+    "symbolIcon.constructorForeground": "#9fbc90",
+    "symbolIcon.enumeratorForeground": "#9fbc90",
+    "symbolIcon.interfaceForeground": "#9fbc90",
+    "symbolIcon.moduleForeground": "#9fbc90",
+    "symbolIcon.namespaceForeground": "#9fbc90",
+    "symbolIcon.typeParameterForeground": "#9fbc90",
+    "symbolIcon.packageForeground": "#9fbc90",
+    "symbolIcon.objectForeground": "#9fbc90",
     "symbolIcon.eventForeground": "#d79bbf",
     "symbolIcon.fileForeground": "#d79bbf",
     "symbolIcon.folderForeground": "#d79bbf",
@@ -48,22 +48,22 @@
     "symbolIcon.operatorForeground": "#d79bbf",
     "symbolIcon.snippetForeground": "#d79bbf",
     "symbolIcon.structForeground": "#d79bbf",
-    "symbolIcon.arrayForeground": "#5f4031",
-    "symbolIcon.booleanForeground": "#5f4031",
-    "symbolIcon.methodForeground": "#5f4031",
-    "symbolIcon.propertyForeground": "#5f4031",
-    "symbolIcon.fieldForeground": "#5f4031",
-    "symbolIcon.functionForeground": "#5f4031",
+    "symbolIcon.arrayForeground": "#e5cc93",
+    "symbolIcon.booleanForeground": "#e5cc93",
+    "symbolIcon.methodForeground": "#e5cc93",
+    "symbolIcon.propertyForeground": "#e5cc93",
+    "symbolIcon.fieldForeground": "#e5cc93",
+    "symbolIcon.functionForeground": "#e5cc93",
     "symbolIcon.textForeground": "#65676c",
     "symbolIcon.variableForeground": "#65676c",
-    "symbolIcon.stringForeground": "#5f3852",
-    "symbolIcon.referenceForeground": "#5f3852",
-    "symbolIcon.unitForeground": "#5f3852",
-    "symbolIcon.constantForeground": "#5f3852",
-    "symbolIcon.enumeratorMemberForeground": "#5f3852",
-    "symbolIcon.keyForeground": "#5f3852",
-    "symbolIcon.nullForeground": "#5f3852",
-    "symbolIcon.numberForeground": "#5f3852",
+    "symbolIcon.stringForeground": "#6697ac",
+    "symbolIcon.referenceForeground": "#6697ac",
+    "symbolIcon.unitForeground": "#6697ac",
+    "symbolIcon.constantForeground": "#6697ac",
+    "symbolIcon.enumeratorMemberForeground": "#6697ac",
+    "symbolIcon.keyForeground": "#6697ac",
+    "symbolIcon.nullForeground": "#6697ac",
+    "symbolIcon.numberForeground": "#6697ac"
   },
   "tokenColors": [
     {
@@ -93,7 +93,7 @@
     {
       "scope": "entity.name.function",
       "settings": {
-        "foreground": "#e5cc93" 
+        "foreground": "#e5cc93"
       }
     },
     {
@@ -111,34 +111,42 @@
       }
     },
     {
-      "scope": ["keyword", "keyword.control", "keyword.operator", "storage.modifier"],
+      "scope": [
+        "keyword",
+        "keyword.control",
+        "keyword.operator",
+        "storage.modifier",
+        "punctuation.definition.variable.php"
+      ],
       "settings": {
-        "foreground": "#c0c3cc",
+        "foreground": "#c0c3cc"
       }
     },
     {
       "scope": ["storage.type", "support.class.component.tsx", "meta.tag.custom.start.html entity.name.tag.html"],
       "settings": {
-        "foreground": "#898d94",
+        "foreground": "#898d94"
       }
     },
     {
       "scope": "entity.name.type",
       "settings": {
-        "foreground": "#d79bbf",
+        "foreground": "#d79bbf"
       }
     },
     {
       "scope": "entity.name.tag",
       "settings": {
-        "foreground": "#d79bbf",
+        "foreground": "#d79bbf"
       }
     },
     {
       "scope": [
         "markup.heading.markdown",
         "support.type.property-name.json",
-        "storage.type.class.jsdoc"
+        "storage.type.class.jsdoc",
+        "entity.name.tag.cs",
+        "keyword.other.phpdoc.php"
       ],
       "settings": {
         "foreground": "#ae8fa5",
