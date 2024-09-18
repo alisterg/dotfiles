@@ -20,24 +20,19 @@
         "path": "./themes/a-thursday-color-theme.json"
       },
       {
-        "label": "A-solar",
-        "uiTheme": "vs-dark",
-        "path": "./themes/solar-color-theme.json"
-      },
-      {
         "label": "A-elemental",
         "uiTheme": "vs-dark",
         "path": "./themes/elemental-color-theme.json"
       },
       {
+        "label": "A-space",
+        "uiTheme": "vs-dark",
+        "path": "./themes/space-color-theme.json"
+      },
+      {
         "label": "A-earthshine",
         "uiTheme": "vs",
         "path": "./themes/earthshine-color-theme.json"
-      },
-      {
-        "label": "A-liquid",
-        "uiTheme": "vs",
-        "path": "./themes/liquid-color-theme.json"
       }
     ]
   },
