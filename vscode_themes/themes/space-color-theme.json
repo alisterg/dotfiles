@@ -5,30 +5,70 @@
     "editor.background": "#16161c",
     "editor.foldBackground": "#ece7e700",
     "editor.foreground": "#898d94",
-    "editor.lineHighlightBackground": "#23232d",
+    "editor.lineHighlightBackground": "#1c1c24",
     "editor.selectionBackground": "#6697ac88",
     "editorCursor.foreground": "#898d94",
     "editorIndentGuide.background1": "#dfd5d5",
     "editorLineNumber.activeForeground": "#898d94",
     "editorLineNumber.foreground": "#898d94",
-    // "editorRuler.foreground": "#898d94",
     "editorWhitespace.foreground": "#ece7e7",
-    "statusBar.background": "#16161c",
-    "statusBar.foreground": "#898d94",
 
+    "foreground": "#898d94",
+
+    // UI
+    "statusBar.foreground": "#898d94",
+    "tab.activeBackground": "#35b8e338",
+    "editorGroupHeader.tabsBackground": "#16161c",
+    "sideBarTitle.background": "#16161c",
+    "sideBar.dropBackground": "#16161c",
+    "statusBar.background": "#16161c",
+    "tab.border": "#16161c",
+    "menu.border": "#16161c",
+    "sideBar.border": "#16161c",
+    "activityBar.border": "#16161c",
+    "activityBar.background": "#16161c",
+    "editorWidget.background": "#16161c",
+    "panel.border": "#16161c",
     "sideBar.background": "#16161c",
     "titleBar.activeBackground": "#16161c",
     "tab.inactiveBackground": "#16161c",
     "textLink.activeForeground": "#6697ac",
     "editorLink.activeForeground": "#6697ac",
-    "list.activeSelectionBackground": "#6697ac",
+    "list.activeSelectionBackground": "#6697ac88",
     "editor.selectionHighlightBackground": "#6697ac88",
     "editor.wordHighlightBackground": "#6697ac88",
-    "editor.findMatchBackground": "#9fbc90",
+    "editor.findMatchBackground": "#35b8e338",
     "editor.findMatchHighlightBackground": "#9fbc9088",
-    "editorGutter.addedBackground": "#487a1d88",
-    "editorGutter.deletedBackground": "#A50303",
-    "editorGutter.modifiedBackground": "#76622288",
+    "editorGutter.addedBackground": "#35e36038", // 487a1d88
+    "editorGutter.deletedBackground": "#7c2b2b",
+    "editorGutter.modifiedBackground": "#6f633b88",
+    "gitDecoration.addedResourceForeground": "#35e36038",
+    "gitDecoration.deletedResourceForeground": "#7c2b2b",
+    "gitDecoration.modifiedResourceForeground": "#6f633b88",
+    "gitDecoration.ignoredResourceForeground": "#5f6266",
+    "list.warningForeground": "#898d94",
+    "list.errorForeground": "#8f757c",
+
+    "panel.background": "#0f0f13", // 1e1e26
+
+    // Terminal
+    "terminal.ansiBlack": "#16161c",
+    "terminal.ansiBrightBlack": "#16161c",
+    "terminal.ansiRed": "#b2656b",
+    "terminal.ansiBrightRed": "#b2656b",
+    "terminal.ansiGreen": "#6697ac",
+    "terminal.ansiBrightGreen": "#9fbc90",
+    "terminal.ansiYellow": "#d79bbf",
+    "terminal.ansiBrightYellow": "#e5cc93",
+    "terminal.ansiBlue": "#929fb0",
+    "terminal.ansiBrightBlue": "#6697ac",
+    "terminal.ansiMagenta": "#e5cb92",
+    "terminal.ansiBrightMagenta": "#ae8fa5",
+    "terminal.ansiCyan": "#9cb4b3",
+    "terminal.ansiBrightCyan": "#9cb4b3",
+    "terminal.ansiWhite": "#898d94",
+    "terminal.ansiBrightWhite": "#c0c3cc",
+    "terminal.foreground": "#898d94",
 
     // Intellisense icons
     "symbolIcon.classForeground": "#9fbc90",
@@ -41,13 +81,13 @@
     "symbolIcon.typeParameterForeground": "#9fbc90",
     "symbolIcon.packageForeground": "#9fbc90",
     "symbolIcon.objectForeground": "#9fbc90",
-    "symbolIcon.eventForeground": "#d79bbf",
-    "symbolIcon.fileForeground": "#d79bbf",
-    "symbolIcon.folderForeground": "#d79bbf",
-    "symbolIcon.keywordForeground": "#d79bbf",
-    "symbolIcon.operatorForeground": "#d79bbf",
-    "symbolIcon.snippetForeground": "#d79bbf",
-    "symbolIcon.structForeground": "#d79bbf",
+    "symbolIcon.eventForeground": "#35b8e3",
+    "symbolIcon.fileForeground": "#35b8e3",
+    "symbolIcon.folderForeground": "#35b8e3",
+    "symbolIcon.keywordForeground": "#35b8e3",
+    "symbolIcon.operatorForeground": "#35b8e3",
+    "symbolIcon.snippetForeground": "#35b8e3",
+    "symbolIcon.structForeground": "#35b8e3",
     "symbolIcon.arrayForeground": "#e5cc93",
     "symbolIcon.booleanForeground": "#e5cc93",
     "symbolIcon.methodForeground": "#e5cc93",
@@ -131,13 +171,13 @@
     {
       "scope": "entity.name.type",
       "settings": {
-        "foreground": "#d79bbf"
+        "foreground": "#35b8e3" // 4 2CAF6    // d 79bb f
       }
     },
     {
       "scope": "entity.name.tag",
       "settings": {
-        "foreground": "#d79bbf"
+        "foreground": "#35b8e3"
       }
     },
     {
@@ -149,8 +189,7 @@
         "keyword.other.phpdoc.php"
       ],
       "settings": {
-        "foreground": "#ae8fa5",
-        "fontStyle": "bold"
+        "foreground": "#d79bbf"
       }
     },
     {
