@@ -10,8 +10,8 @@
     "editorCursor.foreground": "#898d94",
     "editorIndentGuide.background1": "#dfd5d5",
     "editorLineNumber.activeForeground": "#898d94",
-    "editorLineNumber.foreground": "#898d94",
-    "editorWhitespace.foreground": "#ece7e7",
+    "editorLineNumber.foreground": "#3b4253",
+    "editorWhitespace.foreground": "#3b4253",
 
     "foreground": "#898d94",
 

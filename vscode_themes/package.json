@@ -25,12 +25,12 @@
         "path": "./themes/elemental-color-theme.json"
       },
       {
-        "label": "A-space",
+        "label": "A-space-dark",
         "uiTheme": "vs-dark",
         "path": "./themes/space-color-theme.json"
       },
       {
-        "label": "A-earthshine",
+        "label": "A-earth-light",
         "uiTheme": "vs",
         "path": "./themes/earthshine-color-theme.json"
       }
