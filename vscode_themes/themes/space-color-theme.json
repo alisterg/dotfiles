@@ -17,7 +17,7 @@
 
     // UI
     "statusBar.foreground": "#898d94",
-    "tab.activeBackground": "#35b8e338",
+    "tab.activeBackground": "#1c1c24",
     "editorGroupHeader.tabsBackground": "#16161c",
     "sideBarTitle.background": "#16161c",
     "sideBar.dropBackground": "#16161c",
