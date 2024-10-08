@@ -30,6 +30,11 @@
         "path": "./themes/space-color-theme.json"
       },
       {
+        "label": "A-space-contrast",
+        "uiTheme": "vs-dark",
+        "path": "./themes/space-contrast-color-theme.json"
+      },
+      {
         "label": "A-space-grey",
         "uiTheme": "vs-dark",
         "path": "./themes/space-grey-color-theme.json"

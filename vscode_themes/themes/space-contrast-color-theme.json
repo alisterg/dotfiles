@@ -140,7 +140,7 @@
     {
       "scope": "entity.name.function",
       "settings": {
-        "foreground": "#e08f71" // c8 7c61
+        "foreground": "#e5cc93" // c8 7c61
       }
     },
     {
@@ -195,19 +195,19 @@
         "meta.tag.other.unrecognized.html.derivative entity.name.tag.html"
       ],
       "settings": {
-        "foreground": "#d37291"
+        "foreground": "#35b8e3"
       }
     },
     {
       "scope": "entity.name.tag",
       "settings": {
-        "foreground": "#35b8e3"
+        "foreground": "#d37291"
       }
     },
     {
       "scope": ["markup.heading.markdown", "support.type.property-name.json"],
       "settings": {
-        "foreground": "#35b8e3"
+        "foreground": "#d79bbf"
       }
     },
     {
