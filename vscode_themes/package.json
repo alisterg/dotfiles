@@ -30,14 +30,9 @@
         "path": "./themes/space-color-theme.json"
       },
       {
-        "label": "A-space-contrast",
+        "label": "A-lowlevel",
         "uiTheme": "vs-dark",
-        "path": "./themes/space-contrast-color-theme.json"
-      },
-      {
-        "label": "A-blood-orange",
-        "uiTheme": "vs-dark",
-        "path": "./themes/blood-orange-color-theme.json"
+        "path": "./themes/lowlevel-color-theme.json"
       },
       {
         "label": "A-earth-light",
