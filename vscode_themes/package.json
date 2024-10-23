@@ -15,16 +15,6 @@
   "contributes": {
     "themes": [
       {
-        "label": "A-lunar",
-        "uiTheme": "vs-dark",
-        "path": "./themes/a-thursday-color-theme.json"
-      },
-      {
-        "label": "A-elemental",
-        "uiTheme": "vs-dark",
-        "path": "./themes/elemental-color-theme.json"
-      },
-      {
         "label": "A-space-dark",
         "uiTheme": "vs-dark",
         "path": "./themes/space-color-theme.json"

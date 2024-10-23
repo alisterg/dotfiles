@@ -110,7 +110,7 @@
     {
       "scope": ["comment", "punctuation.definition.comment"],
       "settings": {
-        "foreground": "#3b4253"
+        "foreground": "#5C6773"
       }
     },
     {
@@ -148,7 +148,8 @@
         "meta.type.annotation entity.name.type",
         "entity.name.function.call",
         "meta.block.cpp entity.name.function.member.cpp",
-        "meta.body.function.definition.cpp entity.name.function.member.cpp"
+        "meta.body.function.definition.cpp entity.name.function.member.cpp",
+        "entity.name.function.member"
       ],
       "settings": {
         "foreground": "#a5adba",
@@ -173,11 +174,18 @@
         "storage.type",
         "support.class.component.tsx",
         "meta.tag.custom.start.html entity.name.tag.html",
+      ],
+      "settings": {
+        "foreground": "#a5adba"
+      }
+    },
+    {
+      "scope": [
         "entity.name.tag.localname.cs",
         "storage.type.class.jsdoc"
       ],
       "settings": {
-        "foreground": "#a5adba"
+        "foreground": "#56767c"
       }
     },
     {
