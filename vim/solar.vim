@@ -29,6 +29,7 @@ let s:light_blue   = { "gui": "#2aa198", "cterm": "153" } " dark cyan
 let s:blue         = { "gui": "#268bd2", "cterm": "12"  } " blue
 let s:dark_purple  = { "gui": "#6c71c4", "cterm": "134" } " magenta
 let s:light_purple = { "gui": "#A04B73", "cterm": "134" }
+let s:magenta      = { "gui": "#d33682", "cterm": "134" }
 let s:white        = { "gui": "#D5D9E2", "cterm": "15"  }
 let s:light_black  = { "gui": "#323845", "cterm": "235" }
 let s:darker_black = { "gui": "#00161c", "cterm": "235" }
@@ -61,7 +62,8 @@ function! s:h(group, style)
     \ "cterm="   (has_key(a:style, "cterm") ? a:style.cterm    : "NONE")
 endfunction
 
-call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
+" call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
+call s:h("Normal",        {"fg": s:norm})
 
 " restore &background's value in case changing Normal changed &background (:help :hi-normal-cterm)
 if &background != s:background
@@ -89,6 +91,7 @@ hi! link typeScriptGlobalMethod        Nothing
 hi! link typeScriptBOMWindowProp       Nothing
 hi! link typeScriptGlobal              Nothing
 hi! link typeScriptDestructureVariable Nothing
+hi! link typeScriptFuncCallArg         Nothing
 hi! link htmlTag                       Nothing
 hi! link htmlEndTag                    Nothing
 hi! link javaScript                    Nothing
@@ -106,7 +109,7 @@ hi! link goConditional              typeScriptRepeat
 hi! link goStatement                typeScriptRepeat
 hi! link hsStatement                typeScriptRepeat
 
-call s:h("Identifier", {"fg": s:dark_purple})
+call s:h("Identifier", {"fg": s:emphasis})
 hi! link Conditonal  Identifier
 hi! link Repeat      Identifier
 hi! link Label       Identifier
@@ -115,13 +118,16 @@ hi! link jsonQuote   Identifier
 
 call s:h("Function", {"fg": s:blue})
 hi! link goFunction  Function
+hi! link goDeclaration  Function
 hi! link hsStructure Function
 hi! link hsTypedef   Function
+hi! link typeScriptMember           Function
+hi! link javaScriptFunction         Function
+hi! link goBuiltins              Function
 
-call s:h("typeScriptClassName", {"fg": s:blue})
+call s:h("typeScriptClassName", {"fg": s:yellow})
 hi! link typeScriptAliasDeclaration typeScriptClassName
-hi! link typeScriptMember           typeScriptClassName
-hi! link javaScriptFunction         typeScriptClassName
+hi! link typeScriptInterfaceName    typeScriptClassName
 hi! link csClassType                typeScriptClassName
 hi! link typeScriptEnum             typeScriptClassName
 hi! link goTypeName                 typeScriptClassName
@@ -134,7 +140,6 @@ hi! link typeScriptTypeReference Keyword
 hi! link goLabel                 Keyword
 hi! link goVar                   Keyword
 hi! link goRepeat                Keyword
-hi! link goBuiltins              Keyword
 
 call s:h("markdownH1",          { "fg": s:blue})
 call s:h("markdownH1Delimiter", { "fg": s:light_blue})
@@ -160,33 +165,32 @@ hi! link cssClassName         Operator
 hi! link htmlArg              Operator
 hi! link typeScriptIdentifier Operator
 
-call s:h("Type", {"fg": s:norm, "cterm": "bold", "gui": "bold"})
+call s:h("Type", {"fg": s:yellow})
 hi! link StorageClass       Type
 hi! link Structure          Type
 hi! link Typedef            Type
-hi! link goDeclaration      Type
-hi! link javaScriptReserved Type
 
-call s:h("typeScriptNull", {"fg": s:emphasis})
+call s:h("typeScriptNull", {"fg": s:light_purple})
 hi! link Number                   typeScriptNull
 hi! link Float                    typeScriptNull
 hi! link Boolean                  typeScriptNull
-hi! link javaScriptType           typeScriptNull
-hi! link typeScriptPredefinedType typeScriptNull
-hi! link goPredefinedIdentifiers  typeScriptNull
-hi! link goType                   typeScriptNull
 hi! link goUnsignedInts           typeScriptNull
 hi! link hsConSym                 typeScriptNull
 
-call s:h("PreProc",   { "fg": s:dark_purple})
+call s:h("PreProc",   { "fg": s:magenta})
 hi! link Statement PreProc
 hi! link Include   PreProc
 hi! link Define    PreProc
 hi! link Macro     PreProc
 hi! link goPackage PreProc
 hi! link goImport  PreProc
+hi! link javaScriptReserved PreProc
+hi! link javaScriptType           PreProc
+hi! link typeScriptPredefinedType PreProc
+hi! link goPredefinedIdentifiers  PreProc
+hi! link goType                   PreProc
 
-call s:h("Special", { "fg": s:dark_purple})
+call s:h("Special", { "fg": s:orange})
 hi! link SpecialChar Special
 hi! link Tag         Special
 hi! link Delimiter   Special

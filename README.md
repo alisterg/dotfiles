@@ -38,3 +38,4 @@ Why not automate this with a script?
   - Sign in with GitHub
 - Firefox: `brew install --cask firefox`
 - Chrome: `brew install --cask google-chrome`
+- Diff-so-fancy: `brew install diff-so-fancy`
